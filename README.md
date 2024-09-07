@@ -10,4 +10,4 @@
 
 ### Organisation | [Trello](https://trello.com/b/j5wTX283/les-développeurs-du-grenier)
 
-### Design de base (pas encore le lien)
+### [Design de base](https://www.figma.com/design/5NtbHqwnjz5tTyJu4latyK/Accueil_version_view?node-id=0-1&t=DVtVDRJMrRcyHtYl-1)
