@@ -1,0 +1,53 @@
+:root {
+    --blancSel: #ffffff;
+    --LavandreCendre: #E1E5F2;
+    --bleuSarcelle: #1F7A8C;
+    --bleuNuit: #022B3A;
+    --noirPoudre: #2A2A2A;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format('truetype');
+}
+
+main {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    font-family: 'Raleway';
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    color: var(--noirPoudre)
+}
+
+h3 a {
+    color: var(--blancSel);
+    background-color: var(--bleuSarcelle);
+    padding: 0.4em 0.6em;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+h3 a:hover {
+    color: var(--bleuSarcelle);
+    background-color: var(--blancSel);
+    border: 1px solid var(--bleuSarcelle);
+}
+
+main {
+    background-color: var(--blancSel);
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
