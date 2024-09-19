@@ -18,7 +18,7 @@
     border-radius: 25px;
     background-color: variables.$blancSel;
     color: variables.$noirPoudre;
-    border: 1px solid variables.$noirPoudre inset;
+    border: 1px solid variables.$noirPoudre;
     &:hover {
         background-color: variables.$noirPoudre;
         color: variables.$blancSel;
@@ -36,6 +36,6 @@
     &:hover {
         background-color: variables.$blancSel;
         color: variables.$noirPoudre;
-        border: 1px solid variables.$noirPoudre inset;
+        border: 1px solid variables.$noirPoudre ;
     }
 }

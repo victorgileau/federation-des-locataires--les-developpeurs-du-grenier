@@ -56,6 +56,36 @@ header ul li a {
   background-size: 120% 25%;
 }
 
+.btnN {
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding: 0.2em;
+  border-radius: 25px;
+  background-color: #2A2A2A;
+  color: #ffffff;
+}
+.btnN:hover {
+  background-color: #ffffff;
+  color: #2A2A2A;
+  border: 1px solid #2A2A2A;
+}
+
+.btnB {
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding: 0.2em;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #2A2A2A;
+  border: 1px solid #2A2A2A;
+}
+.btnB:hover {
+  background-color: #2A2A2A;
+  color: #ffffff;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");

@@ -47,3 +47,11 @@ header ul li a {
 .btn {
     @include btnMenuHover.btnMenuHover;
 }
+
+.btnN {
+    @include btnMenuHover.btnNoir;
+}
+
+.btnB {
+    @include btnMenuHover.btnBlanc;
+}
