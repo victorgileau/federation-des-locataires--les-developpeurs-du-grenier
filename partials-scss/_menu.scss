@@ -1,3 +1,5 @@
+@use './mixins/btnMenuHover';
+
 * {
     margin: 0;
     padding: 0;
@@ -40,4 +42,8 @@ header ul li a {
     position: relative;
     margin: 0 15px;
     text-decoration: none;
+}
+
+.btn {
+    @include btnMenuHover.btnMenuHover;
 }

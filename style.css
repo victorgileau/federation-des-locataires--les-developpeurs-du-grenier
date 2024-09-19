@@ -46,6 +46,16 @@ header ul li a {
   text-decoration: none;
 }
 
+.btn {
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+.btn:hover {
+  background-color: #E1E5F2;
+  background-size: 120% 25%;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
@@ -104,4 +114,7 @@ h3 {
   h3 {
     font-size: 32px;
   }
+}
+header ul li a {
+  color: #2A2A2A;
 }/*# sourceMappingURL=style.css.map */
