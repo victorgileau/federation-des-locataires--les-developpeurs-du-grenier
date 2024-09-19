@@ -1,3 +1,61 @@
+/*----------KENZA: Variables de font-size telephone------------------------*/
+/*----------KENZA: Variables de font-size desktop------------------------*/
+@font-face {
+  font-family: "Raleway";
+  src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: "JustMe";
+  src: url(./medias/fonts/Just_Me_Again_Down_Here/JustMeAgainDownHere-Regular.ttf) format("truetype");
+}
+/*---------------KENZA: size telephone---------------*/
+* {
+  font-family: Raleway;
+}
+
 body {
-  background-color: #1F7A8C;
+  background-color: #ffffff;
+}
+
+h1 {
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 32px;
+  color: #2A2A2A;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 24px;
+  color: #022B3A;
+  font-weight: medium;
+}
+
+/*---------------KENZA: media queries tablette---------------*/
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 48px;
+  }
+  h3 {
+    font-size: 32px;
+  }
+}
+/*---------------KENZA: media queries desktop---------------*/
+@media screen and (min-width: 1400px) {
+  h1 {
+    font-size: 96px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  h3 {
+    font-size: 32px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -10,6 +10,8 @@
     src: url(./medias/fonts/Just_Me_Again_Down_Here/JustMeAgainDownHere-Regular.ttf) format('truetype');
 }
 
+/*---------------KENZA: size telephone---------------*/
+
 *{
     font-family: Raleway;
 }
@@ -19,20 +21,54 @@ body {
 }
 
 h1{
-    font-size: 96px;
+    font-size: 36px;
     color: variables.$blancSel;
     font-weight: bold;
 }
 
 h2{
-    font-size: 64px;
+    font-size: 32px;
     color: variables.$noirPoudre;
     font-weight: bold;
 }
 
 h3{
-    font-size: 32px;
+    font-size: 24px;
     color: variables.$bleuNuit;
     font-weight: medium;
 }
 
+/*---------------KENZA: media queries tablette---------------*/
+
+@media screen and (min-width: 768px) {
+
+    
+    h1{
+        font-size: 64px;
+    }
+    
+    h2{
+        font-size: 48px;
+    }
+    
+    h3{
+        font-size: 32px;
+    }
+ }
+
+/*---------------KENZA: media queries desktop---------------*/
+@media screen and (min-width: 1400px) {
+
+
+    h1{
+        font-size: 96px;
+    }
+    
+    h2{
+        font-size: 64px;
+    }
+    
+    h3{
+        font-size: 32px;
+    }
+        }
