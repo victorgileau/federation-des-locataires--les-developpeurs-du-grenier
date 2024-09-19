@@ -1,6 +1,38 @@
 @use 'partials-scss/variables';
 @use 'partials-scss/mixins/mixins';
 
-body {
-    background-color: variables.$bleuSarcelle;
+@font-face {
+    font-family: 'Raleway';
+    src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format('truetype');
 }
+@font-face {
+    font-family: 'JustMe';
+    src: url(./medias/fonts/Just_Me_Again_Down_Here/JustMeAgainDownHere-Regular.ttf) format('truetype');
+}
+
+*{
+    font-family: Raleway;
+}
+
+body {
+    background-color: variables.$blancSel;
+}
+
+h1{
+    font-size: 96px;
+    color: variables.$blancSel;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 64px;
+    color: variables.$noirPoudre;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 32px;
+    color: variables.$bleuNuit;
+    font-weight: medium;
+}
+
