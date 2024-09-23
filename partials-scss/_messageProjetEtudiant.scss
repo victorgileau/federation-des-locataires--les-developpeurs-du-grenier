@@ -1,0 +1,21 @@
+@use './variables';
+@use './mixins/btnMenuHover';
+
+.messageProjetEtudant {
+    width: 100%;
+    padding: 2vw 100px;
+    box-shadow: 0 5px 5px variables.$noirPoudre;
+    display: flex;
+    flex-direction: column;
+    &__msg {
+        color: variables.$blancSel;
+    }
+    &__btn {
+        @include btnMenuHover.btnBlanc;
+        padding: 2px 5px;
+    }
+    &__closeBtn {
+        width: 36px;
+        aspect-ratio: 1/1;
+    }
+}
