@@ -5,8 +5,8 @@
 
 
 
-
-footer{
+/*------------------------TEST GRID----------------------*/
+/*footer{
   width: 100%;
   background-color: variables.$LavandreCendre;
   font-size: variables.$linkSizeMobile;
@@ -17,6 +17,7 @@ footer{
   .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
     row-gap: 28px;
 
     .footer__logo{
@@ -107,15 +108,22 @@ footer{
 
 
 @media screen and (min-width: 768px) {
-  .grid{
+
+  .footer{
+    .grid{
     .footer__logo{
-      grid-column:;
+      grid-column: 1;
+      grid-row: 1;
+      
       }
 
       .footer__partenaire {
-        grid-column: 2/3;
+        grid-column: 2;
+        grid-row: 1;
       }
   }
+  }
+  
   
 }
 
@@ -123,38 +131,33 @@ footer{
   footer{
     font-size: variables.$textSize;
   }
-}
-
-
-
-
-
+}*/
 
 
 /*--------------KENZA: note à sois même, les & fonctionnent pas, essayer de clean up un peu plus------------------------------*/
 
 /*-----------------KENZA: footer pour telephone !--------------------*/
-/*footer {
+footer {
   margin-top: 100%;
   padding: 20px;
   display: block;
   background-color: variables.$LavandreCendre;
-  font-size: variables.$linkSizeMobile;*/
+  font-size: variables.$linkSizeMobile;
 
   /*--------------KENZA: Styles Pour le logo du footer------------------------------*/
 
-  /*.footer__logo {
+  .footer__logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
     .svg__logo--complet {
       width: 70%;
     }
-  }*/
+  }
 
   /*--------------KENZA: Styles Pour le bloc partenaire du footer------------------------------*/
 
-  /*.footer__partenaire {
+  .footer__partenaire {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -164,11 +167,11 @@ footer{
       margin-top: 0;
       width: 180px;
     }
-  }*/
+  }
 
   /*--------------KENZA: Styles Pour le bloc réseaux sociaux du footer------------------------------*/
 
-  /*.footer__sociaux {
+  .footer__sociaux {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -176,11 +179,11 @@ footer{
     .footer__link {
       margin: 10px;
     }
-  }*/
+  }
 
   /*--------------KENZA: Styles Pour le bloc des liens du footer------------------------------*/
 
-  /*.footer__group--link {
+  .footer__group--link {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -210,11 +213,11 @@ footer{
     .footer__title {
       font-size: 1.2em;
     }
-  }*/
+  }
 
   /*--------------KENZA: Éléments autres------------------------------*/
 
-  /*a {
+  a {
     color: variables.$noirPoudre;
   }
 
@@ -248,11 +251,11 @@ footer{
       font-size: 1.5em;
     }
   }
-}*/
+}
 
 /*---------------KENZA: media queries tablette---------------*/
 
-/*@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   footer {
     .footer__logo {
       display: inline-block;
@@ -321,10 +324,10 @@ footer{
       padding-left: 22%;
     }
   }
-}*/
+}
 
 /*---------------KENZA: media queries desktop---------------*/
-/*@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) {
   footer {
     font-size: variables.$linkSize;
     .footer__partenaire {
@@ -332,7 +335,6 @@ footer{
         width: 250px;
       }
     }
-
 
     .footer__group--link {
       .footer__title {
@@ -344,4 +346,4 @@ footer{
       padding-left: 28%;
     }
   }
-}*/
+}
