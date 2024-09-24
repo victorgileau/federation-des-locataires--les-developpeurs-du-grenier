@@ -152,7 +152,7 @@ header ul li a {
   }
 }
 footer {
-  width: 100vw;
+  width: 100%;
   background-color: #E1E5F2;
   font-size: 16px;
   text-decoration: none;
@@ -165,7 +165,7 @@ footer .grid {
   row-gap: 28px;
 }
 footer .grid .footer__logo {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
 }

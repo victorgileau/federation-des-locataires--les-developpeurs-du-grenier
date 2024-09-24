@@ -7,7 +7,7 @@
 
 
 footer{
-  width: 100vw;
+  width: 100%;
   background-color: variables.$LavandreCendre;
   font-size: variables.$linkSizeMobile;
   text-decoration: none;
@@ -20,7 +20,7 @@ footer{
     row-gap: 28px;
 
     .footer__logo{
-      width: 100vw;
+      width: 100%;
       display: flex;
       justify-content: center;
       .svg__logo--complet {
