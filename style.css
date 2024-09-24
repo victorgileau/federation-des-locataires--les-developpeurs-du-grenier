@@ -161,10 +161,11 @@ footer {
 }
 footer .grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   row-gap: 28px;
 }
 footer .grid .footer__logo {
+  grid-column: 1/3;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -174,6 +175,7 @@ footer .grid .footer__logo .svg__logo--complet {
   width: 90%;
 }
 footer .grid .footer__partenaire {
+  grid-column: 1/3;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -182,6 +184,7 @@ footer .grid .footer__partenaire .img__partenaire {
   width: 180px;
 }
 footer .grid .footer__sociaux {
+  grid-column: 1/3;
   display: flex;
   justify-content: center;
 }
@@ -190,6 +193,7 @@ footer .grid .footer__sociaux .footer__link {
   margin-right: 5px;
 }
 footer .grid .footer__group--link {
+  grid-column: 1/3;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -201,6 +205,7 @@ footer .grid .footer__group--link .footer__list {
 footer .grid .footer__group--link .footer__list:nth-child(1) {
   text-align: center;
   width: 70%;
+  margin-bottom: 28px;
 }
 footer .grid .footer__group--link .footer__list > li {
   padding-top: 10px;
@@ -211,6 +216,7 @@ footer .grid a {
   font-weight: 500;
 }
 footer .grid .footer__ligne {
+  grid-column: 1/3;
   padding: none;
   height: 2px;
   width: 100%;
@@ -218,16 +224,28 @@ footer .grid .footer__ligne {
   opacity: 0.2;
 }
 footer .grid .copyright {
+  grid-column: 1/3;
   text-align: center;
 }
 footer .grid .footer__btn {
+  grid-column: 1/3;
   display: flex;
   justify-content: center;
+  margin-bottom: 28px;
 }
 footer .grid .footer__btn button {
   font-size: 1.5em;
 }
 
+@media screen and (min-width: 768px) {
+  .grid .footer__logo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .grid .footer__partenaire {
+    grid-column: 2/3;
+  }
+}
 @media screen and (min-width: 1400px) {
   footer {
     font-size: 36px;
@@ -434,95 +452,91 @@ footer .grid .footer__btn button {
   }
 }*/
 /*--Ajout code message Projet étudant--*/
-.messageProjetEtudant {
-  z-index: 2;
-  position: fixed;
-  width: 100%;
-  padding: 2vw 100px;
-  box-shadow: 0 1px 5px #2A2A2A;
-  background-color: #2A2A2A;
-  display: grid;
-  grid-template-columns: 50vw 40vw 5vw;
-}
-.messageProjetEtudant__msg {
-  align-self: center;
-  color: #ffffff;
-}
-.messageProjetEtudant__btn {
-  transition-property: background-color;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-  padding: 0.2em;
-  border-radius: 25px;
-  background-color: #ffffff;
-  color: #2A2A2A;
-  border: 1px solid #2A2A2A;
-  margin: 0 2vw;
-  padding: 2px 5px;
-  width: 10vmin;
-  align-self: center;
-  justify-self: end;
-}
-.messageProjetEtudant__btn:hover {
-  background-color: #2A2A2A;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-}
-.messageProjetEtudant__btn a {
-  text-decoration: none;
-  color: #2A2A2A;
-}
-.messageProjetEtudant__btn svg {
-  margin-left: 5px;
-  align-self: center;
-  width: 2vh;
-}
-.messageProjetEtudant__btn svg path {
-  fill: #2A2A2A;
-}
-.messageProjetEtudant__btn:hover {
-  background-color: #2A2A2A;
-  color: #ffffff;
-}
-.messageProjetEtudant__btn:hover a {
-  color: #ffffff;
-}
-.messageProjetEtudant__btn:hover svg path {
-  fill: #ffffff;
-}
-.messageProjetEtudant__closeBtn svg {
-  width: 24px;
-  aspect-ratio: 1/1;
-}
-.messageProjetEtudant__closeBtn svg path {
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
-}
-.messageProjetEtudant__closeBtn svg:hover path {
-  stroke: #D7E0FF;
+/*.messageProjetEtudant {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    padding: 2vw 100px;
+    box-shadow: 0 1px 5px variables.$noirPoudre;
+    background-color: variables.$noirPoudre;
+    display: grid;
+    grid-template-columns: 50vw 40vw 5vw;
+
+    &__msg {
+        align-self: center;
+        color: variables.$blancSel;
+    }
+    &__btn {
+        @include btnMenuHover.btnBlanc;
+        margin: 0 2vw;
+        padding: 2px 5px;
+        width: 10vmin;
+        align-self: center;
+        justify-self: end;
+        a {
+            text-decoration: none;
+            color: variables.$noirPoudre;
+        }
+        svg {
+            margin-left: 5px;
+            align-self: center;
+            width: 2vh;
+            path {
+              fill: variables.$noirPoudre;
+            }
+        }
+        &:hover {
+            background-color: variables.$noirPoudre;
+            color: variables.$blancSel;
+            a {
+                color: variables.$blancSel;
+            }
+            svg {
+                path {
+                    fill: variables.$blancSel;
+                }
+            }
+        }
+    }
+    &__closeBtn {
+        svg {
+            width: 24px;
+            aspect-ratio: 1/1;
+            path {
+              transition-duration: 0.2s;
+              transition-timing-function: linear;
+            }
+            &:hover {
+              path {
+                stroke: variables.$lavandrepetant;
+              }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .messageProjetEtudant {
-    grid-template-columns: 100vw;
-    grid-template-rows: 20vh 10vh 10vh;
-  }
-  .messageProjetEtudant__msg {
-    width: 80vw;
-    grid-row: 1;
-  }
-  .messageProjetEtudant__btn {
-    grid-row: 2;
-  }
-  .messageProjetEtudant__closeBtn {
-    grid-row: 1;
-  }
+    .messageProjetEtudant {
+        grid-template-columns: 100vw;
+        grid-template-rows: 20vh 10vh 10vh;
+        &__msg {
+            width: 80vw;
+            grid-row: 1;
+        }
+        &__btn {
+            grid-row: 2;
+        }
+        &__closeBtn {
+            grid-row: 1;
+        }
+    }
 }
+
 @media screen and (max-width: 1400px) {
-  .messageProjetEtudant {
-    grid-template-columns: 40vw auto 5vw;
-  }
-}
+    .messageProjetEtudant {
+        grid-template-columns: 40vw auto 5vw;
+    }
+}*/
 /*--Fin Ajout code message Projet étudant--*/
 @font-face {
   font-family: "Raleway";
