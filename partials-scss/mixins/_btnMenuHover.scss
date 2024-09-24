@@ -24,6 +24,7 @@
     &:hover {
         background-color: variables.$noirPoudre;
         color: variables.$blancSel;
+        border: 1px solid variables.$blancSel;
     }
 }
 

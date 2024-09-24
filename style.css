@@ -101,6 +101,7 @@ header ul li a {
 .btnB:hover {
   background-color: #2A2A2A;
   color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .burgerIcon {
@@ -394,6 +395,97 @@ footer .grid .footer__btn button {
     }
   }
 }*/
+/*--Ajout code message Projet étudant--*/
+.messageProjetEtudant {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  padding: 2vw 100px;
+  box-shadow: 0 1px 5px #2A2A2A;
+  background-color: #2A2A2A;
+  display: grid;
+  grid-template-columns: 50vw 40vw 5vw;
+}
+.messageProjetEtudant__msg {
+  align-self: center;
+  color: #ffffff;
+}
+.messageProjetEtudant__btn {
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding: 0.2em;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #2A2A2A;
+  border: 1px solid #2A2A2A;
+  margin: 0 2vw;
+  padding: 2px 5px;
+  width: 10vmin;
+  align-self: center;
+  justify-self: end;
+}
+.messageProjetEtudant__btn:hover {
+  background-color: #2A2A2A;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.messageProjetEtudant__btn a {
+  text-decoration: none;
+  color: #2A2A2A;
+}
+.messageProjetEtudant__btn svg {
+  margin-left: 5px;
+  align-self: center;
+  width: 2vh;
+}
+.messageProjetEtudant__btn svg path {
+  fill: #2A2A2A;
+}
+.messageProjetEtudant__btn:hover {
+  background-color: #2A2A2A;
+  color: #ffffff;
+}
+.messageProjetEtudant__btn:hover a {
+  color: #ffffff;
+}
+.messageProjetEtudant__btn:hover svg path {
+  fill: #ffffff;
+}
+.messageProjetEtudant__closeBtn svg {
+  width: 24px;
+  aspect-ratio: 1/1;
+}
+.messageProjetEtudant__closeBtn svg path {
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+.messageProjetEtudant__closeBtn svg:hover path {
+  stroke: #D7E0FF;
+}
+
+@media screen and (max-width: 768px) {
+  .messageProjetEtudant {
+    grid-template-columns: 100vw;
+    grid-template-rows: 20vh 10vh 10vh;
+  }
+  .messageProjetEtudant__msg {
+    width: 80vw;
+    grid-row: 1;
+  }
+  .messageProjetEtudant__btn {
+    grid-row: 2;
+  }
+  .messageProjetEtudant__closeBtn {
+    grid-row: 1;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .messageProjetEtudant {
+    grid-template-columns: 40vw auto 5vw;
+  }
+}
+/*--Fin Ajout code message Projet étudant--*/
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
