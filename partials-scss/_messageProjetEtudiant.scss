@@ -3,27 +3,31 @@
 
 /*--Ajout code message Projet étudant--*/
 
-/*.messageProjetEtudant {
-    z-index: 2;
+.messageProjetEtudant {
+    z-index: 1;
     position: fixed;
     width: 100%;
     padding: 2vw 100px;
     box-shadow: 0 1px 5px variables.$noirPoudre;
     background-color: variables.$noirPoudre;
     display: grid;
-    grid-template-columns: 50vw 40vw 5vw;
+    grid-template-columns: 100%;
+    grid-template-rows: 40px auto 80px;
 
     &__msg {
+        text-align: center;
         align-self: center;
         color: variables.$blancSel;
+        grid-row: 2;
     }
     &__btn {
+        grid-row: 3;
         @include btnMenuHover.btnBlanc;
         margin: 0 2vw;
-        padding: 2px 5px;
-        width: 10vmin;
+        padding: 5px 10px;
+        width: 100px;
         align-self: center;
-        justify-self: end;
+        justify-self: center;
         a {
             text-decoration: none;
             color: variables.$noirPoudre;
@@ -50,6 +54,8 @@
         }
     }
     &__closeBtn {
+        justify-self: end;
+        grid-row: 1;
         svg {
             width: 24px;
             aspect-ratio: 1/1;
@@ -66,28 +72,39 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .messageProjetEtudant {
-        grid-template-columns: 100vw;
-        grid-template-rows: 20vh 10vh 10vh;
+        grid-template-columns: 50vw auto 5vw;
+        grid-template-rows: none;
         &__msg {
-            width: 80vw;
-            grid-row: 1;
+            text-align: left;
+            grid-row: none;
         }
         &__btn {
-            grid-row: 2;
+            grid-row: none;
+            justify-self: end;
         }
         &__closeBtn {
-            grid-row: 1;
+            grid-row: none;
         }
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 1400px) {
     .messageProjetEtudant {
-        grid-template-columns: 40vw auto 5vw;
+        grid-template-columns: 50vw auto 5vw;
+        &__msg {
+            text-align: left;
+        }
+        &__btn {
+            justify-self: end;
+        }
     }
-}*/
+}
+
+.displayNone {
+    display: none;
+}
 
 
 /*--Fin Ajout code message Projet étudant--*/
