@@ -12,7 +12,8 @@ body {
   min-height: 200vh;
 }
 
-header {
+.navbar {
+  margin-top: 120px;
   position: fixed;
   top: 0;
   left: 0;
@@ -24,27 +25,28 @@ header {
   padding: 40px 100px;
   text-decoration: none;
 }
-header .logo img {
+.navbar .logo img {
   position: relative;
   width: 150px;
 }
-header ul {
+.navbar ul {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header ul li {
+.navbar ul li {
   position: relative;
   list-style: none;
 }
-header ul li a {
+.navbar ul li a {
   position: relative;
   margin: 0 15px;
   text-decoration: none;
 }
 
 .nav-content {
+  margin-top: 120px;
   position: fixed;
   top: 0;
   left: 0;
@@ -115,7 +117,11 @@ header ul li a {
 }
 
 @media screen and (max-width: 1200px) {
+  .navbar {
+    margin-top: 120px;
+  }
   .nav-content {
+    margin-top: 0;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.397);
     -webkit-backdrop-filter: blur(5px);
@@ -151,6 +157,20 @@ header ul li a {
     font-size: 0.8em;
   }
 }
+@media screen and (max-width: 768px) {
+  .navbar {
+    margin-top: 240px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar {
+    margin-top: 300px;
+  }
+}
+.noMarginTop {
+  margin-top: 0;
+}
+
 /*------------------------TEST GRID----------------------*/
 /*footer{
   width: 100%;

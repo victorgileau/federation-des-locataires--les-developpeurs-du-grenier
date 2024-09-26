@@ -8,7 +8,8 @@
 body {
     min-height: 200vh;
 }
-header {
+.navbar {
+    margin-top: 120px;
     position: fixed;
     top: 0;
     left: 0;
@@ -45,6 +46,7 @@ header {
 }
 
 .nav-content {
+    margin-top: 120px;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,8 +87,13 @@ header {
 }
 
 
+
 @media screen and (max-width: 1200px) {
+    .navbar {
+        margin-top: 120px;
+    }
     .nav-content {
+        margin-top: 0;
         position: absolute;
         background-color: rgba(255, 255, 255, 0.397);
         backdrop-filter: blur(5px);
@@ -126,4 +133,20 @@ header {
         padding: 8px;
         font-size: 0.8em;
     }
+}
+
+@media screen and (max-width: 768px) { 
+    .navbar {
+        margin-top: 240px;
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    .navbar {
+        margin-top: 300px;
+    }
+}
+
+.noMarginTop {
+    margin-top: 0;
 }
