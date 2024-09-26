@@ -10,8 +10,8 @@ const menuHamburger = document.querySelector(".burgerBtn");
 const btnMessageProjetEtudiant = document.querySelector('.messageProjetEtudant__closeBtn');
 const messageProjetEtudiant = document.querySelector('.messageProjetEtudant');
 
-if (sessionStorage.getItem('msgFermer') != null) {
-        let msgFermer = sessionStorage.getItem('msgFermer');
+if (localStorage.getItem('msgFermer') != null) {
+        let msgFermer = localStorage.getItem('msgFermer');
         if (msgFermer == 'true') {
                 console.log('messag projet étudiant déja vu');
                 messageProjetEtudiant.classList.add('displayNone');
@@ -20,7 +20,7 @@ if (sessionStorage.getItem('msgFermer') != null) {
 
 btnMessageProjetEtudiant.addEventListener('click', () => {
         messageProjetEtudiant.classList.add('displayNone');
-        sessionStorage.setItem('msgFermer', 'true');
+        localStorage.setItem('msgFermer', 'true');
         console.log('test');
 });
 
