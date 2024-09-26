@@ -24,6 +24,25 @@ header {
   padding: 40px 100px;
   text-decoration: none;
 }
+header .logo img {
+  position: relative;
+  width: 150px;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+}
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+}
 
 .desktop {
   position: fixed;
@@ -39,29 +58,6 @@ header {
   text-decoration: none;
 }
 
-header .logo img {
-  position: relative;
-  width: 150px;
-}
-
-header ul {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header ul li {
-  position: relative;
-  list-style: none;
-}
-
-header ul li a {
-  position: relative;
-  margin: 0 15px;
-  text-decoration: none;
-}
-
 .btn {
   transition-property: background-color;
   transition-duration: 0.2s;
@@ -73,6 +69,7 @@ header ul li a {
 }
 
 .btnN {
+  padding: 10px;
   border: none;
   transition-property: background-color;
   transition-duration: 0.2s;
@@ -89,6 +86,7 @@ header ul li a {
 }
 
 .btnB {
+  padding: 10px;
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -145,9 +143,11 @@ header ul li a {
     font-size: 1.5em;
   }
   .btnN {
+    padding: 8px;
     font-size: 0.8em;
   }
   .btnB {
+    padding: 8px;
     font-size: 0.8em;
   }
 }
