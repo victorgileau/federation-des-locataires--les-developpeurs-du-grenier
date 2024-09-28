@@ -3,18 +3,22 @@
 
 /*--Ajout code message Projet étudant--*/
 
+.msgEtudantBG {
+    background-color: variables.$noirPoudre;
+    box-shadow: 0 1px 5px variables.$noirPoudre;
+}
+
 .messageProjetEtudant {
     z-index: 1;
-    position: fixed;
-    width: 100%;
-    padding: 2vw 100px;
-    box-shadow: 0 1px 5px variables.$noirPoudre;
+    padding: 2vw 0;
+    margin: 0;
     background-color: variables.$noirPoudre;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 100vw;
     grid-template-rows: 40px auto 80px;
 
     &__msg {
+        padding: 0 5vw;
         text-align: center;
         align-self: center;
         color: variables.$blancSel;
@@ -54,6 +58,7 @@
         }
     }
     &__closeBtn {
+        margin-right: 25px;
         justify-self: end;
         grid-row: 1;
         svg {
@@ -74,9 +79,12 @@
 
 @media screen and (min-width: 768px) {
     .messageProjetEtudant {
-        grid-template-columns: 50vw auto 5vw;
+        width: 95vw;
+        margin: 0 auto;
+        grid-template-columns: 50% auto 5%;
         grid-template-rows: none;
         &__msg {
+            padding: 0;
             text-align: left;
             grid-row: none;
         }
@@ -92,8 +100,11 @@
 
 @media screen and (min-width: 1400px) {
     .messageProjetEtudant {
+        width: 1200px;
+        margin: 0 auto;
         grid-template-columns: 50vw auto 5vw;
         &__msg {
+            padding: 0;
             text-align: left;
         }
         &__btn {
