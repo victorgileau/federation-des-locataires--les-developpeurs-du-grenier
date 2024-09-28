@@ -6,6 +6,8 @@
 .msgEtudantBG {
     background-color: variables.$noirPoudre;
     box-shadow: 0 1px 5px variables.$noirPoudre;
+    position: fixed;
+    width: 100%;
 }
 
 .messageProjetEtudant {

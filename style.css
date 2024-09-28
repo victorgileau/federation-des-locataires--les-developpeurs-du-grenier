@@ -474,6 +474,8 @@ footer .footer__btn button {
 .msgEtudantBG {
   background-color: #2A2A2A;
   box-shadow: 0 1px 5px #2A2A2A;
+  position: fixed;
+  width: 100%;
 }
 
 .messageProjetEtudant {
