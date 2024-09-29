@@ -400,6 +400,7 @@ footer .footer__btn button {
 /*---------------KENZA: media queries tablette---------------*/
 @media screen and (min-width: 768px) {
   footer .svg__logo--complet {
+    margin-left: 30px;
     width: 25%;
     display: inline-block;
     margin: none;
@@ -412,7 +413,7 @@ footer .footer__btn button {
     margin-top: 28px;
   }
   footer .footer__partenaire .img__partenaire {
-    width: 32%;
+    width: 29%;
   }
   footer .footer__ligne {
     margin-top: 56px;
@@ -420,11 +421,13 @@ footer .footer__btn button {
   footer .footer__sociaux {
     width: 15%;
     display: inline-block;
+    margin-left: 30px;
   }
   footer .footer__group--link {
     display: inline-block;
-    width: 100%;
+    width: 90%;
     text-align: left;
+    margin-left: 30px;
   }
   footer .footer__group--link .footer__list--contact {
     display: inline-block;
@@ -439,7 +442,7 @@ footer .footer__btn button {
   footer .footer__group--link .footer__list--flhlmq {
     vertical-align: top;
     display: inline-block;
-    padding-left: 28%;
+    padding-left: 27%;
     width: 43%;
   }
   footer .footer__group--link .footer__title {
@@ -450,12 +453,13 @@ footer .footer__btn button {
     width: 50%;
     margin-top: 28px;
     margin-bottom: 28px;
+    margin-left: 30px;
     text-align: left;
   }
   footer .footer__btn {
     position: absolute;
     display: inline-block;
-    right: 0;
+    right: 30px;
   }
   footer .footer__btn button {
     font-size: 1em;
@@ -468,22 +472,37 @@ footer .footer__btn button {
   }
   footer .svg__logo--complet {
     display: inline-block;
+    margin-left: 120px;
   }
   footer .footer__partenaire {
+    padding-top: 22px;
+    margin-right: 120px;
     margin: 0;
-    width: 70%;
+    width: 55%;
   }
   footer .footer__partenaire .img__partenaire {
     width: 30%;
   }
+  footer .footer__group--link {
+    margin-left: 120px;
+  }
+  footer .footer__group--link .footer__list--flhlmq {
+    padding-left: 10%;
+  }
   footer .footer__group--link .footer__title {
     font-size: 1em;
   }
+  footer .footer__sociaux {
+    margin-left: 120px;
+  }
   footer .footer__btn {
     margin-top: 50px;
+    margin-bottom: 50px;
+    right: 120px;
   }
   footer .copyright {
     margin-top: 50px;
+    margin-left: 120px;
   }
 }
 /*--Ajout code message Projet étudant--*/
