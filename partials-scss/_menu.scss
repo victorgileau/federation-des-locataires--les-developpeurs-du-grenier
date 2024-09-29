@@ -1,3 +1,4 @@
+/*Joshua*/
 @use './mixins/btnMenuHover';
 
 * {
@@ -15,10 +16,8 @@ body {
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    padding: 40px 100px;
+    justify-content: center;
+    padding: 40px 0px;
     text-decoration: none;
 
     & .logo img {
@@ -47,16 +46,12 @@ body {
 
 .nav-content {
     margin-top: 120px;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.6s;
-    padding: 40px 100px;
     text-decoration: none;
 }
 
@@ -86,9 +81,13 @@ body {
     width: 35px;
 }
 
+#logoBurger {
+    display: none;
+}
 
 
-@media screen and (max-width: 1200px) {
+
+@media screen and (max-width: 1300px) {
     .navbar {
         margin-top: 120px;
     }
@@ -133,20 +132,43 @@ body {
         padding: 8px;
         font-size: 0.8em;
     }
+
+    #logoBurger {
+        display: block;
+    }
+
+    #logoNormal {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) { 
     .navbar {
-        margin-top: 240px;
+        margin-top: 215px;
     }
 }
 
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 467px) { 
     .navbar {
-        margin-top: 300px;
+        margin-top: 250px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .nav-content {
+        width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+    .nav-content {
+        width: 1300px;
+        margin: 0 auto;
     }
 }
 
 .noMarginTop {
     margin-top: 0;
 }
+

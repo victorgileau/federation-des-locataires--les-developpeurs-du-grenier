@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*----------KENZA: Variables de font-size telephone------------------------*/
 /*----------KENZA: Variables de font-size desktop------------------------*/
+/*Joshua*/
 /*KENZA: Note à parler avant remise: Mettre un padding dans les boutons +s'assurer que le font-weight soit le même en tout temps*/
 * {
   margin: 0;
@@ -19,10 +20,8 @@ body {
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.6s;
-  padding: 40px 100px;
+  justify-content: center;
+  padding: 40px 0px;
   text-decoration: none;
 }
 .navbar .logo img {
@@ -47,16 +46,12 @@ body {
 
 .nav-content {
   margin-top: 120px;
-  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.6s;
-  padding: 40px 100px;
   text-decoration: none;
 }
 
@@ -116,7 +111,11 @@ body {
   width: 35px;
 }
 
-@media screen and (max-width: 1200px) {
+#logoBurger {
+  display: none;
+}
+
+@media screen and (max-width: 1300px) {
   .navbar {
     margin-top: 120px;
   }
@@ -156,15 +155,33 @@ body {
     padding: 8px;
     font-size: 0.8em;
   }
+  #logoBurger {
+    display: block;
+  }
+  #logoNormal {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .navbar {
-    margin-top: 240px;
+    margin-top: 215px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 467px) {
   .navbar {
-    margin-top: 300px;
+    margin-top: 250px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .nav-content {
+    width: 1400px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+  .nav-content {
+    width: 1300px;
+    margin: 0 auto;
   }
 }
 .noMarginTop {
@@ -611,9 +628,9 @@ footer .footer__btn button {
 }
 @media screen and (min-width: 1400px) {
   .messageProjetEtudant {
-    width: 1200px;
+    width: 1400px;
     margin: 0 auto;
-    grid-template-columns: 50vw auto 5vw;
+    grid-template-columns: 1000px auto auto;
   }
   .messageProjetEtudant__msg {
     padding: 0;
@@ -621,6 +638,9 @@ footer .footer__btn button {
   }
   .messageProjetEtudant__btn {
     justify-self: end;
+  }
+  .messageProjetEtudant__closeBtn {
+    margin: 0;
   }
 }
 .displayNone {

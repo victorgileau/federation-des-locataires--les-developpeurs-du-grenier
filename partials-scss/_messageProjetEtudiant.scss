@@ -102,15 +102,18 @@
 
 @media screen and (min-width: 1400px) {
     .messageProjetEtudant {
-        width: 1200px;
+        width: 1400px;
         margin: 0 auto;
-        grid-template-columns: 50vw auto 5vw;
+        grid-template-columns: 1000px auto auto;
         &__msg {
             padding: 0;
             text-align: left;
         }
         &__btn {
             justify-self: end;
+        }
+        &__closeBtn {
+            margin: 0;
         }
     }
 }
