@@ -1,0 +1,46 @@
+.service {
+    padding: 25px;
+    border-radius: 25px;
+    width: 40vw;
+    height: auto;
+    background-color: rgba(0,0,0,0.5);
+    display: grid;
+    gap: 10px 0;
+    &__titre {
+      font-size: 20px;
+      font-weight: bold;
+      grid-column: span 2;
+      grid-row: 1;
+    }
+    &__icon {
+      justify-self: end;
+      grid-column: 3;
+      grid-row: 1;
+      width: 25px;
+      aspect-ratio: 1/1;
+      background-image: url(https://riot-us.com/wp-content/uploads/2023/11/intro-1634607238.webp);
+      background-position: center;
+      background-size: cover;
+      border-radius: 5px;
+    }
+    &__line {
+      grid-column: span 3;
+      grid-row: 2;
+      hr {
+        height: 1px;
+        color: #000;
+        background-color: #000;
+        border: none;
+      }
+    }
+    &__info {
+      grid-column: span 3;
+      grid-row: 3;
+      margin-bottom: 25px;
+    }
+    &__btn {
+      min-width: 100px;
+      grid-column: 1;
+      grid-row: 4;
+    }
+  }

@@ -1,8 +1,10 @@
 @use 'partials-scss/variables';
 @use 'partials-scss/mixins/mixins';
+@use 'partials-scss/mixins/btnMenuHover';
 @use 'partials-scss/menu';
 @use 'partials-scss/footer';
 @use './partials-scss/messageProjetEtudiant';
+@use './partials-scss/servicesAccueil';
 
 @font-face {
     font-family: 'Raleway';

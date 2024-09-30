@@ -1,140 +1,5 @@
 @use "variables";
 @use "mixins/mixins";
-@use "mixins/btnMenuHover";
-
-
-
-
-/*------------------------TEST GRID----------------------*/
-/*footer{
-  width: 100%;
-  background-color: variables.$LavandreCendre;
-  font-size: variables.$linkSizeMobile;
-  text-decoration: none;
-  color: variables.$noirPoudre;
-  margin-top: 100%;
-
-  .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-    row-gap: 28px;
-
-    .footer__logo{
-      grid-column: 1/3;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      .svg__logo--complet {
-        margin-top: 28px;
-        width: 90%;
-      }
-    }
-      
-
-      .footer__partenaire {
-        grid-column: 1/3;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        .img__partenaire {
-          width: 180px;
-        }
-      }
-
-      .footer__sociaux {
-        grid-column: 1/3;
-        display: flex;
-        justify-content: center;
-        .footer__link {
-          margin-left: 5px;
-          margin-right: 5px;
-        }
-      }
-
-      .footer__group--link {
-        grid-column: 1/3;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        .footer__list{
-          &:nth-child(1){
-            text-align: center;
-            width: 70%;
-            margin-bottom: 28px;
-          }
-          padding-left: 10px;
-          padding-right: 10px;
-          >li{
-            padding-top: 10px;
-          }
-        }
-      }
-
-
-
-    a{
-      color: variables.$noirPoudre;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    .footer__ligne {
-    grid-column: 1/3;
-    padding: none;
-    height: 2px;
-    width: 100%;
-    background-color: variables.$noirPoudre;
-    opacity: 0.2;
-    }
-
-    .copyright {
-      grid-column: 1/3;
-      text-align: center;
-    }
-  
-    .footer__btn {
-      grid-column: 1/3;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 28px;
-      button {
-        font-size: 1.5em;
-      }
-    }
-  }
-}
-
-
-
-@media screen and (min-width: 768px) {
-
-  .footer{
-    .grid{
-    .footer__logo{
-      grid-column: 1;
-      grid-row: 1;
-      
-      }
-
-      .footer__partenaire {
-        grid-column: 2;
-        grid-row: 1;
-      }
-  }
-  }
-  
-  
-}
-
-@media screen and (min-width: 1400px) {
-  footer{
-    font-size: variables.$textSize;
-  }
-}*/
-
-
-/*--------------KENZA: note à sois même, les & fonctionnent pas, essayer de clean up un peu plus------------------------------*/
 
 /*-----------------KENZA: footer pour telephone !--------------------*/
 footer {
@@ -196,6 +61,10 @@ footer {
 
     li {
       padding-top: 10px;
+      opacity: .8;
+      &:hover{
+        opacity: 1;
+      }
     }
 
     .footer__list--contact {
@@ -284,7 +153,7 @@ footer {
     .footer__sociaux {
       width: 15%;
       display: inline-block;
-      margin-left: 30px;
+      margin-left: 20px;
     }
 
     .footer__group--link {
@@ -295,21 +164,21 @@ footer {
 
       .footer__list--contact {
         display: inline-block;
-        width: 30%;
+        width: 20%;
       }
 
       .footer__list--info {
         vertical-align: top;
-        padding-left: 15%;
+        margin-left: 42%;
         display: inline-block;
-        width: 25%;
+        width: 10%;
       }
 
       .footer__list--flhlmq {
         vertical-align: top;
         display: inline-block;
-        padding-left: 27%;
-        width: 43%;
+        margin-left: 10%;
+        width: 15%;
       }
 
       .footer__title {
@@ -343,7 +212,6 @@ footer {
 
     .svg__logo--complet {
       display: inline-block;
-      margin-left: 120px;
     }
     font-size: variables.$linkSize;
     .footer__partenaire {
@@ -357,29 +225,26 @@ footer {
     }
 
     .footer__group--link {
-      margin-left: 120px;
+
+      .footer__list--info {
+        margin-left: 49%;
+      }
 
       .footer__list--flhlmq {
-        padding-left: 10%;
+        margin-left: 5%;
       }
       .footer__title {
         font-size: 1em;
       }
     }
 
-    .footer__sociaux {
-      margin-left:120px;
-    }
-
     .footer__btn {
       margin-top: 50px;
       margin-bottom: 50px;
-      right:120px;
     }
 
     .copyright {
       margin-top: 50px;
-      margin-left:120px;
     }
   }
 }

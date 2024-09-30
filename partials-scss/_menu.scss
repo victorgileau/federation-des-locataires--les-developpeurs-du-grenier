@@ -1,5 +1,6 @@
 /*Joshua*/
 @use './mixins/btnMenuHover';
+@use './mixins/mixins';
 
 * {
     margin: 0;
@@ -59,14 +60,14 @@ body {
     @include btnMenuHover.btnMenuHover;
 }
 
-.btnN {
+.btnBleu {
     padding: 10px;
-    @include btnMenuHover.btnNoir;
+    @include mixins.btnBleu;
 }
 
 .btnB {
     padding: 10px;
-    @include btnMenuHover.btnBlanc;
+    @include mixins.btnBlanc;
 }
 
 .burgerIcon {

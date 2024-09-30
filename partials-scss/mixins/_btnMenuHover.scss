@@ -12,34 +12,3 @@
     }
 }
 
-@mixin btnBlanc {
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    padding: 0.5em;
-    border-radius: 25px;
-    background-color: variables.$blancSel;
-    color: variables.$noirPoudre;
-    border: 1px solid variables.$noirPoudre;
-    &:hover {
-        background-color: variables.$noirPoudre;
-        color: variables.$blancSel;
-        border: 1px solid variables.$blancSel;
-    }
-}
-
-@mixin btnNoir {
-    border: none;
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    padding: 0.5em;
-    border-radius: 25px;
-    background-color: variables.$noirPoudre;
-    color: variables.$blancSel;
-    &:hover {
-        background-color: variables.$blancSel;
-        color: variables.$noirPoudre;
-        border: 1px solid variables.$noirPoudre ;
-    }
-}

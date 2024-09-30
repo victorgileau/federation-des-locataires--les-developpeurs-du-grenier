@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /*----------KENZA: Variables de font-size telephone------------------------*/
 /*----------KENZA: Variables de font-size desktop------------------------*/
-/*Joshua*/
 /*KENZA: Note à parler avant remise: Mettre un padding dans les boutons +s'assurer que le font-weight soit le même en tout temps*/
+/*Joshua*/
 * {
   margin: 0;
   padding: 0;
@@ -65,21 +65,24 @@ body {
   background-size: 120% 25%;
 }
 
-.btnN {
+.btnBleu {
   padding: 10px;
   border: none;
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: linear;
-  padding: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   border-radius: 25px;
-  background-color: #2A2A2A;
+  background-color: #022B3A;
   color: #ffffff;
 }
-.btnN:hover {
+.btnBleu:hover {
   background-color: #ffffff;
-  color: #2A2A2A;
-  border: 1px solid #2A2A2A;
+  color: #022B3A;
+  border: 1px solid #022B3A;
 }
 
 .btnB {
@@ -87,14 +90,17 @@ body {
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: linear;
-  padding: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   border-radius: 25px;
   background-color: #ffffff;
-  color: #2A2A2A;
-  border: 1px solid #2A2A2A;
+  color: #022B3A;
+  border: 1px solid #022B3A;
 }
 .btnB:hover {
-  background-color: #2A2A2A;
+  background-color: #022B3A;
   color: #ffffff;
   border: 1px solid #ffffff;
 }
@@ -188,134 +194,6 @@ body {
   margin-top: 0;
 }
 
-/*------------------------TEST GRID----------------------*/
-/*footer{
-  width: 100%;
-  background-color: variables.$LavandreCendre;
-  font-size: variables.$linkSizeMobile;
-  text-decoration: none;
-  color: variables.$noirPoudre;
-  margin-top: 100%;
-
-  .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    row-gap: 28px;
-
-    .footer__logo{
-      grid-column: 1/3;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      .svg__logo--complet {
-        margin-top: 28px;
-        width: 90%;
-      }
-    }
-
-
-      .footer__partenaire {
-        grid-column: 1/3;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        .img__partenaire {
-          width: 180px;
-        }
-      }
-
-      .footer__sociaux {
-        grid-column: 1/3;
-        display: flex;
-        justify-content: center;
-        .footer__link {
-          margin-left: 5px;
-          margin-right: 5px;
-        }
-      }
-
-      .footer__group--link {
-        grid-column: 1/3;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        .footer__list{
-          &:nth-child(1){
-            text-align: center;
-            width: 70%;
-            margin-bottom: 28px;
-          }
-          padding-left: 10px;
-          padding-right: 10px;
-          >li{
-            padding-top: 10px;
-          }
-        }
-      }
-
-
-
-    a{
-      color: variables.$noirPoudre;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .footer__ligne {
-    grid-column: 1/3;
-    padding: none;
-    height: 2px;
-    width: 100%;
-    background-color: variables.$noirPoudre;
-    opacity: 0.2;
-    }
-
-    .copyright {
-      grid-column: 1/3;
-      text-align: center;
-    }
-
-    .footer__btn {
-      grid-column: 1/3;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 28px;
-      button {
-        font-size: 1.5em;
-      }
-    }
-  }
-}
-
-
-
-@media screen and (min-width: 768px) {
-
-  .footer{
-    .grid{
-    .footer__logo{
-      grid-column: 1;
-      grid-row: 1;
-
-      }
-
-      .footer__partenaire {
-        grid-column: 2;
-        grid-row: 1;
-      }
-  }
-  }
-
-
-}
-
-@media screen and (min-width: 1400px) {
-  footer{
-    font-size: variables.$textSize;
-  }
-}*/
-/*--------------KENZA: note à sois même, les & fonctionnent pas, essayer de clean up un peu plus------------------------------*/
 /*-----------------KENZA: footer pour telephone !--------------------*/
 footer {
   margin-top: 100%;
@@ -369,6 +247,10 @@ footer .footer__group--link .footer__list {
 }
 footer .footer__group--link li {
   padding-top: 10px;
+  opacity: 0.8;
+}
+footer .footer__group--link li:hover {
+  opacity: 1;
 }
 footer .footer__group--link .footer__list--contact {
   width: 70%;
@@ -438,7 +320,7 @@ footer .footer__btn button {
   footer .footer__sociaux {
     width: 15%;
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 20px;
   }
   footer .footer__group--link {
     display: inline-block;
@@ -448,19 +330,19 @@ footer .footer__btn button {
   }
   footer .footer__group--link .footer__list--contact {
     display: inline-block;
-    width: 30%;
+    width: 20%;
   }
   footer .footer__group--link .footer__list--info {
     vertical-align: top;
-    padding-left: 15%;
+    margin-left: 42%;
     display: inline-block;
-    width: 25%;
+    width: 10%;
   }
   footer .footer__group--link .footer__list--flhlmq {
     vertical-align: top;
     display: inline-block;
-    padding-left: 27%;
-    width: 43%;
+    margin-left: 10%;
+    width: 15%;
   }
   footer .footer__group--link .footer__title {
     font-size: 1em;
@@ -489,7 +371,6 @@ footer .footer__btn button {
   }
   footer .svg__logo--complet {
     display: inline-block;
-    margin-left: 120px;
   }
   footer .footer__partenaire {
     padding-top: 22px;
@@ -500,26 +381,21 @@ footer .footer__btn button {
   footer .footer__partenaire .img__partenaire {
     width: 30%;
   }
-  footer .footer__group--link {
-    margin-left: 120px;
+  footer .footer__group--link .footer__list--info {
+    margin-left: 49%;
   }
   footer .footer__group--link .footer__list--flhlmq {
-    padding-left: 10%;
+    margin-left: 5%;
   }
   footer .footer__group--link .footer__title {
     font-size: 1em;
   }
-  footer .footer__sociaux {
-    margin-left: 120px;
-  }
   footer .footer__btn {
     margin-top: 50px;
     margin-bottom: 50px;
-    right: 120px;
   }
   footer .copyright {
     margin-top: 50px;
-    margin-left: 120px;
   }
 }
 /*--Ajout code message Projet étudant--*/
@@ -551,11 +427,14 @@ footer .footer__btn button {
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: linear;
-  padding: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
   border-radius: 25px;
   background-color: #ffffff;
-  color: #2A2A2A;
-  border: 1px solid #2A2A2A;
+  color: #022B3A;
+  border: 1px solid #022B3A;
   margin: 0 2vw;
   padding: 5px 10px;
   width: 100px;
@@ -563,7 +442,7 @@ footer .footer__btn button {
   justify-self: center;
 }
 .messageProjetEtudant__btn:hover {
-  background-color: #2A2A2A;
+  background-color: #022B3A;
   color: #ffffff;
   border: 1px solid #ffffff;
 }
@@ -648,6 +527,53 @@ footer .footer__btn button {
 }
 
 /*--Fin Ajout code message Projet étudant--*/
+.service {
+  padding: 25px;
+  border-radius: 25px;
+  width: 40vw;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  gap: 10px 0;
+}
+.service__titre {
+  font-size: 20px;
+  font-weight: bold;
+  grid-column: span 2;
+  grid-row: 1;
+}
+.service__icon {
+  justify-self: end;
+  grid-column: 3;
+  grid-row: 1;
+  width: 25px;
+  aspect-ratio: 1/1;
+  background-image: url(https://riot-us.com/wp-content/uploads/2023/11/intro-1634607238.webp);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+.service__line {
+  grid-column: span 3;
+  grid-row: 2;
+}
+.service__line hr {
+  height: 1px;
+  color: #000;
+  background-color: #000;
+  border: none;
+}
+.service__info {
+  grid-column: span 3;
+  grid-row: 3;
+  margin-bottom: 25px;
+}
+.service__btn {
+  min-width: 100px;
+  grid-column: 1;
+  grid-row: 4;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");

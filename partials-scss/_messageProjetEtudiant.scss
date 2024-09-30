@@ -1,5 +1,5 @@
 @use './variables';
-@use './mixins/btnMenuHover';
+@use './mixins/mixins';
 
 /*--Ajout code message Projet étudant--*/
 
@@ -28,7 +28,7 @@
     }
     &__btn {
         grid-row: 3;
-        @include btnMenuHover.btnBlanc;
+        @include mixins.btnBlanc;
         margin: 0 2vw;
         padding: 5px 10px;
         width: 100px;
