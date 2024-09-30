@@ -660,6 +660,205 @@ footer .footer__btn button {
   color: #E1E5F2;
 }
 
+body {
+  height: 120vh;
+}
+
+.hero {
+  margin-top: 30vh;
+  width: 100%;
+  height: auto;
+}
+.hero__container {
+  margin: auto;
+  height: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 100%;
+}
+.hero__container .info {
+  font-family: "Raleway";
+  padding: 25px;
+  text-align: center;
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-rows: 180px 380px auto;
+}
+.hero__container .info__nomEntreprise {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  font-size: 36px;
+}
+.hero__container .info__msgEntreprise {
+  grid-row: 2;
+  grid-column: 1;
+  align-self: center;
+  font-size: 72px;
+}
+.hero__container .info__msgEntreprise em {
+  font-style: normal;
+  font-size: 80px;
+  background-image: url(./medias/img/hero_background_svg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-family: "JustMe";
+}
+.hero__container .info__msgEntreprise em strong {
+  font-weight: normal;
+  font-family: "JustMe";
+  color: #1F7A8C;
+}
+.hero__container .info__btn {
+  width: 250px;
+  margin: 2vh 0;
+  align-self: center;
+  font-size: 24px;
+  padding: 1vh 3vw;
+}
+.hero__container .info__btn--un {
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 25px;
+  background-color: #2A2A2A;
+  color: #ffffff;
+  font-weight: bold;
+  justify-self: center;
+  grid-row: 3;
+}
+.hero__container .info__btn--un:hover {
+  background-color: #ffffff;
+  color: #2A2A2A;
+  border: 1px solid #2A2A2A;
+}
+.hero__container .info__btn--deux {
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #022B3A;
+  border: 1px solid #022B3A;
+  font-weight: bold;
+  justify-self: center;
+  grid-row: 4;
+}
+.hero__container .info__btn--deux:hover {
+  background-color: #022B3A;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.hero__container .info__btn--deux svg {
+  margin-left: 10px;
+  width: 25px;
+}
+.hero__container .info__btn--deux svg path {
+  fill: #022B3A;
+}
+.hero__container .info__btn--deux:hover svg path {
+  fill: #ffffff;
+}
+.hero__container .swiper {
+  z-index: -1;
+  margin: 5vh 0;
+  justify-self: center;
+  width: 80%;
+  aspect-ratio: 3/4;
+  grid-column: 1;
+  grid-row: 2;
+}
+.hero__container .swiper .swiper-pagination {
+  position: absolute;
+}
+.hero__container .swiper .swiper-slide__img {
+  width: 100%;
+  height: 95%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  border-radius: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-top: 20vh;
+  }
+  .hero__container .info {
+    grid-template-rows: 100px 250px auto;
+  }
+  .hero__container .info__nomEntreprise {
+    grid-column: span 2;
+  }
+  .hero__container .info__msgEntreprise {
+    grid-column: span 2;
+  }
+  .hero__container .info__btn {
+    grid-row: 4;
+  }
+  .hero__container .info__btn--un {
+    margin-right: 2vw;
+    grid-column: 1;
+    justify-self: end;
+  }
+  .hero__container .info__btn--deux {
+    justify-self: start;
+    grid-column: 2;
+  }
+  .hero__container .swiper {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    grid-template-columns: 60% 40%;
+  }
+  .hero__container .info {
+    text-align: left;
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-rows: none;
+  }
+  .hero__container .info__nomEntreprise {
+    align-self: center;
+    grid-row: 2/3;
+    grid-column: 1/3;
+  }
+  .hero__container .info__msgEntreprise {
+    align-self: center;
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .hero__container .info__btn {
+    grid-row: 4;
+  }
+  .hero__container .info__btn--un {
+    justify-self: start;
+  }
+  .hero__container .info__btn--deux {
+    justify-self: start;
+    margin-right: 120px;
+  }
+  .hero__container .swiper {
+    width: 100%;
+    aspect-ratio: 3/5;
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");

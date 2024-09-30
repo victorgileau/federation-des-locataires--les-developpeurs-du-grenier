@@ -30,3 +30,19 @@ btnMessageProjetEtudiant.addEventListener('click', () => {
 });
 
 /*--Fin Code ajouter msg étudant--*/
+
+/*--Code swiper hero--*/
+
+var swiper = new Swiper(".hero_swiper", {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+                delay: 3000,
+        },
+        pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+        },
+});
+
+/*--Code swiper hero--*/
