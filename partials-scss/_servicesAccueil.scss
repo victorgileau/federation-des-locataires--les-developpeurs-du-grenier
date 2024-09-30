@@ -19,12 +19,14 @@
     }
     .services__cards{
         display: flex;
-        max-width: 70%;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 95%;
         .service {
             margin: 20px;
             padding: 25px;
             border-radius: 25px;
-            width: 40vw;
+            width: 70%;
             height: auto;
             background-color: variables.$noirPoudre;
             display: grid;
@@ -98,11 +100,26 @@
 /*---------------KENZA: media queries tablette---------------*/
 
 @media screen and (min-width: 768px){
-
+  .services{
+    .services__cards{
+      .service{
+        width: 35%;
+      }
+    }
+    
+}
 }
 
 /*---------------KENZA: media queries desktop---------------*/
 
 @media screen and (min-width: 1440px){
+  .services{
+    .services__cards{
+      .service{
+        width: 20%;
+      }
+    }
+    
+}
   
 }

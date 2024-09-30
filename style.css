@@ -548,13 +548,15 @@ footer .footer__btn button {
 }
 .services .services__cards {
   display: flex;
-  max-width: 70%;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 95%;
 }
 .services .services__cards .service {
   margin: 20px;
   padding: 25px;
   border-radius: 25px;
-  width: 40vw;
+  width: 70%;
   height: auto;
   background-color: #2A2A2A;
   display: grid;
@@ -636,7 +638,28 @@ footer .footer__btn button {
 }
 
 /*---------------KENZA: media queries tablette---------------*/
+@media screen and (min-width: 768px) {
+  .services .services__cards .service {
+    width: 35%;
+  }
+}
 /*---------------KENZA: media queries desktop---------------*/
+@media screen and (min-width: 1440px) {
+  .services .services__cards .service {
+    width: 20%;
+  }
+}
+.temoignages {
+  display: none;
+  justify-content: center;
+  width: 100vw;
+  height: 100vw;
+  background: linear-gradient(#2A2A2A 40%, #ffffff 100%);
+}
+.temoignages__titre {
+  color: #E1E5F2;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
@@ -675,7 +698,7 @@ h2 {
 
 h3 {
   font-size: 24px;
-  color: #022B3A;
+  color: #2A2A2A;
   font-weight: medium;
 }
 

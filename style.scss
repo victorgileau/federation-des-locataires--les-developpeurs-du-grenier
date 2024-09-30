@@ -5,6 +5,7 @@
 @use 'partials-scss/footer';
 @use './partials-scss/messageProjetEtudiant';
 @use './partials-scss/servicesAccueil';
+@use "./partials-scss/temoignages";
 
 @font-face {
     font-family: 'Raleway';
@@ -46,7 +47,7 @@ h2{
 
 h3{
     font-size: 24px;
-    color: variables.$bleuNuit;
+    color: variables.$noirPoudre;
     font-weight: medium;
 }
 

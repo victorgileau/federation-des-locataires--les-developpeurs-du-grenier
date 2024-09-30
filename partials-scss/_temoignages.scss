@@ -1,0 +1,12 @@
+@use "./variables";
+
+.temoignages{
+    display: none;
+    justify-content: center;
+    width: 100vw;
+    height: 100vw;
+    background: linear-gradient( variables.$noirPoudre 40%, variables.$blancSel 100%);
+    &__titre{
+        color: variables.$LavandreCendre;
+    }
+}
