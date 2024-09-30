@@ -6,6 +6,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     .services__background{
@@ -92,4 +93,16 @@
           }
     }
     
+}
+
+/*---------------KENZA: media queries tablette---------------*/
+
+@media screen and (min-width: 768px){
+
+}
+
+/*---------------KENZA: media queries desktop---------------*/
+
+@media screen and (min-width: 1440px){
+  
 }
