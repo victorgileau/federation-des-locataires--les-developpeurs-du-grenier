@@ -12,6 +12,7 @@
     background-color: variables.$blancSel;
     color: variables.$bleuNuit;
     border: 1px solid variables.$bleuNuit;
+    font-weight: bold;
     &:hover {
         background-color: variables.$bleuNuit;
         color: variables.$blancSel;
@@ -31,6 +32,7 @@
     border-radius: 25px;
     background-color: variables.$noirPoudre;
     color: variables.$blancSel;
+    font-weight: bold;
     &:hover {
         background-color: variables.$blancSel;
         color: variables.$noirPoudre;
@@ -52,9 +54,50 @@
     border-radius: 25px;
     background-color: variables.$bleuNuit;
     color: variables.$blancSel;
+    font-weight: bold;
     &:hover {
         background-color: variables.$blancSel;
         color: variables.$bleuNuit;
         border: 1px solid variables.$bleuNuit ;
+    }
+}
+
+@mixin btnLavendreS {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0em;
+    padding-right: 2em;
+    border-radius: 25px;
+    background-color: variables.$lavandrepetant;
+    color: variables.$noirPoudre;
+    font-weight: bold;
+    &:hover {
+        background-color: variables.$noirPoudre;
+        color: variables.$lavandrepetant;
+        border: 1px solid variables.$lavandrepetant ;
+    }
+}
+
+@mixin btnLavendre {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0em;
+    padding-right: 1em;
+    border-radius: 25px;
+    background-color: variables.$lavandrepetant;
+    color: variables.$noirPoudre;
+    font-weight: bold;
+    &:hover {
+        background-color: variables.$noirPoudre;
+        color: variables.$lavandrepetant;
+        border: 1px solid variables.$lavandrepetant ;
     }
 }

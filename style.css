@@ -78,6 +78,7 @@ body {
   border-radius: 25px;
   background-color: #022B3A;
   color: #ffffff;
+  font-weight: bold;
 }
 .btnBleu:hover {
   background-color: #ffffff;
@@ -98,6 +99,7 @@ body {
   background-color: #ffffff;
   color: #022B3A;
   border: 1px solid #022B3A;
+  font-weight: bold;
 }
 .btnB:hover {
   background-color: #022B3A;
@@ -435,6 +437,7 @@ footer .footer__btn button {
   background-color: #ffffff;
   color: #022B3A;
   border: 1px solid #022B3A;
+  font-weight: bold;
   margin: 0 2vw;
   padding: 5px 10px;
   width: 100px;
@@ -527,51 +530,108 @@ footer .footer__btn button {
 }
 
 /*--Fin Ajout code message Projet étudant--*/
-.service {
+.services {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services .services__background {
+  border-radius: 30px;
+  z-index: -1;
+  position: absolute;
+  width: 90vw;
+  height: 70%;
+  background: linear-gradient(#ffffff 10%, #E1E5F2 100%);
+}
+.services .services__cards {
+  display: flex;
+  max-width: 70%;
+}
+.services .services__cards .service {
+  margin: 20px;
   padding: 25px;
   border-radius: 25px;
   width: 40vw;
   height: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #2A2A2A;
   display: grid;
   gap: 10px 0;
+  color: #ffffff;
+  transition-duration: 0.2s;
 }
-.service__titre {
+.services .services__cards .service__titre {
   font-size: 20px;
   font-weight: bold;
   grid-column: span 2;
   grid-row: 1;
+  color: #ffffff;
 }
-.service__icon {
+.services .services__cards .service__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   justify-self: end;
   grid-column: 3;
   grid-row: 1;
-  width: 25px;
+  width: 30px;
   aspect-ratio: 1/1;
-  background-image: url(https://riot-us.com/wp-content/uploads/2023/11/intro-1634607238.webp);
-  background-position: center;
-  background-size: cover;
+  background-color: #E1E5F2;
   border-radius: 5px;
 }
-.service__line {
+.services .services__cards .service__icon svg {
+  fill: #2A2A2A;
+  width: 18px;
+}
+.services .services__cards .service__line {
   grid-column: span 3;
   grid-row: 2;
 }
-.service__line hr {
+.services .services__cards .service__line hr {
   height: 1px;
-  color: #000;
-  background-color: #000;
+  color: #ffffff;
+  background-color: #ffffff;
   border: none;
 }
-.service__info {
+.services .services__cards .service__info {
   grid-column: span 3;
   grid-row: 3;
   margin-bottom: 25px;
 }
-.service__btn {
-  min-width: 100px;
+.services .services__cards .service__btn {
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0em;
+  padding-right: 2em;
+  border-radius: 25px;
+  background-color: #D7E0FF;
+  color: #2A2A2A;
+  font-weight: bold;
+  position: relative;
+  padding-left: 0.5em;
+  width: 120px;
+  height: 35px;
   grid-column: 1;
   grid-row: 4;
+}
+.services .services__cards .service__btn:hover {
+  background-color: #2A2A2A;
+  color: #D7E0FF;
+  border: 1px solid #D7E0FF;
+}
+.services .services__cards .service__btn .btn__fleche {
+  position: absolute;
+  width: 16px;
+  margin-left: 5px;
+}
+.services .services__cards .service:hover {
+  transform: translateY(-30px);
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.5);
 }
 
 @font-face {
