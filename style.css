@@ -542,19 +542,25 @@ footer .footer__btn button {
   justify-content: center;
   align-items: center;
 }
+.services p {
+  margin-top: 20px;
+  text-align: center;
+}
 .services .services__background {
   border-radius: 30px;
   z-index: -1;
   position: absolute;
   width: 90vw;
-  height: 70%;
-  background: linear-gradient(#ffffff 10%, #E1E5F2 100%);
+  height: 450px;
+  background: linear-gradient(#ffffff 5%, #E1E5F2 20%);
 }
 .services .services__cards {
+  margin-top: 150px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 95%;
+  min-height: 350px;
 }
 .services .services__cards .service {
   margin: 20px;
@@ -644,7 +650,7 @@ footer .footer__btn button {
 /*---------------KENZA: media queries tablette---------------*/
 @media screen and (min-width: 768px) {
   .services .services__cards .service {
-    width: 35%;
+    width: 40%;
   }
 }
 /*---------------KENZA: media queries desktop---------------*/

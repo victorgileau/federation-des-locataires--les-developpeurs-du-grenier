@@ -8,20 +8,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    p{
+      margin-top: 20px;
+      text-align: center;
+    } 
 
     .services__background{
         border-radius: 30px;
         z-index: -1;
         position: absolute;
         width: 90vw;
-        height: 70%;
-        background: linear-gradient( variables.$blancSel 10%, variables.$LavandreCendre 100%);
+        height: 450px;
+        background: linear-gradient( variables.$blancSel 5%, variables.$LavandreCendre 20%);
     }
     .services__cards{
+      margin-top: 150px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         max-width: 95%;
+        min-height: 350px;
         .service {
             margin: 20px;
             padding: 25px;
@@ -103,7 +110,7 @@
   .services{
     .services__cards{
       .service{
-        width: 35%;
+        width: 40%;
       }
     }
     
