@@ -45,4 +45,29 @@ var swiper = new Swiper(".hero_swiper", {
         },
 });
 
-/*--Code swiper hero--*/
+/*--Fin Code swiper hero--*/
+
+/*--Code swiper Actu--*/
+
+var swiperDeux = new Swiper(".swiperActialite", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        navigation: {
+                nextEl: '.btn-next',
+                prevEl: '.btn-prev',
+        },
+        breakpoints: {
+                768: {
+                        slidesPerView: 2,
+                        loop: true,
+                },
+                1400: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        loop: true,
+                },
+        },
+});
+
+/*--Fin Code swiper Actu--*/
