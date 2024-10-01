@@ -1,0 +1,74 @@
+@use './variables';
+@use './mixins/mixins';
+
+.abonnement {
+    width: 100%;
+    height: 80vh;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .appelAction {
+        z-index: -1;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        text-align: center;
+        background-image: url(./medias/img/accueil_devenir_membre_montreal.jpg);
+        width: 80%;
+        height: 60vh;
+        background-size: cover;
+        background-position: center;
+        border-radius: 25px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Raleway';
+
+        &--over {
+            position: absolute;
+            z-index: 1;
+            border-radius: 25px;
+            backdrop-filter: blur(2px);
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 60vh;
+        }
+
+        &__svgLine {
+            svg {
+                width: 25px;
+            }
+
+            position: absolute;
+            bottom: -13vh;
+            right: 10px;
+        }
+
+        &__titre {
+            font-size: 48px;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 48px;
+            display: flex;
+            align-items: center;
+            color: variables.$bleuNuit;
+        }
+
+        &__btn {
+            @include mixins.btnBlanc;
+            font-size: 48px;
+            border-radius: 100px;
+        }
+    }
+
+}

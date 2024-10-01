@@ -71,3 +71,25 @@ var swiperDeux = new Swiper(".swiperActialite", {
 });
 
 /*--Fin Code swiper Actu--*/
+
+/*-- Code abonnement --*/
+
+gsap.registerPlugin(ScrollTrigger);
+
+let tl = gsap.timeline( {
+  scrollTrigger: {
+    scrub: 1,
+    trigger: '.appelAction',
+    start: '75% 85%',
+    end: '90% 70%',
+  }
+}).to('.appelAction--over', 3, {
+  y: '-45%', 
+  duration: 3,
+  scaleY: 0.1,
+}).to(".appelAction__svgLine", {
+  y: '-56vh',
+  duration: 3,
+}, '-=3');
+
+/*-- Fin Code abonnement --*/

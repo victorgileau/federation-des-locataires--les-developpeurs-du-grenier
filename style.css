@@ -1016,6 +1016,87 @@ footer .footer__btn button {
     font-size: 26px;
   }
 }
+.abonnement {
+  width: 100%;
+  height: 80vh;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.abonnement .appelAction {
+  z-index: -1;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  text-align: center;
+  background-image: url(./medias/img/accueil_devenir_membre_montreal.jpg);
+  width: 80%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway";
+}
+.abonnement .appelAction--over {
+  position: absolute;
+  z-index: 1;
+  border-radius: 25px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 60vh;
+}
+.abonnement .appelAction__svgLine {
+  position: absolute;
+  bottom: -13vh;
+  right: 10px;
+}
+.abonnement .appelAction__svgLine svg {
+  width: 25px;
+}
+.abonnement .appelAction__titre {
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+.abonnement .appelAction__text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  color: #022B3A;
+}
+.abonnement .appelAction__btn {
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #022B3A;
+  border: 1px solid #022B3A;
+  font-weight: bold;
+  font-size: 48px;
+  border-radius: 100px;
+}
+.abonnement .appelAction__btn:hover {
+  background-color: #022B3A;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
