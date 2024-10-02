@@ -1,12 +1,100 @@
 @use "./variables";
 
 .temoignages{
-    display: none;
-    justify-content: center;
-    width: 100vw;
-    height: 100vw;
-    background: linear-gradient( variables.$noirPoudre 40%, variables.$blancSel 100%);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 99vw;
+
+    height: 170vh;
+    background: linear-gradient( variables.$blancSel, variables.$noirPoudre 1%, variables.$noirPoudre 50%, variables.$blancSel 100%);
+    svg{
+        width: 110%;
+    }
     &__titre{
+        margin-top: 50px;
         color: variables.$LavandreCendre;
     }
+
+    .temoignage {
+        color: variables.$blancSel;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 50px;
+
+        @for $i from 1 through 3 {
+            &:nth-of-type(#{$i}) .tem__img {
+                background-image: url("../medias/img/accueil_temoin_0#{$i}.jpg");
+            }
+        }
+        
+        &__titre {
+            margin-top: 20px;
+            margin-bottom: 20px;
+          font-size: 24px;
+          font-weight: bold;
+          p {
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: variables.$weightLight;
+            line-height: 0;
+            font-size: 20px;
+          }
+        }
+        .tem {
+            margin-top: 20px;
+            margin-bottom: 20px;
+          box-shadow: 5px 5px 25px #000;
+          border-radius: 0 25px 25px 25px;
+          height: 200px;
+          width: 100%;
+          overflow: hidden;
+          background-color: variables.$blancSel;
+          color: variables.$noirPoudre;
+          display: grid;
+          grid-template-rows: 200px;
+          column-gap: 25px;
+
+          
+          &__img {
+            grid-column: 1;
+            background-size: cover;
+            background-position: center;
+            aspect-ratio: 1/1;
+            
+          }
+          &__info {
+            padding-left: 0;
+            padding-right: 20px;
+            width: 100%;
+            font-style: italic;
+            font-size: 16px;
+            align-self: center;
+            grid-column: 2 / span 4;
+          }
+        }
+      }
+      
 }
+
+
+  @media screen and (min-width: 768px) {
+
+  }
+
+  @media screen and (min-width: 1440px) {
+    .temoignages{
+        .temoignage {
+            width: 80%;
+            .tem {
+              
+              &__img {
+                background-position-y: 50%;
+              }
+            }
+          }
+    }
+    
+  }

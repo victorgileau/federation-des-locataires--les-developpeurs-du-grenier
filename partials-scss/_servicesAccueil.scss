@@ -8,10 +8,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
     
     p{
       margin-top: 20px;
       text-align: center;
+      font-size: variables.$textSize;
+      font-weight: variables.$weightMedium;
     } 
 
     .services__background{

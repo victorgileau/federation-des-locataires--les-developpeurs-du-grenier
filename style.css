@@ -541,10 +541,14 @@ footer .footer__btn button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 .services p {
   margin-top: 20px;
   text-align: center;
+  font-size: 36px;
+  font-weight: 500;
 }
 .services .services__background {
   border-radius: 30px;
@@ -660,16 +664,89 @@ footer .footer__btn button {
   }
 }
 .temoignages {
-  display: none;
-  justify-content: center;
-  width: 100vw;
-  height: 100vw;
-  background: linear-gradient(#2A2A2A 40%, #ffffff 100%);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 99vw;
+  height: 170vh;
+  background: linear-gradient(#ffffff, #2A2A2A 1%, #2A2A2A 50%, #ffffff 100%);
+}
+.temoignages svg {
+  width: 110%;
 }
 .temoignages__titre {
+  margin-top: 50px;
   color: #E1E5F2;
 }
+.temoignages .temoignage {
+  color: #ffffff;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+}
+.temoignages .temoignage:nth-of-type(1) .tem__img {
+  background-image: url("../medias/img/accueil_temoin_01.jpg");
+}
+.temoignages .temoignage:nth-of-type(2) .tem__img {
+  background-image: url("../medias/img/accueil_temoin_02.jpg");
+}
+.temoignages .temoignage:nth-of-type(3) .tem__img {
+  background-image: url("../medias/img/accueil_temoin_03.jpg");
+}
+.temoignages .temoignage__titre {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.temoignages .temoignage__titre p {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  line-height: 0;
+  font-size: 20px;
+}
+.temoignages .temoignage .tem {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 25px #000;
+  border-radius: 0 25px 25px 25px;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #2A2A2A;
+  display: grid;
+  grid-template-rows: 200px;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.temoignages .temoignage .tem__img {
+  grid-column: 1;
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 1/1;
+}
+.temoignages .temoignage .tem__info {
+  padding-left: 0;
+  padding-right: 20px;
+  width: 100%;
+  font-style: italic;
+  font-size: 16px;
+  align-self: center;
+  grid-column: 2/span 4;
+}
 
+@media screen and (min-width: 1440px) {
+  .temoignages .temoignage {
+    width: 80%;
+  }
+  .temoignages .temoignage .tem__img {
+    background-position-y: 50%;
+  }
+}
 .hero {
   margin-top: 25vh;
   width: 100%;
@@ -778,7 +855,7 @@ footer .footer__btn button {
   fill: #ffffff;
 }
 .hero__container .swiper {
-  z-index: -1;
+  z-index: 1;
   margin: 5vh 0;
   justify-self: center;
   width: 80%;
