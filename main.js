@@ -10,6 +10,7 @@ const menuHamburger = document.querySelector(".burgerBtn");
 const btnMessageProjetEtudiant = document.querySelector('.messageProjetEtudant__closeBtn');
 const messageProjetEtudiant = document.querySelector('.messageProjetEtudant');
 const navBar = document.querySelector(".navbar");
+const hero =  document.querySelector(".hero");
 
 if (localStorage.getItem('msgFermer') != null) {
         let msgFermer = localStorage.getItem('msgFermer');
@@ -18,12 +19,14 @@ if (localStorage.getItem('msgFermer') != null) {
                 messageProjetEtudiant.classList.add('displayNone');
                 navBar.classList.add('noMarginTop');
                 navLinks.classList.add('noMarginTop');
+                hero.classList.add('marginNoMsg');
         }
 }
 
 btnMessageProjetEtudiant.addEventListener('click', () => {
         navBar.classList.add('noMarginTop');
         navLinks.classList.add('noMarginTop');
+        hero.classList.add('marginNoMsg');
         messageProjetEtudiant.classList.add('displayNone');
         localStorage.setItem('msgFermer', 'true');
         console.log('test');
@@ -33,7 +36,7 @@ btnMessageProjetEtudiant.addEventListener('click', () => {
 
 /*--Code swiper hero--*/
 
-var swiper = new Swiper(".hero_swiper", {
+let swiper = new Swiper(".hero_swiper", {
         slidesPerView: 1,
         loop: true,
         autoplay: {
@@ -49,7 +52,7 @@ var swiper = new Swiper(".hero_swiper", {
 
 /*--Code swiper Actu--*/
 
-var swiperDeux = new Swiper(".swiperActialite", {
+let swiperDeux = new Swiper(".swiperActialite", {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: true,
@@ -64,7 +67,6 @@ var swiperDeux = new Swiper(".swiperActialite", {
                 },
                 1400: {
                         slidesPerView: 3,
-                        spaceBetween: 30,
                         loop: true,
                 },
         },

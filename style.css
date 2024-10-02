@@ -754,8 +754,12 @@ footer .footer__btn button {
     background-position-y: 50%;
   }
 }
+.hero.marginNoMsg {
+  margin-top: 10vh;
+}
+
 .hero {
-  margin-top: 25vh;
+  margin-top: 28vh;
   width: 100%;
   padding: 0 20px;
   height: auto;
@@ -774,7 +778,7 @@ footer .footer__btn button {
   grid-column: 1;
   grid-row: 1;
   display: grid;
-  grid-template-rows: 180px 380px auto;
+  grid-template-rows: auto auto auto;
 }
 .hero__container .info__nomEntreprise {
   grid-row: 1;
@@ -884,11 +888,14 @@ footer .footer__btn button {
 }
 
 @media screen and (min-width: 768px) {
+  .hero.marginNoMsg {
+    margin-top: 6vh;
+  }
   .hero {
-    margin-top: 15vh;
+    margin-top: 16vh;
   }
   .hero__container .info {
-    grid-template-rows: 100px 250px auto;
+    grid-template-rows: auto auto auto;
   }
   .hero__container .info__nomEntreprise {
     grid-column: span 2;
@@ -913,6 +920,12 @@ footer .footer__btn button {
   }
 }
 @media screen and (min-width: 1200px) {
+  .hero.marginNoMsg {
+    margin-top: 6vh;
+  }
+  .hero {
+    margin-top: 12vh;
+  }
   .hero__container {
     grid-template-columns: 60% 40%;
   }
@@ -954,18 +967,16 @@ footer .footer__btn button {
   width: 100%;
   max-width: 1400px;
   margin: auto;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 80vh;
 }
 .actualites h1 {
-  justify-self: flex-end;
+  text-align: center;
   color: #022B3A;
+  height: 10vh;
 }
 
 .swiper-nav {
+  height: 5vh;
   position: relative;
   width: 100%;
   max-width: 1400px;

@@ -1,8 +1,12 @@
 @use './variables';
 @use './mixins/mixins';
 
+.hero.marginNoMsg {
+    margin-top: 10vh;
+}
+
 .hero {
-    margin-top: 25vh;
+    margin-top: 28vh;
     width: 100%;
     padding: 0 20px;
 
@@ -23,7 +27,7 @@
             grid-column: 1;
             grid-row: 1;
             display: grid;
-            grid-template-rows: 180px 380px auto;
+            grid-template-rows: auto auto auto;
 
             &__nomEntreprise {
                 grid-row: 1;
@@ -116,11 +120,14 @@
 }
 
 @media screen and (min-width: 768px) {
+    .hero.marginNoMsg {
+        margin-top: 6vh;
+    }
     .hero {
-        margin-top: 15vh;
+        margin-top: 16vh;
         &__container {
             .info {
-                grid-template-rows: 100px 250px auto;
+                grid-template-rows: auto auto auto;
 
                 &__nomEntreprise {
                     grid-column: span 2;
@@ -154,7 +161,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+    .hero.marginNoMsg {
+        margin-top: 6vh;
+    }
     .hero {
+        margin-top: 12vh;
         &__container {
             grid-template-columns: 60% 40%;
 
