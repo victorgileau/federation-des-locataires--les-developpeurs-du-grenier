@@ -665,9 +665,9 @@ footer .footer__btn button {
   }
 }
 .temoignages {
-  grid-template-areas: "svg svg svg svg" "titre titre titre titre" "myArea1 myArea1 myArea1 ." ". myArea2 myArea2 myArea2" "myArea3 myArea3 myArea3 .";
   /*Victor*/
   display: grid;
+  grid-template-areas: "svg svg svg" "titre titre titre" "myArea1 myArea1 myArea1" "myArea2 myArea2 myArea2" "myArea3 myArea3 myArea3";
   /*fin Victor*/
   overflow-x: hidden;
   width: 99vw;
@@ -695,21 +695,21 @@ footer .footer__btn button {
 }
 .temoignages .temoignage {
   color: #ffffff;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 50px;
 }
 .temoignages .temoignage:nth-of-type() {
   background-color: #E1E5F2;
 }
 .temoignages .temoignage:nth-of-type(1) .tem__img {
-  background-image: url("../medias/img/accueil_temoin_01.jpg");
+  background-image: url("./medias/img/accueil_temoin_01.jpg");
 }
 .temoignages .temoignage:nth-of-type(2) .tem__img {
-  background-image: url("../medias/img/accueil_temoin_02.jpg");
+  background-image: url("./medias/img/accueil_temoin_02.jpg");
 }
 .temoignages .temoignage:nth-of-type(3) .tem__img {
-  background-image: url("../medias/img/accueil_temoin_03.jpg");
+  background-image: url("./medias/img/accueil_temoin_03.jpg");
 }
 .temoignages .temoignage__titre {
   grid-column: span 4;
@@ -719,11 +719,9 @@ footer .footer__btn button {
   font-weight: bold;
 }
 .temoignages .temoignage__titre p {
-  padding: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 300;
-  line-height: 0;
   font-size: 20px;
 }
 .temoignages .temoignage div.tem.cat {
@@ -741,8 +739,8 @@ footer .footer__btn button {
   color: #2A2A2A;
   display: grid;
   grid-template-rows: 20vh;
-  -moz-column-gap: 25px;
-       column-gap: 25px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 .temoignages .temoignage .tem__img {
   grid-column: 1;
@@ -750,23 +748,35 @@ footer .footer__btn button {
   background-position: center;
   aspect-ratio: 1/1;
   height: 100%;
+  width: 90%;
 }
 .temoignages .temoignage .tem__info {
   padding-left: 0;
-  padding-right: 20px;
+  padding-right: 10px;
   width: 100%;
   font-style: italic;
-  font-size: 16px;
+  font-size: 14px;
   align-self: center;
   grid-column: 2/span 4;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .temoignages .temoignage {
-    width: 80%;
+    grid-template-areas: "svg svg svg" "titre titre titre" "myArea1 myArea1 myArea1" "myArea2 myArea2 myArea2" "myArea3 myArea3 myArea3";
+  }
+  .temoignages .temoignage .tem__info {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .temoignages {
+    grid-template-areas: "svg svg svg" "titre titre titre" "myArea1 myArea1 ." ". myArea2 myArea2" "myArea3 myArea3 .";
   }
   .temoignages .temoignage .tem__img {
     background-position-y: 50%;
+  }
+  .temoignages .temoignage .tem__info {
+    font-size: 24px;
   }
 }
 .hero.marginNoMsg {
