@@ -22,7 +22,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 40px 0px;
+  padding: 20px 0px;
   text-decoration: none;
   z-index: 2;
 }
@@ -1215,6 +1215,32 @@ footer .footer__btn button {
   background-color: #022B3A;
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+
+.apropos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  aspect-ratio: 16/9;
+  background-image: url("../medias/img/accueil_a_propos.jpg");
+  background-size: cover;
+}
+.apropos__text {
+  color: white;
+  font-size: 5vw;
+  text-align: center;
+  line-height: 20px;
+}
+.apropos__content {
+  z-index: 2;
+  margin: 0 auto;
+  width: 1400px;
+}
+.apropos__vector {
+  position: absolute;
+  width: 47vw;
+  z-index: 1;
 }
 
 @font-face {

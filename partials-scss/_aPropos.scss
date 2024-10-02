@@ -1,0 +1,29 @@
+.apropos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    aspect-ratio: 16/9;
+    background-image: url('../medias/img/accueil_a_propos.jpg');
+    background-size: cover;
+    &__text {
+      color: white;
+      font-size: 5vw;
+      text-align: center;
+      line-height: 20px;
+
+    }
+    
+    &__content {
+        z-index: 2;
+        margin: 0 auto;
+        width: 1400px;
+    }
+
+
+    &__vector {
+        position: absolute;
+        width: 47vw;
+        z-index: 1;
+    }
+  }
