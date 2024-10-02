@@ -665,20 +665,33 @@ footer .footer__btn button {
   }
 }
 .temoignages {
+  grid-template-areas: "svg svg svg svg" "titre titre titre titre" "myArea1 myArea1 myArea1 ." ". myArea2 myArea2 myArea2" "myArea3 myArea3 myArea3 .";
+  /*Victor*/
+  display: grid;
+  /*fin Victor*/
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 99vw;
   height: 170vh;
   background: linear-gradient(#ffffff, #2A2A2A 1%, #2A2A2A 50%, #ffffff 100%);
 }
 .temoignages svg {
-  width: 110%;
+  grid-area: svg;
+  width: 100%;
 }
 .temoignages__titre {
+  text-align: center;
+  grid-area: titre;
   margin-top: 50px;
   color: #E1E5F2;
+}
+.temoignages .temoignage--un {
+  grid-area: myArea1;
+}
+.temoignages .temoignage--deux {
+  grid-area: myArea2;
+}
+.temoignages .temoignage--trois {
+  grid-area: myArea3;
 }
 .temoignages .temoignage {
   color: #ffffff;
@@ -699,6 +712,7 @@ footer .footer__btn button {
   background-image: url("../medias/img/accueil_temoin_03.jpg");
 }
 .temoignages .temoignage__titre {
+  grid-column: span 4;
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 24px;
@@ -720,13 +734,13 @@ footer .footer__btn button {
   margin-bottom: 20px;
   box-shadow: 5px 5px 25px #000;
   border-radius: 0 25px 25px 25px;
-  height: 200px;
+  height: 20vh;
   width: 100%;
   overflow: hidden;
   background-color: #ffffff;
   color: #2A2A2A;
   display: grid;
-  grid-template-rows: 200px;
+  grid-template-rows: 20vh;
   -moz-column-gap: 25px;
        column-gap: 25px;
 }
@@ -735,6 +749,7 @@ footer .footer__btn button {
   background-size: cover;
   background-position: center;
   aspect-ratio: 1/1;
+  height: 100%;
 }
 .temoignages .temoignage .tem__info {
   padding-left: 0;

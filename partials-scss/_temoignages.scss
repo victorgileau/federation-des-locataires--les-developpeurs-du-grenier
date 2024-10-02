@@ -1,23 +1,48 @@
 @use "./variables";
 
 .temoignages{
+  grid-template-areas:
+  "svg svg svg svg"
+  "titre titre titre titre"
+  "myArea1 myArea1 myArea1 ."
+  ". myArea2 myArea2 myArea2"
+  "myArea3 myArea3 myArea3 .";
+  /*Victor*/
+    display: grid;
+    /*fin Victor*/
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
     width: 99vw;
 
     height: 170vh;
     background: linear-gradient( variables.$blancSel, variables.$noirPoudre 1%, variables.$noirPoudre 50%, variables.$blancSel 100%);
     svg{
-        width: 110%;
+      grid-area: svg;
+        width: 100%;
     }
     &__titre{
+      text-align: center;
+      grid-area: titre;
         margin-top: 50px;
         color: variables.$lavandreCendre;
     }
 
+    .temoignage--un {
+      grid-area: myArea1;
+    }
+
+    .temoignage--deux {
+      grid-area: myArea2;
+    }
+
+    .temoignage--trois {
+      grid-area: myArea3;
+    }
+
     .temoignage {
+      
       &:nth-of-type(){
         background-color: variables.$lavandreCendre;
       }
@@ -27,12 +52,14 @@
         margin-top: 50px;
 
         @for $i from 1 through 3 {
+          
             &:nth-of-type(#{$i}) .tem__img {
                 background-image: url("../medias/img/accueil_temoin_0#{$i}.jpg");
             }
         }
         
         &__titre {
+          grid-column: span 4;
             margin-top: 20px;
             margin-bottom: 20px;
           font-size: 24px;
@@ -55,13 +82,13 @@
             margin-bottom: 20px;
           box-shadow: 5px 5px 25px #000;
           border-radius: 0 25px 25px 25px;
-          height: 200px;
+          height: 20vh;
           width: 100%;
           overflow: hidden;
           background-color: variables.$blancSel;
           color: variables.$noirPoudre;
           display: grid;
-          grid-template-rows: 200px;
+          grid-template-rows: 20vh;
           column-gap: 25px;
 
           
@@ -70,7 +97,7 @@
             background-size: cover;
             background-position: center;
             aspect-ratio: 1/1;
-            
+            height: 100%;
           }
           &__info {
             padding-left: 0;
@@ -82,6 +109,7 @@
             grid-column: 2 / span 4;
           }
         }
+        
       }
       
 }

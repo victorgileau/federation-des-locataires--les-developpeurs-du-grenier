@@ -90,7 +90,7 @@ let tl = gsap.timeline( {
   duration: 3,
   scaleY: 0.1,
 }).to(".appelAction__svgLine", {
-  y: '-56vh',
+  y: '-780px',
   duration: 3,
 }, '-=3');
 
