@@ -686,6 +686,9 @@ footer .footer__btn button {
   margin-right: 20px;
   margin-top: 50px;
 }
+.temoignages .temoignage:nth-of-type() {
+  background-color: #E1E5F2;
+}
 .temoignages .temoignage:nth-of-type(1) .tem__img {
   background-image: url("../medias/img/accueil_temoin_01.jpg");
 }
@@ -708,6 +711,9 @@ footer .footer__btn button {
   font-weight: 300;
   line-height: 0;
   font-size: 20px;
+}
+.temoignages .temoignage div.tem.cat {
+  background-color: #D7E0FF;
 }
 .temoignages .temoignage .tem {
   margin-top: 20px;

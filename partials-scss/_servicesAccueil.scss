@@ -24,7 +24,7 @@
         position: absolute;
         width: 90vw;
         height: 450px;
-        background: linear-gradient( variables.$blancSel 5%, variables.$LavandreCendre 20%);
+        background: linear-gradient( variables.$blancSel 5%, variables.$lavandreCendre 20%);
     }
     .services__cards{
       margin-top: 150px;
@@ -60,7 +60,7 @@
               grid-row: 1;
               width: 30px;
               aspect-ratio: 1/1;
-              background-color: variables.$LavandreCendre;
+              background-color: variables.$lavandreCendre;
               border-radius: 5px;
               svg{
                 fill: variables.$noirPoudre;
