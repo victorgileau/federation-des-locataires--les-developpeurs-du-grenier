@@ -8,10 +8,10 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
     max-width: 1400px;
     margin: auto;
     height: 80vh;
-    h1 {
-        text-align: center;
+    &__titre {
+        width: 100%;
+        justify-self: center;
         color: variables.$bleuNuit;
-        height: 10vh;
     }
 }
 
