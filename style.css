@@ -542,13 +542,17 @@ footer .footer__btn button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   margin-bottom: 100px;
 }
+.services h2 {
+  margin-top: 50px;
+  text-align: center;
+}
 .services p {
+  width: 80%;
   margin-top: 20px;
   text-align: center;
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 500;
 }
 .services .services__background {
@@ -556,11 +560,11 @@ footer .footer__btn button {
   z-index: -1;
   position: absolute;
   width: 90vw;
-  height: 450px;
+  height: 700px;
   background: linear-gradient(#ffffff 5%, #E1E5F2 20%);
 }
 .services .services__cards {
-  margin-top: 150px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -654,12 +658,27 @@ footer .footer__btn button {
 
 /*---------------KENZA: media queries tablette---------------*/
 @media screen and (min-width: 768px) {
+  .services h2 {
+    margin-top: 70px;
+  }
+  .services p {
+    font-size: 22px;
+  }
+  .services .services__cards {
+    margin-top: 150px;
+  }
   .services .services__cards .service {
     width: 40%;
   }
 }
 /*---------------KENZA: media queries desktop---------------*/
 @media screen and (min-width: 1440px) {
+  .services h2 {
+    margin-top: 300px;
+  }
+  .services p {
+    font-size: 36px;
+  }
   .services .services__cards .service {
     width: 20%;
   }
@@ -1164,7 +1183,7 @@ footer .footer__btn button {
   text-align: center;
   background-image: url(./medias/img/accueil_devenir_membre_montreal.jpg);
   width: 80%;
-  height: 500px;
+  height: 700px;
   background-size: cover;
   background-position: center;
   border-radius: 25px;
@@ -1204,7 +1223,7 @@ footer .footer__btn button {
   margin-bottom: 48px;
   display: flex;
   align-items: center;
-  color: #022B3A;
+  color: #ffffff;
 }
 .abonnement .appelAction__btn {
   transition-property: background-color;

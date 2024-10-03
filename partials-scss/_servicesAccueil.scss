@@ -8,13 +8,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
     margin-bottom: 100px;
+
+    h2{
+      margin-top: 50px;
+      text-align: center;
+    }
     
     p{
+      width: 80%;
       margin-top: 20px;
       text-align: center;
-      font-size: variables.$textSize;
+      font-size: variables.$textSizeMobile;
       font-weight: variables.$weightMedium;
     } 
 
@@ -23,11 +28,11 @@
         z-index: -1;
         position: absolute;
         width: 90vw;
-        height: 450px;
+        height: 700px;
         background: linear-gradient( variables.$blancSel 5%, variables.$lavandreCendre 20%);
     }
     .services__cards{
-      margin-top: 150px;
+      margin-top: 50px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -112,7 +117,14 @@
 
 @media screen and (min-width: 768px){
   .services{
+    h2{
+      margin-top: 70px;
+    }
+    p{
+      font-size: 22px;
+    }
     .services__cards{
+      margin-top: 150px;
       .service{
         width: 40%;
       }
@@ -125,7 +137,15 @@
 
 @media screen and (min-width: 1440px){
   .services{
+    h2{
+      
+      margin-top: 300px;
+    }
+    p{
+      font-size: variables.$textSize;
+    }
     .services__cards{
+      
       .service{
         width: 20%;
       }
