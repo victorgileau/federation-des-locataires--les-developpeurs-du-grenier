@@ -3,17 +3,18 @@
 .temoignages{
   
   /*Victor*/
-    display: grid;
+    /*display: grid;
     grid-template-areas:
   "svg svg svg"
   "titre titre titre"
-  "myArea1 myArea1 myArea1"
-  "myArea2 myArea2 myArea2"
-  "myArea3 myArea3 myArea3";
+  "margeTem margeTem margeTem";*/
+ 
     /*fin Victor*/
     overflow-x: hidden;
     width: 99vw;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 
     height: 170vh;
@@ -41,93 +42,110 @@
       grid-area: myArea3;
     }
 
-    .temoignage {
+    .marge__tem{
+      //grid-area: margeTem;
+      display: grid;
+      grid-template-areas:
+      "myArea1 myArea1 myArea1"
+      "myArea2 myArea2 myArea2"
+      "myArea3 myArea3 myArea3";
+      width: 100%;
+      max-width: 1400px;
+      margin: auto;
+      .temoignage {
       
-      &:nth-of-type(){
-        background-color: variables.$lavandreCendre;
-      }
-        color: variables.$blancSel;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 50px;
-
-        @for $i from 1 through 3 {
-            &:nth-of-type(#{$i}) .tem__img {
-                background-image: url("./medias/img/accueil_temoin_0#{$i}.jpg");
+        &:nth-of-type(){
+          background-color: variables.$lavandreCendre;
+        }
+          color: variables.$blancSel;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-top: 50px;
+  
+          @for $i from 1 through 3 {
+              &:nth-of-type(#{$i}) .tem__img {
+                  background-image: url("./medias/img/accueil_temoin_0#{$i}.jpg");
+              }
+          }
+          
+          &__titre {
+            grid-column: span 4;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            p {
+              margin-top: 20px;
+              margin-bottom: 20px;
+              font-weight: variables.$weightLight;
+              font-size: 20px;
             }
-        }
-        
-        &__titre {
-          grid-column: span 4;
-            margin-top: 20px;
-            margin-bottom: 20px;
-          font-size: 24px;
-          font-weight: bold;
-          p {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-weight: variables.$weightLight;
-            font-size: 20px;
           }
-        }
-        div.tem.cat{
-          background-color: variables.$lavandrepetant;
-        }
-        .tem {
-          
-            margin-top: 20px;
-            margin-bottom: 20px;
-          box-shadow: 5px 5px 25px #000;
-          border-radius: 0 25px 25px 25px;
-          height: 20vh;
-          width: 100%;
-          overflow: hidden;
-          background-color: variables.$blancSel;
-          color: variables.$noirPoudre;
-          display: grid;
-          grid-template-rows: 20vh;
-          column-gap: 5px;
-
-          
-          &__img {
-            grid-column: 1;
-            background-size: cover;
-            background-position: center;
-            aspect-ratio: 1/1;
-            height: 100%;
-            width: 90%;
+          div.tem.cat{
+            background-color: variables.$lavandrepetant;
           }
-          &__info {
-            padding-left: 0;
-            padding-right: 10px;
+          .tem {
+            
+              margin-top: 20px;
+              margin-bottom: 20px;
+            box-shadow: 5px 5px 25px #000;
+            border-radius: 0 25px 25px 25px;
+            height: 20vh;
             width: 100%;
-            font-style: italic;
-            font-size: 14px;
-            align-self: center;
-            grid-column: 2 / span 4;
+            overflow: hidden;
+            background-color: variables.$blancSel;
+            color: variables.$noirPoudre;
+            display: grid;
+            grid-template-rows: 20vh;
+            column-gap: 5px;
+  
+            
+            &__img {
+              grid-column: 1;
+              background-size: cover;
+              background-position: center;
+              aspect-ratio: 1/1;
+              height: 100%;
+              width: 90%;
+            }
+            &__info {
+              padding-left: 0;
+              padding-right: 10px;
+              width: 100%;
+              font-style: italic;
+              font-size: 14px;
+              align-self: center;
+              grid-column: 2 / span 4;
+            }
           }
+          
         }
-        
-      }
+
+    }
+
+    
       
 }
 
 
   @media screen and (min-width: 768px) {
     .temoignages{
-      .temoignage{
+      grid-template-areas:
+    "svg svg svg"
+    "titre titre titre";
+      .marge__tem{
+        width: 90%;
         grid-template-areas:
-  "svg svg svg"
-  "titre titre titre"
-  "myArea1 myArea1 myArea1"
-  "myArea2 myArea2 myArea2"
-  "myArea3 myArea3 myArea3";
-
-  .tem{
-    &__info {
-      font-size: 16px;
+      "myArea1 myArea1 myArea1"
+      "myArea2 myArea2 myArea2"
+      "myArea3 myArea3 myArea3";
+        .temoignage{
+    .tem{
+      &__info {
+        font-size: 16px;
+      }
     }
-  }
+        }
       }
     }
 
@@ -137,11 +155,13 @@
     .temoignages{
       grid-template-areas:
   "svg svg svg"
-  "titre titre titre"
-  "myArea1 myArea1 ."
-  ". myArea2 myArea2"
-  "myArea3 myArea3 .";
-        .temoignage {
+  "titre titre titre";
+        .marge__tem{
+          grid-template-areas:
+      "myArea1 myArea1 ."
+      ". myArea2 myArea2"
+      "myArea3 myArea3 .";
+          .temoignage {
             .tem {
               
               &__img {
@@ -154,6 +174,7 @@
               
             }
           }
+        }
     }
     
   }

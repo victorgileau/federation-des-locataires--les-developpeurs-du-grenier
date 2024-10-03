@@ -685,11 +685,17 @@ footer .footer__btn button {
 }
 .temoignages {
   /*Victor*/
-  display: grid;
-  grid-template-areas: "svg svg svg" "titre titre titre" "myArea1 myArea1 myArea1" "myArea2 myArea2 myArea2" "myArea3 myArea3 myArea3";
+  /*display: grid;
+    grid-template-areas:
+  "svg svg svg"
+  "titre titre titre"
+  "margeTem margeTem margeTem";*/
   /*fin Victor*/
   overflow-x: hidden;
   width: 99vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 170vh;
   background: linear-gradient(#ffffff, #2A2A2A 1%, #2A2A2A 50%, #ffffff 100%);
 }
@@ -712,41 +718,48 @@ footer .footer__btn button {
 .temoignages .temoignage--trois {
   grid-area: myArea3;
 }
-.temoignages .temoignage {
+.temoignages .marge__tem {
+  display: grid;
+  grid-template-areas: "myArea1 myArea1 myArea1" "myArea2 myArea2 myArea2" "myArea3 myArea3 myArea3";
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+.temoignages .marge__tem .temoignage {
   color: #ffffff;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 50px;
 }
-.temoignages .temoignage:nth-of-type() {
+.temoignages .marge__tem .temoignage:nth-of-type() {
   background-color: #E1E5F2;
 }
-.temoignages .temoignage:nth-of-type(1) .tem__img {
+.temoignages .marge__tem .temoignage:nth-of-type(1) .tem__img {
   background-image: url("./medias/img/accueil_temoin_01.jpg");
 }
-.temoignages .temoignage:nth-of-type(2) .tem__img {
+.temoignages .marge__tem .temoignage:nth-of-type(2) .tem__img {
   background-image: url("./medias/img/accueil_temoin_02.jpg");
 }
-.temoignages .temoignage:nth-of-type(3) .tem__img {
+.temoignages .marge__tem .temoignage:nth-of-type(3) .tem__img {
   background-image: url("./medias/img/accueil_temoin_03.jpg");
 }
-.temoignages .temoignage__titre {
+.temoignages .marge__tem .temoignage__titre {
   grid-column: span 4;
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
 }
-.temoignages .temoignage__titre p {
+.temoignages .marge__tem .temoignage__titre p {
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 300;
   font-size: 20px;
 }
-.temoignages .temoignage div.tem.cat {
+.temoignages .marge__tem .temoignage div.tem.cat {
   background-color: #D7E0FF;
 }
-.temoignages .temoignage .tem {
+.temoignages .marge__tem .temoignage .tem {
   margin-top: 20px;
   margin-bottom: 20px;
   box-shadow: 5px 5px 25px #000;
@@ -761,7 +774,7 @@ footer .footer__btn button {
   -moz-column-gap: 5px;
        column-gap: 5px;
 }
-.temoignages .temoignage .tem__img {
+.temoignages .marge__tem .temoignage .tem__img {
   grid-column: 1;
   background-size: cover;
   background-position: center;
@@ -769,7 +782,7 @@ footer .footer__btn button {
   height: 100%;
   width: 90%;
 }
-.temoignages .temoignage .tem__info {
+.temoignages .marge__tem .temoignage .tem__info {
   padding-left: 0;
   padding-right: 10px;
   width: 100%;
@@ -780,21 +793,28 @@ footer .footer__btn button {
 }
 
 @media screen and (min-width: 768px) {
-  .temoignages .temoignage {
-    grid-template-areas: "svg svg svg" "titre titre titre" "myArea1 myArea1 myArea1" "myArea2 myArea2 myArea2" "myArea3 myArea3 myArea3";
+  .temoignages {
+    grid-template-areas: "svg svg svg" "titre titre titre";
   }
-  .temoignages .temoignage .tem__info {
+  .temoignages .marge__tem {
+    width: 90%;
+    grid-template-areas: "myArea1 myArea1 myArea1" "myArea2 myArea2 myArea2" "myArea3 myArea3 myArea3";
+  }
+  .temoignages .marge__tem .temoignage .tem__info {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 1440px) {
   .temoignages {
-    grid-template-areas: "svg svg svg" "titre titre titre" "myArea1 myArea1 ." ". myArea2 myArea2" "myArea3 myArea3 .";
+    grid-template-areas: "svg svg svg" "titre titre titre";
   }
-  .temoignages .temoignage .tem__img {
+  .temoignages .marge__tem {
+    grid-template-areas: "myArea1 myArea1 ." ". myArea2 myArea2" "myArea3 myArea3 .";
+  }
+  .temoignages .marge__tem .temoignage .tem__img {
     background-position-y: 50%;
   }
-  .temoignages .temoignage .tem__info {
+  .temoignages .marge__tem .temoignage .tem__info {
     font-size: 24px;
   }
 }
