@@ -3,7 +3,7 @@ wp-admin/
 wp-includes/
 
 # Ignore tout les phps
-*.php
+/*.php
 
 # Ignore readme.html
 readme.html
