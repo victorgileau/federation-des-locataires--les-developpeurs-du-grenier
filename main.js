@@ -90,8 +90,19 @@ let tl = gsap.timeline( {
   duration: 3,
   scaleY: 0.1,
 }).to(".appelAction__svgLine", {
-  y: '-488px',
+  y: '-688px',
   duration: 3,
 }, '-=3');
+
+gsap.to('.appelAction', {
+        backgroundPosition: "20% 120%",
+        ease: 'none',
+        scrollTrigger: {
+                trigger: '.appelAction',
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true,
+        }
+});
 
 /*-- Fin Code abonnement --*/
