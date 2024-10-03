@@ -86,11 +86,11 @@ let tl = gsap.timeline( {
     end: '45% 50%',
   }
 }).to('.appelAction--over', 3, {
-  y: '-45%', 
+  y: '-45%',
   duration: 3,
   scaleY: 0.1,
 }).to(".appelAction__svgLine", {
-  y: '-645px',
+  y: '-525px',
   duration: 3,
 }, '-=3');
 
