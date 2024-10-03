@@ -21,7 +21,7 @@ body {
     justify-content: center;
     padding: 20px 0px;
     text-decoration: none;
-    z-index: 2;
+    z-index: 1000;
 
     & .logo img {
         position: relative;
@@ -79,7 +79,7 @@ body {
 .burgerBtn {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 20px;
     right: 50px;
     width: 35px;
 }

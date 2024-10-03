@@ -1,17 +1,21 @@
+@use './mixins/mixins';
+@use './variables';
+
 .apropos {
+  position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     aspect-ratio: 16/9;
-    background-image: url('../medias/img/accueil_a_propos.jpg');
+    background-image: url('./medias/img/accueil_a_propos.jpg');
     background-size: cover;
     &__text {
       color: white;
-      font-size: 5vw;
+      font-size: 6vw;
       text-align: center;
       line-height: 20px;
-
+      margin-bottom: 5px;
     }
     
     &__content {
@@ -23,7 +27,34 @@
 
     &__vector {
         position: absolute;
-        width: 47vw;
+        width: 60vw;
         z-index: 1;
     }
+
+    &__btn {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 10%;
+    }
+
+    &__desc {
+      width: 70%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 27%;
+      font-size: 2vw;
+      text-align: center;
+      color: white;
+      text-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+      font-weight: variables.$weightMedium;
+    }
+
+  }
+
+  .btnBs {
+    font-size: 2.5vmin;
+    text-align: center;
+    @include mixins.btnBlancSarcelle;
   }

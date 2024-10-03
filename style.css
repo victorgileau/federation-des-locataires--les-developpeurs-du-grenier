@@ -24,7 +24,7 @@ body {
   justify-content: center;
   padding: 20px 0px;
   text-decoration: none;
-  z-index: 2;
+  z-index: 1000;
 }
 .navbar .logo img {
   position: relative;
@@ -116,7 +116,7 @@ body {
 .burgerBtn {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 20px;
   right: 50px;
   width: 35px;
 }
@@ -1186,15 +1186,15 @@ footer .footer__btn button {
     font-size: 26px;
   }
 }
-.abonnement {
+.membre {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   max-width: 1400px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.abonnement .appelAction {
+.membre .appelAction {
   z-index: -1;
   margin: 0;
   overflow: hidden;
@@ -1215,7 +1215,7 @@ footer .footer__btn button {
   justify-content: center;
   font-family: "Raleway";
 }
-.abonnement .appelAction--over {
+.membre .appelAction--over {
   position: absolute;
   z-index: 10;
   border-radius: 25px;
@@ -1226,19 +1226,19 @@ footer .footer__btn button {
   height: 700px;
   pointer-events: none;
 }
-.abonnement .appelAction__svgLine {
+.membre .appelAction__svgLine {
   position: absolute;
   bottom: -13vh;
   right: 10px;
 }
-.abonnement .appelAction__svgLine svg {
+.membre .appelAction__svgLine svg {
   width: 25px;
 }
-.abonnement .appelAction__titre {
+.membre .appelAction__titre {
   font-size: 48px;
   margin-bottom: 25px;
 }
-.abonnement .appelAction__text {
+.membre .appelAction__text {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 48px;
@@ -1246,7 +1246,7 @@ footer .footer__btn button {
   align-items: center;
   color: #ffffff;
 }
-.abonnement .appelAction__btn {
+.membre .appelAction__btn {
   transition-property: background-color;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -1262,26 +1262,28 @@ footer .footer__btn button {
   font-size: 48px;
   border-radius: 100px;
 }
-.abonnement .appelAction__btn:hover {
+.membre .appelAction__btn:hover {
   background-color: #022B3A;
   color: #ffffff;
   border: 1px solid #ffffff;
 }
 
 .apropos {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   aspect-ratio: 16/9;
-  background-image: url("../medias/img/accueil_a_propos.jpg");
+  background-image: url("./medias/img/accueil_a_propos.jpg");
   background-size: cover;
 }
 .apropos__text {
   color: white;
-  font-size: 5vw;
+  font-size: 6vw;
   text-align: center;
   line-height: 20px;
+  margin-bottom: 5px;
 }
 .apropos__content {
   z-index: 2;
@@ -1290,10 +1292,190 @@ footer .footer__btn button {
 }
 .apropos__vector {
   position: absolute;
-  width: 47vw;
+  width: 60vw;
   z-index: 1;
 }
+.apropos__btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+}
+.apropos__desc {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 27%;
+  font-size: 2vw;
+  text-align: center;
+  color: white;
+  text-shadow: 4px 4px 10px rgb(0, 0, 0);
+  font-weight: 500;
+}
 
+.btnBs {
+  font-size: 2.5vmin;
+  text-align: center;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: #1F7A8C;
+  font-weight: bold;
+}
+.btnBs:hover {
+  background-color: #1F7A8C;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.recherchebar {
+  width: 100vw;
+  background-color: #E1E5F2;
+  padding: 50px;
+}
+.recherchebar__text {
+  text-align: center;
+  font-size: 1.5em;
+}
+.recherchebar__content {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 15px;
+}
+
+.search {
+  --padding: 1vw;
+  justify-self: end;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: var(--padding);
+  border-radius: 28px;
+  background-color: white;
+}
+
+.search-input {
+  font-size: 3.5vw;
+  margin-left: var(--padding);
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .recherchebar__content {
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .search {
+    width: 35vw;
+    justify-self: end;
+    max-width: 500px;
+  }
+  .search-input {
+    font-size: 16px;
+    width: 35vw;
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .recherchebar__content {
+    width: 1400px;
+    margin: 0 auto;
+  }
+}
+.abonnement {
+  width: 100vw;
+  padding: 50px 0;
+}
+
+.membership {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
+.membership__form {
+  width: 25vmin;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-right: 10px;
+}
+.membership__input {
+  font-size: 16px;
+  margin-left: var(--padding);
+  outline: none;
+  border-radius: 28px;
+  background: transparent;
+  width: 25vmin;
+  padding: 1.3vmin;
+}
+.membership__text {
+  color: black;
+  font-size: 32px;
+  grid-column: span 2;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.membership__btn {
+  justify-self: center;
+  font-size: 1vw;
+  padding: 1.3vmin;
+}
+.membership__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+  .membership__content {
+    flex-direction: column;
+  }
+  .membership__form {
+    width: 40vmin;
+    margin: 10px 0px;
+  }
+  .membership__input {
+    width: 40vmin;
+  }
+  .membership__btn {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .membership__form {
+    width: 75vmin;
+  }
+  .membership__text {
+    font-size: 4vw;
+  }
+  .membership__input {
+    width: 75vmin;
+    padding: 1.5vmin;
+  }
+  .membership__btn {
+    font-size: 5vmin;
+  }
+}
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");

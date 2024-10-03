@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <!--Fin Ajout lien css-->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Acceuil - FHLMQ</title>
 </head>
 <body>
@@ -101,12 +102,27 @@
                 </div>
             <!--Fin Hero (Victor)-->
         </section>
-        <section class="recherche"></section>
+        <!--Début Recherche (Joshua)-->
+        <section class="recherche">
+          <div class="recherchebar">
+            <div class="recherchebar__content">
+              <h4 class="recherchebar__text">Que cherchez-vous aujourd'hui ?</h4>
+              <form class="search">
+                <span class="search-icon material-symbols-outlined">search</span>
+                <input type="search" class="search-input" placeholder="Cherchez par mots-clés, ex: Actualités">
+              </form>
+               </div>
+            </div>
+        </section>
+        <!--Fin Recherche (Joshua)-->
+
         <section class="a-propos">
           <div class="apropos">
             <div class="apropos__content">
               <h1 class="apropos__text">L'union fait la force</h1>
             </div>
+            <button class="apropos__btn btnBs">Qui sommes-nous ?</button>
+            <p class="apropos__desc">Nous promouvons et défendons les intérêts des locataires pour travailler à l’amélioration de leur qualité de vie</p>
             <img src="./medias/img/a_propos_vector.svg" class="apropos__vector">
           </div>
         </section>
@@ -392,29 +408,39 @@
             
         </section>
         <!--Fin Services(Kenza)-->
-        <section class="membre"></section>
-        <section class="abonnement">
-          <!--Abonnement (Victor)-->
-            <div class="appelAction">
+        <section class="membre">
+                    <!--Abonnement (Victor)-->
+                    <div class="appelAction">
               
-              <div class="appelAction__svgLine">
-                  <svg viewBox="0 0 15 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 54.5C15 58.6421 11.6421 62 7.5 62C3.35786 62 0 58.6421 0 54.5C0 50.3579 3.35786 47 7.5 47C11.6421 47 15 50.3579 15 54.5Z" fill="black"/>
-                    <path d="M6 0H9V49H6V0Z" fill="black"/>
-                  </svg>
-                </div>
-              <h1 class="appelAction__titre">
-                Appel à l'action !
-              </h1>
-              <div class="appelAction__text">
-                Devenir membre fait toute la différence !
-              </div>
-              <div class="appelAction__btn">
-                S'inscrire
-              </div>
-              <div class="appelAction--over"></div>
+                      <div class="appelAction__svgLine">
+                          <svg viewBox="0 0 15 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 54.5C15 58.6421 11.6421 62 7.5 62C3.35786 62 0 58.6421 0 54.5C0 50.3579 3.35786 47 7.5 47C11.6421 47 15 50.3579 15 54.5Z" fill="black"/>
+                            <path d="M6 0H9V49H6V0Z" fill="black"/>
+                          </svg>
+                        </div>
+                      <h1 class="appelAction__titre">
+                        Appel à l'action !
+                      </h1>
+                      <div class="appelAction__text">
+                        Devenir membre fait toute la différence !
+                      </div>
+                      <div class="appelAction__btn">
+                        S'inscrire
+                      </div>
+                      <div class="appelAction--over"></div>
+                    </div>
+                  <!--Fin Abonnement (Victor)-->
+        </section>
+        <section class="abonnement">
+          <div class="membership">
+            <h1 class="membership__text">Abonnez-vous à notre infolettre</h1>
+            <div class="membership__content">
+              <form action="" class="membership__form">
+                <input type="text" class="membership__input" placeholder="votreCourriel@flhlmq.qc.ca">
+              </form>
+              <button class="membership__btn btnBleu">S'abonner</button>
             </div>
-          <!--Fin Abonnement (Victor)-->
+          </div>
         </section> 
     </body>
 <!--Début footer (Kenza)-->
