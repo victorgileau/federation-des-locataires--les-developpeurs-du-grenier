@@ -10,3 +10,6 @@ readme.html
 
 # Ignore license.txt
 license.txt
+
+# Ignorer .htaccess
+.htaccess
