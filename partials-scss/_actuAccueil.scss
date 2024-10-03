@@ -90,7 +90,8 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
 
     &__date {
         margin-bottom: 20px;
-        color: blue;
+        color: variables.$bleuNuit;
+        font-weight: 600;
         grid-row: 1;
         height: 100%;
     }

@@ -1086,7 +1086,8 @@ footer .footer__btn button {
 }
 .actualite__date {
   margin-bottom: 20px;
-  color: blue;
+  color: #022B3A;
+  font-weight: 600;
   grid-row: 1;
   height: 100%;
 }
@@ -1184,7 +1185,7 @@ footer .footer__btn button {
   background-image: url(./medias/img/accueil_devenir_membre_montreal.jpg);
   width: 80%;
   height: 700px;
-  background-size: cover;
+  background-size: 150%;
   background-position: center;
   border-radius: 25px;
   color: #fff;
