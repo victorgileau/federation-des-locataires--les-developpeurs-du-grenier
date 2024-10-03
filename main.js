@@ -82,26 +82,27 @@ let tl = gsap.timeline( {
   scrollTrigger: {
     scrub: 1,
     trigger: '.appelAction',
-    start: '75% 85%',
-    end: '90% 70%',
+    start: '25% 65%',
+    end: '45% 50%',
   }
 }).to('.appelAction--over', 3, {
   y: '-45%', 
   duration: 3,
   scaleY: 0.1,
 }).to(".appelAction__svgLine", {
-  y: '-688px',
+  y: '-645px',
   duration: 3,
 }, '-=3');
 
 gsap.to('.appelAction', {
-        backgroundPosition: "20% 120%",
+        backgroundPosition: "50% 100%",
         ease: 'none',
         scrollTrigger: {
                 trigger: '.appelAction',
-                start: 'top bottom',
-                end: 'bottom top',
+                start: '25% bottom',
+                end: '90% top',
                 scrub: true,
+                
         }
 });
 
