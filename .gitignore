@@ -1,0 +1,12 @@
+# Ignore wp-admin et wp-includes
+wp-admin/
+wp-includes/
+
+# Ignore tout les phps
+*.php
+
+# Ignore readme.html
+readme.html
+
+# Ignore license.txt
+license.txt
