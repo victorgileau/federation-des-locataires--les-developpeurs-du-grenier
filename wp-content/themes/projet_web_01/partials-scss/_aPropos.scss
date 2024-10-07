@@ -6,9 +6,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     aspect-ratio: 16/9;
-    background-image: url('./medias/img/accueil_a_propos.jpg');
+    background-image: url("./medias/img/accueil_a_propos.png");
     background-size: cover;
     &__text {
       color: white;

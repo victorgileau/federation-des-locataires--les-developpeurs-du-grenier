@@ -19,7 +19,7 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
     height: 5vh;
     position: relative;
     width: 100%;
-    max-width: 1400px;
+    //max-width: 1400px;
     margin: auto;
     display: flex;
     justify-content: end;
@@ -52,6 +52,7 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
 }
 
 .swiper {
+    overflow-x: hidden;
     position: relative;
     width: 100%;
     max-width: 1400px;
@@ -60,6 +61,7 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
     height: 60vh;
 
     .swiper-slide {
+        overflow-x: hidden;
         justify-content: center;
         position: relative;
         width: auto;

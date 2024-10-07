@@ -10,18 +10,26 @@
   "margeTem margeTem margeTem";*/
  
     /*fin Victor*/
-    overflow-x: hidden;
-    width: 99vw;
+    //overflow-x: hidden;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     
 
-    height: 170vh;
+    height: 150vh;
+    max-height: 170vh;
     background: linear-gradient( variables.$blancSel, variables.$noirPoudre 1%, variables.$noirPoudre 50%, variables.$blancSel 100%);
     svg{
+      position: absolute;
+      top: 0;
       grid-area: svg;
         width: 100%;
+        overflow-x: hidden;
+        path {
+          width: 110%;
+        }
     }
     &__titre{
       text-align: center;
@@ -51,7 +59,7 @@
       "myArea3 myArea3 myArea3";
       width: 100%;
       max-width: 1400px;
-      margin: auto;
+      margin: 0 auto;
       .temoignage {
       
         &:nth-of-type(){

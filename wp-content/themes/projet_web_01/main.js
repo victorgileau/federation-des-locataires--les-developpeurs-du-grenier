@@ -76,14 +76,15 @@ let swiperDeux = new Swiper(".swiperActialite", {
 
 /*-- Code abonnement --*/
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 let tl = gsap.timeline( {
   scrollTrigger: {
     scrub: 1,
     trigger: '.appelAction',
-    start: '25% 65%',
-    end: '45% 50%',
+    start: '15% 65%',
+    end: '35% 50%',
   }
 }).to('.appelAction--over', 3, {
   y: '-45%',
