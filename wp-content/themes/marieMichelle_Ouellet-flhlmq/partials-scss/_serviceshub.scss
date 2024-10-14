@@ -1,0 +1,136 @@
+@use "./mixins/mixins";
+@use "./variables";
+
+.participations__alignement{
+    display:flex;
+    justify-content: center;
+}
+
+.participation {
+    z-index: 100000;
+    @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}){
+            background-image: url("./medias/img/services_participation_#{$i}.jpg");
+        }
+    }
+    margin:10px;
+    overflow:hidden;
+    position:relative;
+    padding: 25px;
+    border-radius: 25px;
+    width: 20%;
+    background-size:cover;
+    background-position: center;
+    display: grid;
+    gap: 10px 0;
+    
+    &__bg--color{
+      left:0;
+      opacity:0;
+      z-index:1;
+      position:absolute;
+      top:0;
+      width:100%;
+      height:150%;
+      mix-blend-mode:screen;
+      background-color:variables.$lavandrepetant;
+      backdrop-filter: blur(2px);
+      transition:0.5s;
+    }
+    
+    &:hover &__bg--color{
+        transition:0.5s;
+      opacity:1;
+      
+    }
+
+    &:hover &__titre{
+        color: variables.$noirPoudre;
+        
+      }
+    
+    &:hover &__icon{
+      opacity:1;
+    }
+    
+    &:hover &__line{
+      opacity:1;
+    }
+    
+    &:hover &__info{
+      opacity:1;
+    }
+    
+    &:hover &__btn{
+      opacity:1;
+    }
+    
+    
+    &__titre {
+      color:white;
+      z-index:2;
+      font-size: 20px;
+      font-weight: bold;
+      grid-column: span 2;
+      grid-row: 1;
+    }
+    &__icon {
+      z-index:2;
+      transition:0.5s;
+      opacity:0;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+    grid-column: 3;
+    grid-row: 1;
+    width: 30px;
+    aspect-ratio: 1/1;
+    background-color: variables.$noirPoudre;
+    border-radius: 5px;
+    svg{
+    fill: variables.$lavandreCendre;
+    width: 18px;
+    }
+    }
+    &__line {
+      z-index:2;
+      transition:0.5s;
+      opacity:0;
+      grid-column: span 3;
+      grid-row: 2;
+      hr {
+        height: 1px;
+        color: variables.$noirPoudre;
+        background-color: variables.$noirPoudre;
+      border: none;
+      }
+    }
+    &__info {
+      z-index:2;
+      transition:0.5s;
+      opacity:0;
+      grid-column: span 3;
+      grid-row: 3;
+      margin-bottom: 25px;
+    }
+    &__btn {
+      z-index:2;
+      transition:0.5s;
+      opacity:0;
+      @include mixins.btnLavendreSH;
+                position: relative;
+                padding-left: 0.5em;
+                width: 120px;
+                height: 35px;
+                grid-column: 1;
+                grid-row: 4;
+            
+            .btn__fleche{
+                position: absolute;
+                width: 16px;
+                margin-left:5px;
+            }
+              
+        }
+    }
