@@ -141,3 +141,23 @@
         border: 1px solid variables.$noirPoudre;
     }
 }
+
+@mixin btnSarcelleSH {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0em;
+    padding-right: 2em;
+    border-radius: 25px;
+    background-color: variables.$blancSel;
+    color: variables.$bleuSarcelle;
+    font-weight: bold;
+    &:hover {
+        background-color: variables.$bleuSarcelle;
+        color: variables.$blancSel;
+        border: 1px solid variables.$blancSel;
+    }
+}

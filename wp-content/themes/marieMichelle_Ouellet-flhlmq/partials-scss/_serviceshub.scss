@@ -7,7 +7,6 @@
 }
 
 .participation {
-    z-index: 100000;
     @for $i from 1 through 3 {
         &:nth-of-type(#{$i}){
             background-image: url("./medias/img/services_participation_#{$i}.jpg");
@@ -134,3 +133,116 @@
               
         }
     }
+
+    .publications__alignement{
+        display:flex;
+    }
+
+    .publication {
+        @for $i from 1 through 6 {
+          &:nth-of-type(#{$i}) {
+            background-image: url("./medias/img/services_publications_#{$i}.jpg");
+          }
+        }
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+        padding: 25px;
+        border-radius: 25px;
+        width: 20%;
+        background-size: cover;
+        background-position: top;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      
+        &__bg--color {
+          left: 0;
+          opacity: 0;
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 150%;
+          background-color: variables.$bleuSarcelle;
+          backdrop-filter: blur(2px);
+          transition: 0.5s;
+        }
+      
+        &:hover &__bg--color {
+          transition: 0.5s;
+          opacity: 0.8;
+        }
+      
+        &:hover &__titre {
+          color: white;
+        }
+      
+        &:hover &__icon {
+          opacity: 1;
+        }
+      
+        &:hover &__line {
+          opacity: 1;
+        }
+      
+        &:hover &__info {
+          opacity: 1;
+        }
+      
+        &:hover &__btn {
+          opacity: 1;
+        }
+      
+        &__titre {
+          color: variables.$blancSel;
+          z-index: 2;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      
+        &__line {
+            margin-top:10px;
+          z-index: 2;
+          transition: 0.5s;
+          opacity: 0;
+          width: 100%;
+          hr {
+            height: 1px;
+            color: variables.$blancSel;
+            background-color: variables.$blancSel;
+            border: none;
+          }
+        }
+        &__info {
+            display: flex;
+            align-items: center;
+            min-height: 200px;
+            max-height: 250px;
+            margin-top:10px;
+          z-index: 2;
+          transition: 0.5s;
+          opacity: 0;
+          margin-bottom: 25px;
+          color: variables.$blancSel;
+        }
+        &__btn {
+            justify-self: end;
+            @include mixins.btnSarcelleSH;
+          z-index: 2;
+          transition: 0.5s;
+          opacity: 0;
+          position: relative;
+          padding-left: 0.5em;
+          width: 120px;
+          height: 35px;
+      
+          .btn__fleche {
+            position: absolute;
+            width: 16px;
+            margin-left: 5px;
+          }
+        }
+      }
+      
