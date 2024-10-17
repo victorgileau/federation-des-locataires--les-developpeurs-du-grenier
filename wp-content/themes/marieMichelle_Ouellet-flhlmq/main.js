@@ -1,5 +1,6 @@
 const menuHamburger = document.querySelector(".burgerBtn");
         const navLinks = document.querySelector(".nav-content");
+        const servicesHub = document.querySelector(".section__hero--services")
  
         menuHamburger.addEventListener('click',()=>{
         navLinks.classList.toggle('mobile-menu')
@@ -20,6 +21,7 @@ if (localStorage.getItem('msgFermer') != null) {
                 navBar.classList.add('noMarginTop');
                 navLinks.classList.add('noMarginTop');
                 hero.classList.add('marginNoMsg');
+                servicesHub.classList.add('marginNoMsg');
         }
 }
 
