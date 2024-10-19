@@ -1662,8 +1662,10 @@ footer .footer__btn button {
 
 .swiperTest {
   width: 100%;
+  height: 55vh;
 }
 .swiperTest .swiper-slide {
+  height: auto;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -1675,20 +1677,20 @@ footer .footer__btn button {
   text-decoration: none;
 }
 .swiperTest .swiper-slide a .publication {
-  margin: 10px;
   overflow: hidden;
   position: relative;
   padding: 25px;
   border-radius: 25px;
   width: 100%;
-  max-width: 300px;
-  margin: 12 auto;
+  max-width: 100%;
+  height: 55vh;
   padding: 20px;
   background-size: cover;
   background-position: top;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   text-align: center;
 }
 .swiperTest .swiper-slide a .publication__bg--color {
@@ -1705,7 +1707,7 @@ footer .footer__btn button {
 .swiperTest .swiper-slide a .publication__titre {
   color: #ffffff;
   z-index: 2;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: bold;
 }
 .swiperTest .swiper-slide a .publication__line {
@@ -1730,7 +1732,6 @@ footer .footer__btn button {
   z-index: 2;
   transition: 0.5s;
   opacity: 0;
-  margin-bottom: 25px;
   color: #ffffff;
   font-weight: 500;
 }

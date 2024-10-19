@@ -83,14 +83,23 @@ let swiperDeux = new Swiper(".swiperActialite", {
 /*--swiper servicesHub 1--*/
 
 let swiperPubli = new Swiper(".swiperTest", {
-        slidesPerView: 4,
+        slidesPerView: 2,
         centeredSlides: true,
-        
+        spaceBetween:10,
         grabCursor: true,
-    
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+                768: {
+                        slidesPerView:3,
+
+                },
+                1400: {
+                        slidesPerView: 4,
+
+                },
         },
       });
 
