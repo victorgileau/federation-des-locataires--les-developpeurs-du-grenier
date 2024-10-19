@@ -1,6 +1,5 @@
 const menuHamburger = document.querySelector(".burgerBtn");
         const navLinks = document.querySelector(".nav-content");
-        const servicesHub = document.querySelector(".servicesHub")
  
         menuHamburger.addEventListener('click',()=>{
         navLinks.classList.toggle('mobile-menu')
@@ -20,15 +19,20 @@ if (localStorage.getItem('msgFermer') != null) {
                 messageProjetEtudiant.classList.add('displayNone');
                 navBar.classList.add('noMarginTop');
                 navLinks.classList.add('noMarginTop');
-                hero.classList.add('marginNoMsg');
-                servicesHub.classList.add('marginNoMsg');
+                if(hero != null){
+                        hero.classList.add('marginNoMsg');
+                }
+                
         }
 }
 
 btnMessageProjetEtudiant.addEventListener('click', () => {
         navBar.classList.add('noMarginTop');
         navLinks.classList.add('noMarginTop');
-        hero.classList.add('marginNoMsg');
+
+        if(hero != null){
+                hero.classList.add('marginNoMsg');
+        }
         messageProjetEtudiant.classList.add('displayNone');
         localStorage.setItem('msgFermer', 'true');
         console.log('test');
@@ -75,6 +79,20 @@ let swiperDeux = new Swiper(".swiperActialite", {
 });
 
 /*--Fin Code swiper Actu--*/
+
+/*--swiper servicesHub 1--*/
+
+let swiperPubli = new Swiper(".swiperTest", {
+        slidesPerView: 4,
+        centeredSlides: true,
+        
+        grabCursor: true,
+    
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 
 /*-- Code abonnement --*/
 

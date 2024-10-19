@@ -941,7 +941,7 @@ footer .footer__btn button {
 .hero__container .info__btn--deux:hover svg path {
   fill: #ffffff;
 }
-.hero__container .swiper {
+.hero__container .hero_swiper {
   z-index: 2;
   margin: 5vh 0;
   justify-self: center;
@@ -950,11 +950,11 @@ footer .footer__btn button {
   grid-column: 1;
   grid-row: 2;
 }
-.hero__container .swiper .swiper-pagination {
+.hero__container .hero_swiper .swiper-pagination {
   bottom: -2px;
   position: absolute;
 }
-.hero__container .swiper .swiper-slide__img {
+.hero__container .hero_swiper .swiper-slide__img {
   width: 100%;
   height: 95%;
   -o-object-fit: cover;
@@ -1660,17 +1660,30 @@ footer .footer__btn button {
   margin-left: 5px;
 }
 
-.publications__alignement {
-  display: flex;
+.swiperTest {
+  width: 100%;
 }
-
-.publication {
+.swiperTest .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiperTest .swiper-slide a {
+  text-decoration: none;
+}
+.swiperTest .swiper-slide a .publication {
   margin: 10px;
   overflow: hidden;
   position: relative;
   padding: 25px;
   border-radius: 25px;
-  width: 20%;
+  width: 100%;
+  max-width: 300px;
+  margin: 12 auto;
+  padding: 20px;
   background-size: cover;
   background-position: top;
   display: flex;
@@ -1678,25 +1691,7 @@ footer .footer__btn button {
   align-items: center;
   text-align: center;
 }
-.publication:nth-of-type(1) {
-  background-image: url("./medias/img/services_publications_1.jpg");
-}
-.publication:nth-of-type(2) {
-  background-image: url("./medias/img/services_publications_2.jpg");
-}
-.publication:nth-of-type(3) {
-  background-image: url("./medias/img/services_publications_3.jpg");
-}
-.publication:nth-of-type(4) {
-  background-image: url("./medias/img/services_publications_4.jpg");
-}
-.publication:nth-of-type(5) {
-  background-image: url("./medias/img/services_publications_5.jpg");
-}
-.publication:nth-of-type(6) {
-  background-image: url("./medias/img/services_publications_6.jpg");
-}
-.publication__bg--color {
+.swiperTest .swiper-slide a .publication__bg--color {
   left: 0;
   opacity: 0;
   z-index: 1;
@@ -1707,45 +1702,26 @@ footer .footer__btn button {
   background-color: #1F7A8C;
   transition: 0.5s;
 }
-.publication:hover .publication__bg--color {
-  transition: 0.5s;
-  opacity: 0.8;
-}
-.publication:hover .publication__titre {
-  color: white;
-}
-.publication:hover .publication__icon {
-  opacity: 1;
-}
-.publication:hover .publication__line {
-  opacity: 1;
-}
-.publication:hover .publication__info {
-  opacity: 1;
-}
-.publication:hover .publication__btn {
-  opacity: 1;
-}
-.publication__titre {
+.swiperTest .swiper-slide a .publication__titre {
   color: #ffffff;
   z-index: 2;
   font-size: 20px;
   font-weight: bold;
 }
-.publication__line {
+.swiperTest .swiper-slide a .publication__line {
   margin-top: 10px;
   z-index: 2;
   transition: 0.5s;
   opacity: 0;
   width: 100%;
 }
-.publication__line hr {
+.swiperTest .swiper-slide a .publication__line hr {
   height: 1px;
   color: #ffffff;
   background-color: #ffffff;
   border: none;
 }
-.publication__info {
+.swiperTest .swiper-slide a .publication__info {
   display: flex;
   align-items: center;
   min-height: 200px;
@@ -1758,7 +1734,7 @@ footer .footer__btn button {
   color: #ffffff;
   font-weight: 500;
 }
-.publication__btn {
+.swiperTest .swiper-slide a .publication__btn {
   justify-self: end;
   border: none;
   transition-property: background-color;
@@ -1780,15 +1756,52 @@ footer .footer__btn button {
   width: 120px;
   height: 35px;
 }
-.publication__btn:hover {
+.swiperTest .swiper-slide a .publication__btn:hover {
   background-color: #1F7A8C;
   color: #ffffff;
   border: 1px solid #ffffff;
 }
-.publication__btn .btn__fleche {
+.swiperTest .swiper-slide a .publication__btn .btn__fleche {
   position: absolute;
   width: 16px;
   margin-left: 5px;
+}
+.swiperTest .swiper-slide a .publication:hover .publication__bg--color {
+  transition: 0.5s;
+  opacity: 0.8;
+}
+.swiperTest .swiper-slide a .publication:hover .publication__titre {
+  color: white;
+}
+.swiperTest .swiper-slide a .publication:hover .publication__icon {
+  opacity: 1;
+}
+.swiperTest .swiper-slide a .publication:hover .publication__line {
+  opacity: 1;
+}
+.swiperTest .swiper-slide a .publication:hover .publication__info {
+  opacity: 1;
+}
+.swiperTest .swiper-slide a .publication:hover .publication__btn {
+  opacity: 1;
+}
+.swiperTest .swiper-slide--1 .publication {
+  background-image: url("medias/img/services_publications_1.jpg");
+}
+.swiperTest .swiper-slide--2 .publication {
+  background-image: url("medias/img/services_publications_2.jpg");
+}
+.swiperTest .swiper-slide--3 .publication {
+  background-image: url("medias/img/services_publications_3.jpg");
+}
+.swiperTest .swiper-slide--4 .publication {
+  background-image: url("medias/img/services_publications_4.jpg");
+}
+.swiperTest .swiper-slide--5 .publication {
+  background-image: url("medias/img/services_publications_5.jpg");
+}
+.swiperTest .swiper-slide--6 .publication {
+  background-image: url("medias/img/services_publications_6.jpg");
 }
 
 .servicesHub.marginNoMsg {
