@@ -1,6 +1,6 @@
 const menuHamburger = document.querySelector(".burgerBtn");
         const navLinks = document.querySelector(".nav-content");
-        const servicesHub = document.querySelector(".section__hero--services")
+        const servicesHub = document.querySelector(".servicesHub")
  
         menuHamburger.addEventListener('click',()=>{
         navLinks.classList.toggle('mobile-menu')

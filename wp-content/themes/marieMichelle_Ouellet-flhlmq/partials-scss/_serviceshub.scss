@@ -1,15 +1,11 @@
+//KENZA
+
 @use "./mixins/mixins";
 @use "./variables";
 
-.hero__services{
-  width: 100%;
-  background-color: red;
-  .test-img{
-    width: 100%;
-    object-fit: cover;
-  }
+.participations{
+  height: 100vh;
 }
-
 .participations__alignement{
     display:flex;
     justify-content: center;
@@ -18,7 +14,7 @@
 .participation {
     @for $i from 1 through 3 {
         &:nth-of-type(#{$i}){
-            background-image: url("./medias/img/services_participation_#{$i}.jpg");
+            background-image: url("medias/img/services_participation_#{$i}.jpg");
         }
     }
     margin:10px;
@@ -26,8 +22,8 @@
     position:relative;
     padding: 25px;
     border-radius: 25px;
-    width: 20%;
-    height: 60vh;
+    width: 25%;
+    height: 55vh;
     background-size:cover;
     background-position: center;
     display: grid;
@@ -47,7 +43,7 @@
     
     &:hover &__bg--color{
       transition:0.5s;
-      opacity:0.8;
+      opacity:0.85;
       
     }
 
@@ -76,7 +72,7 @@
     &__titre {
       color:white;
       z-index:2;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
       grid-column: span 2;
       grid-row: 1;
@@ -114,6 +110,7 @@
       }
     }
     &__info {
+      font-size: 20px;
       z-index:2;
       transition:0.5s;
       opacity:0;
@@ -233,6 +230,7 @@
           opacity: 0;
           margin-bottom: 25px;
           color: variables.$blancSel;
+          font-weight: variables.$weightMedium;
         }
         &__btn {
             justify-self: end;
@@ -253,15 +251,40 @@
         }
       }
 
-.section__hero--services{
-  margin-top: 300px;
+.servicesHub.marginNoMsg {
+  margin-top: 10vh;
+}
+
+.servicesHub{
+  margin-bottom: 100px;
+  margin-top: 100px;
+  &__titre{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 64px;
+    margin-bottom: 69px;
+    color: variables.$bleuNuit;
+    font-weight: variables.$weightMedium;
+  }
+
+  &__hero{
+    margin-bottom: 52px;
+    width: 100%;
+    height: 75vh;
+    background-image: url("medias/img/services_hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &--topLayer{
+      width: 100%;
+      height: 100%;
+      z-index: 30;
+      background-image: linear-gradient(rgb(0,0,0,0) 20% , variables.$bleuSarcelle 150%);
+    }
+  }
 }
       
 .section__services{
   position: relative;
   width: 100%;
-}
-
-.titre__services{
-  color: variables.$noirPoudre;
 }
