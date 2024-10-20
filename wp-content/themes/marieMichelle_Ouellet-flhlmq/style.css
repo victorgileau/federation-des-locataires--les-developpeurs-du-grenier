@@ -1517,7 +1517,7 @@ footer .footer__btn button {
   }
 }
 .participations {
-  height: 100vh;
+  margin-bottom: 200px;
 }
 
 .participations__alignement {
@@ -1660,11 +1660,13 @@ footer .footer__btn button {
   margin-left: 5px;
 }
 
-.swiperTest {
+.swiperPubli {
+  position: relative;
+  right: 0;
   width: 100%;
-  height: 55vh;
+  height: 45vh;
 }
-.swiperTest .swiper-slide {
+.swiperPubli .swiper-slide {
   height: auto;
   text-align: center;
   font-size: 18px;
@@ -1672,18 +1674,20 @@ footer .footer__btn button {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.swiperTest .swiper-slide a {
+.swiperPubli .swiper-slide a {
   text-decoration: none;
 }
-.swiperTest .swiper-slide a .publication {
+.swiperPubli .swiper-slide a .publication {
   overflow: hidden;
   position: relative;
   padding: 25px;
   border-radius: 25px;
   width: 100%;
   max-width: 100%;
-  height: 55vh;
+  height: 45vh;
   padding: 20px;
   background-size: cover;
   background-position: top;
@@ -1693,7 +1697,7 @@ footer .footer__btn button {
   justify-content: space-between;
   text-align: center;
 }
-.swiperTest .swiper-slide a .publication__bg--color {
+.swiperPubli .swiper-slide a .publication__bg--color {
   left: 0;
   opacity: 0;
   z-index: 1;
@@ -1704,26 +1708,26 @@ footer .footer__btn button {
   background-color: #1F7A8C;
   transition: 0.5s;
 }
-.swiperTest .swiper-slide a .publication__titre {
+.swiperPubli .swiper-slide a .publication__titre {
   color: #ffffff;
   z-index: 2;
   font-size: 19px;
   font-weight: bold;
 }
-.swiperTest .swiper-slide a .publication__line {
+.swiperPubli .swiper-slide a .publication__line {
   margin-top: 10px;
   z-index: 2;
   transition: 0.5s;
   opacity: 0;
   width: 100%;
 }
-.swiperTest .swiper-slide a .publication__line hr {
+.swiperPubli .swiper-slide a .publication__line hr {
   height: 1px;
   color: #ffffff;
   background-color: #ffffff;
   border: none;
 }
-.swiperTest .swiper-slide a .publication__info {
+.swiperPubli .swiper-slide a .publication__info {
   display: flex;
   align-items: center;
   min-height: 200px;
@@ -1735,7 +1739,7 @@ footer .footer__btn button {
   color: #ffffff;
   font-weight: 500;
 }
-.swiperTest .swiper-slide a .publication__btn {
+.swiperPubli .swiper-slide a .publication__btn {
   justify-self: end;
   border: none;
   transition-property: background-color;
@@ -1757,54 +1761,108 @@ footer .footer__btn button {
   width: 120px;
   height: 35px;
 }
-.swiperTest .swiper-slide a .publication__btn:hover {
+.swiperPubli .swiper-slide a .publication__btn:hover {
   background-color: #1F7A8C;
   color: #ffffff;
   border: 1px solid #ffffff;
 }
-.swiperTest .swiper-slide a .publication__btn .btn__fleche {
+.swiperPubli .swiper-slide a .publication__btn .btn__fleche {
   position: absolute;
   width: 16px;
   margin-left: 5px;
 }
-.swiperTest .swiper-slide a .publication:hover .publication__bg--color {
+.swiperPubli .swiper-slide a .publication:hover .publication__bg--color {
   transition: 0.5s;
   opacity: 0.8;
 }
-.swiperTest .swiper-slide a .publication:hover .publication__titre {
+.swiperPubli .swiper-slide a .publication:hover .publication__titre {
   color: white;
 }
-.swiperTest .swiper-slide a .publication:hover .publication__icon {
+.swiperPubli .swiper-slide a .publication:hover .publication__icon {
   opacity: 1;
 }
-.swiperTest .swiper-slide a .publication:hover .publication__line {
+.swiperPubli .swiper-slide a .publication:hover .publication__line {
   opacity: 1;
 }
-.swiperTest .swiper-slide a .publication:hover .publication__info {
+.swiperPubli .swiper-slide a .publication:hover .publication__info {
   opacity: 1;
 }
-.swiperTest .swiper-slide a .publication:hover .publication__btn {
+.swiperPubli .swiper-slide a .publication:hover .publication__btn {
   opacity: 1;
 }
-.swiperTest .swiper-slide--1 .publication {
+.swiperPubli .swiper-slide--1 .publication {
   background-image: url("medias/img/services_publications_1.jpg");
 }
-.swiperTest .swiper-slide--2 .publication {
+.swiperPubli .swiper-slide--2 .publication {
   background-image: url("medias/img/services_publications_2.jpg");
 }
-.swiperTest .swiper-slide--3 .publication {
+.swiperPubli .swiper-slide--3 .publication {
   background-image: url("medias/img/services_publications_3.jpg");
 }
-.swiperTest .swiper-slide--4 .publication {
+.swiperPubli .swiper-slide--4 .publication {
   background-image: url("medias/img/services_publications_4.jpg");
 }
-.swiperTest .swiper-slide--5 .publication {
+.swiperPubli .swiper-slide--5 .publication {
   background-image: url("medias/img/services_publications_5.jpg");
 }
-.swiperTest .swiper-slide--6 .publication {
+.swiperPubli .swiper-slide--6 .publication {
   background-image: url("medias/img/services_publications_6.jpg");
 }
 
+.droits {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, auto));
+  gap: 1em;
+  width: 100%;
+}
+
+.droit {
+  font-family: "Raleway";
+  width: 400px;
+  padding: 0 20px;
+  max-width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 20px 80px auto 10px;
+}
+.droit:nth-of-type(1) .droit__img {
+  background-image: url("medias/img/services_participation_1.jpg");
+}
+.droit:nth-of-type(2) .droit__img {
+  background-image: url("medias/img/services_participation_2.jpg");
+}
+.droit:nth-of-type(3) .droit__img {
+  background-image: url("medias/img/services_participation_3.jpg");
+}
+.droit__titre {
+  grid-row: 1;
+  font-size: 20px;
+  padding: 10px 0;
+}
+.droit__titre p {
+  line-height: 20px;
+}
+.droit__titre:hover p {
+  background-image: url(./medias/img/hero_background_svg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.droit__desc {
+  grid-row: 2;
+  position: relative;
+  margin-top: 20px;
+}
+.droit__img {
+  grid-row: 3/6;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+
+/*Sections*/
 .servicesHub.marginNoMsg {
   margin-top: 10vh;
 }

@@ -5,7 +5,7 @@
 
 
 .participations{
-  height: 100vh;
+  margin-bottom: 200px;
 }
 .participations__alignement{
     display:flex;
@@ -142,9 +142,11 @@
 
     
     
-    .swiperTest{
+    .swiperPubli{
+      position: relative;
+      right:0;
       width: 100%;
-      height: 55vh;
+      height: 45vh;
       
       .swiper-slide {
         height: auto;
@@ -154,6 +156,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-left:10px;
+        padding-right:10px;
         
         
         a{
@@ -167,7 +171,7 @@
             border-radius: 25px;
             width: 100%;
             max-width: 100%;
-            height: 55vh;
+            height: 45vh;
             padding: 20px;
             background-size: cover;
             background-position: top;
@@ -280,13 +284,68 @@
       }
     }
 
-    
+    .droits{
+      display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px, auto)) ;
+  gap:1em;
+  width: 100%;
+    }
 
-    
+    .droit {
+      font-family: 'Raleway';
+      width: 400px;
+      padding: 0 20px;
+      max-width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 20px 80px auto 10px;
 
+      @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}){
+          .droit__img{
+            background-image: url("medias/img/services_participation_#{$i}.jpg");
+          }
+            
+        }
+    }
+  
+      &__titre{
+        grid-row: 1;
+        font-size: 20px;
+          padding: 10px 0;
+  
+          p {
+              line-height: 20px;
+          }
+  
+          &:hover {
+              p {
+                  //background-color: variables.$lavandreCendre;
+                  background-image: url(./medias/img/hero_background_svg.svg);
+                  background-size: cover;
+                  background-repeat: no-repeat;
+              }
+          }
+      }
+  
+      &__desc {
+        grid-row: 2;
+        position: relative;
+          margin-top:20px;
+      }
+  
+      &__img {
+          grid-row: 3 / 6;
+          position: relative;
+          background-size: cover;
+          background-position: center;
+          width: 100%;
+          height: 100%;
+          border-radius: 25px;
+      }
+  }
 
-    
-
+/*Sections*/
 .servicesHub.marginNoMsg {
   margin-top: 10vh;
 }
