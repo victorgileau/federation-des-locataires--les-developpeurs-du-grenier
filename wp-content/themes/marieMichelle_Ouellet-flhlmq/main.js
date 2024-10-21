@@ -80,12 +80,13 @@ let swiperDeux = new Swiper(".swiperActialite", {
 
 /*--Fin Code swiper Actu--*/
 
-/*--swiper servicesHub 1--*/
+/*--swiper servicesHub 1 (Kenza)--*/
 
 let swiperPubli = new Swiper(".swiperPubli", {
         slidesPerView: 1,
         centeredSlides: true,
         grabCursor: true,
+        spaceBetween: 10,
         navigation: {
           nextEl:".btn-next" ,
           prevEl:".btn-prev" ,
@@ -95,12 +96,18 @@ let swiperPubli = new Swiper(".swiperPubli", {
                         slidesPerView:4,
 
                 },
+                849: {
+                        slidesPerView:3,
+
+                },
                 1400: {
                         slidesPerView: 5,
 
                 },
         },
       });
+
+/*--Fin swiper ServicesHub 1--*/
 
 /*-- Code abonnement --*/
 
