@@ -93,11 +93,11 @@ let swiperPubli = new Swiper(".swiperPubli", {
         },
         breakpoints: {
                 768: {
-                        slidesPerView:4,
+                        slidesPerView:3,
 
                 },
                 849: {
-                        slidesPerView:3,
+                        slidesPerView:4,
 
                 },
                 1400: {
