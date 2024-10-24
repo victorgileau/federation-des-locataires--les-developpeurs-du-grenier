@@ -2003,7 +2003,7 @@ footer .footer__btn button {
   padding: 100px;
   background-color: #D7E0FF;
   border-radius: 25px;
-  max-width: 800px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 .contact__container h2 {
@@ -2265,6 +2265,21 @@ input:focus, textarea:focus {
     margin-top: 15vh;
   }
 }
+.article {
+  height: 100vh;
+}
+.article__content {
+  margin: 0 auto;
+  width: 1400px;
+}
+.article__img {
+  width: 100vw;
+  height: 500px;
+  background-image: url("../medias/img/petition_hlm.png");
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");

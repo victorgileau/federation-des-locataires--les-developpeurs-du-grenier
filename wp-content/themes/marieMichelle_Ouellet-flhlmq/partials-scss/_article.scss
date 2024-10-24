@@ -1,0 +1,18 @@
+@use "variables";
+@use "mixins/mixins";
+
+.article {
+    height: 100vh;
+    &__content {
+        margin: 0 auto;
+        width: 1400px;
+    }
+
+    &__img {
+        width: 100vw;
+        height: 500px;
+        background-image: url("../medias/img/petition_hlm.png");
+        background-size: cover;
+        margin-bottom: 50px;
+    }
+}
