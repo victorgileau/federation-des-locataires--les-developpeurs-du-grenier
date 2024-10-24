@@ -43,70 +43,78 @@ btnMessageProjetEtudiant.addEventListener('click', () => {
 
 /*--Code swiper hero--*/
 
-let swiper = new Swiper(".hero_swiper", {
-        slidesPerView: 1,
-        loop: true,
-        autoplay: {
-                delay: 3000,
-        },
-        pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-        },
-});
+if (document.querySelector('.hero_swiper') != null) {
+        let swiper = new Swiper(".hero_swiper", {
+                slidesPerView: 1,
+                loop: true,
+                autoplay: {
+                        delay: 3000,
+                },
+                pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                },
+        });
+}
+
 
 /*--Fin Code swiper hero--*/
 
 /*--Code swiper Actu--*/
 
-let swiperDeux = new Swiper(".swiperActialite", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        navigation: {
-                nextEl: '.btn-next',
-                prevEl: '.btn-prev',
-        },
-        breakpoints: {
-                768: {
-                        slidesPerView: 2,
-                        loop: true,
+if (document.querySelector('.swiperActialite') != null) {
+        let swiperDeux = new Swiper(".swiperActialite", {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                navigation: {
+                        nextEl: '.btn-next',
+                        prevEl: '.btn-prev',
                 },
-                1400: {
-                        slidesPerView: 3,
-                        loop: true,
+                breakpoints: {
+                        768: {
+                                slidesPerView: 2,
+                                loop: true,
+                        },
+                        1400: {
+                                slidesPerView: 3,
+                                loop: true,
+                        },
                 },
-        },
-});
+        });
+}
+
 
 /*--Fin Code swiper Actu--*/
 
 /*--swiper servicesHub 1 (Kenza)--*/
-
-let swiperPubli = new Swiper(".swiperPubli", {
-        slidesPerView: 1,
-        centeredSlides: true,
-        grabCursor: true,
-        spaceBetween: 10,
-        navigation: {
-          nextEl:".btn-next" ,
-          prevEl:".btn-prev" ,
-        },
-        breakpoints: {
-                768: {
-                        slidesPerView:3,
-
+if (document.querySelector('.swiperPubli') != null) {
+        let swiperPubli = new Swiper(".swiperPubli", {
+                slidesPerView: 1,
+                centeredSlides: true,
+                grabCursor: true,
+                spaceBetween: 10,
+                navigation: {
+                  nextEl:".btn-next" ,
+                  prevEl:".btn-prev" ,
                 },
-                849: {
-                        slidesPerView:4,
-
+                breakpoints: {
+                        768: {
+                                slidesPerView:3,
+        
+                        },
+                        849: {
+                                slidesPerView:4,
+        
+                        },
+                        1400: {
+                                slidesPerView: 5,
+        
+                        },
                 },
-                1400: {
-                        slidesPerView: 5,
+              });
+}
 
-                },
-        },
-      });
 
 /*--Fin swiper ServicesHub 1--*/
 
@@ -114,34 +122,37 @@ let swiperPubli = new Swiper(".swiperPubli", {
 
 
 gsap.registerPlugin(ScrollTrigger);
+if (document.querySelector('.appelAction--over') != null) {
+        let tl = gsap.timeline( {
+                scrollTrigger: {
+                  scrub: 1,
+                  trigger: '.appelAction',
+                  start: '15% 65%',
+                  end: '35% 50%',
+                }
+              }).to('.appelAction--over', 3, {
+                y: '-45%',
+                duration: 3,
+                scaleY: 0.1,
+              }).to(".appelAction__svgLine", {
+                y: '-525px',
+                duration: 3,
+              }, '-=3');
+              
+              gsap.to('.appelAction', {
+                      backgroundPosition: "50% 100%",
+                      ease: 'none',
+                      scrollTrigger: {
+                              trigger: '.appelAction',
+                              start: '25% bottom',
+                              end: '90% top',
+                              scrub: true,
+                              
+                      }
+              });
 
-let tl = gsap.timeline( {
-  scrollTrigger: {
-    scrub: 1,
-    trigger: '.appelAction',
-    start: '15% 65%',
-    end: '35% 50%',
-  }
-}).to('.appelAction--over', 3, {
-  y: '-45%',
-  duration: 3,
-  scaleY: 0.1,
-}).to(".appelAction__svgLine", {
-  y: '-525px',
-  duration: 3,
-}, '-=3');
+}
 
-gsap.to('.appelAction', {
-        backgroundPosition: "50% 100%",
-        ease: 'none',
-        scrollTrigger: {
-                trigger: '.appelAction',
-                start: '25% bottom',
-                end: '90% top',
-                scrub: true,
-                
-        }
-});
 
 /*-- Fin Code abonnement --*/
 
@@ -154,15 +165,37 @@ for (let i = 0; i < arrayMembre.length; i++) {
   let membreBtn = document.querySelector(`#${arrayMembre[i]}Btn`);
   let membreBtnClose = document.querySelector(`#${arrayMembre[i]}BtnClose`);
   console.log(`#${arrayMembre[i]}Btn`);
+  if (membreBtn != null) {
+        membreBtn.addEventListener("click", () => {
+                membre.classList.add('modalVisible');
+        });
+  }
   
-  membreBtn.addEventListener("click", () => {
-    membre.classList.add('modalVisible');
-  });
-  
-  membreBtnClose.addEventListener("click", () => {
-    membre.classList.remove('modalVisible');
-  });
-  
+  if (membreBtnClose != null) {
+        membreBtnClose.addEventListener("click", () => {
+                membre.classList.remove('modalVisible');
+        });
+  }
 }
 
 /*-- Fin Code Equipe modal --*/
+
+/*--code error 404 --*/
+
+document.body.addEventListener("mousemove", evt => {
+        const mouseX = evt.clientX;
+        const mouseY = evt.clientY;
+        
+        gsap.set("#move", {
+          x: mouseX,
+          y: mouseY
+        })
+        
+        gsap.to(".cirle", {
+          x: mouseX,
+          y: mouseY,
+          stagger: -0.1
+        })
+      });
+
+/*--fin code error 404 --*/
