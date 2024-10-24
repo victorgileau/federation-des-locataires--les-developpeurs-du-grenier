@@ -9,6 +9,7 @@ const menuHamburger = document.querySelector(".burgerBtn");
 /*--Code ajouter msg étudant--*/
 const btnMessageProjetEtudiant = document.querySelector('.messageProjetEtudant__closeBtn');
 const messageProjetEtudiant = document.querySelector('.messageProjetEtudant');
+const messageProjetEtudiantBG = document.querySelector('.msgEtudantBG');
 const navBar = document.querySelector(".navbar");
 const hero =  document.querySelector(".hero");
 
@@ -16,7 +17,7 @@ if (localStorage.getItem('msgFermer') != null) {
         let msgFermer = localStorage.getItem('msgFermer');
         if (msgFermer == 'true') {
                 console.log('messag projet étudiant déja vu');
-                messageProjetEtudiant.classList.add('displayNone');
+                messageProjetEtudiantBG.classList.add('displayNone');
                 navBar.classList.add('noMarginTop');
                 navLinks.classList.add('noMarginTop');
                 if(hero != null){
@@ -33,7 +34,7 @@ btnMessageProjetEtudiant.addEventListener('click', () => {
         if(hero != null){
                 hero.classList.add('marginNoMsg');
         }
-        messageProjetEtudiant.classList.add('displayNone');
+        messageProjetEtudiantBG.classList.add('displayNone');
         localStorage.setItem('msgFermer', 'true');
         console.log('test');
 });
@@ -143,3 +144,25 @@ gsap.to('.appelAction', {
 });
 
 /*-- Fin Code abonnement --*/
+
+/*-- Code Equipe modal --*/
+
+const arrayMembre = ["membre1", "membre2", "membre3", "membre4"]; 
+
+for (let i = 0; i < arrayMembre.length; i++) {
+  let membre = document.querySelector(`#${arrayMembre[i]}`);
+  let membreBtn = document.querySelector(`#${arrayMembre[i]}Btn`);
+  let membreBtnClose = document.querySelector(`#${arrayMembre[i]}BtnClose`);
+  console.log(`#${arrayMembre[i]}Btn`);
+  
+  membreBtn.addEventListener("click", () => {
+    membre.classList.add('modalVisible');
+  });
+  
+  membreBtnClose.addEventListener("click", () => {
+    membre.classList.remove('modalVisible');
+  });
+  
+}
+
+/*-- Fin Code Equipe modal --*/

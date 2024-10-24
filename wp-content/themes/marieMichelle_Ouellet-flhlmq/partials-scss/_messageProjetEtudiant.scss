@@ -82,6 +82,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .msgEtudantBG {
+        min-height: 120px;
+        max-height: 160px;
+    }
     .messageProjetEtudant {
         max-width: 95vw;
         margin: 0 auto;
@@ -103,8 +107,12 @@
 }
 
 @media screen and (min-width: 1400px) {
+    .msgEtudantBG {
+        max-height: 200px;
+    }
     .messageProjetEtudant {
         max-width: 1400px;
+        max-height: 120px;
         margin: 0 auto;
         grid-template-columns: 1000px auto auto;
         grid-template-rows: auto;

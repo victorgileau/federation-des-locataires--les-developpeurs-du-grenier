@@ -1,0 +1,185 @@
+@use './variables';
+@use './mixins/mixins';
+
+
+.titre {
+    text-align: center;
+    font-size: 64px;
+}
+
+.hero.equipe {
+    margin-top: 230px;
+}
+
+.hero {
+
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    &__titre {
+        margin: 5vh 0;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 64px;
+        margin-bottom: 69px;
+        color: variables.$bleuNuit;
+        font-weight: 500;
+    }
+
+    &__img {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+        object-position: center;
+        margin: 0;
+    }
+
+    &__page {
+        max-width: 1400px;
+        width: 100%;
+        margin: 5vh auto;
+        margin-bottom: 10vh;
+        font-size: 1.5em;
+        font-weight: 500;
+        a {
+            transition-duration: 0.2s;
+            color: variables.$bleuNuit;
+            &:hover {
+                color: variables.$bleuSarcelle;
+            }
+        }
+    }
+}
+
+.equipeConteneur {
+    width: 95%;
+    max-width: 1400px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    column-gap: 1.5vw;
+    row-gap: 5vh;
+
+    .membreEquipe {
+        width: 100%;
+        text-align: center;
+
+        &__img {
+            cursor: pointer;
+            width: 100%;
+            aspect-ratio: 1/1.5;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 25px;
+            transition-duration: 0.2s;
+
+            &:hover {
+                transform: translateY(-0.5em);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        &__nom {
+            font-size: 32px;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        &__poste {
+            font-size: 20px;
+        }
+    }
+
+}
+
+.modalMembreEquipe {
+    z-index: 2000;
+    display: none;
+    padding: 2vw;
+    border-radius: 50px;
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    max-width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: variables.$bleuNuit;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+
+    &::after {
+        z-index: -1;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &__btnFermer {
+        @include mixins.btnNoir;
+        cursor: pointer;
+        align-self: end;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        transition-duration: 0.2s;
+        padding: 20px;
+        font-size: 20px;
+        border: 1px solid #fff;
+    }
+
+    &__img {
+        justify-self: center;
+        width: 35vh;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25px;
+    }
+
+    &__nom {
+        font-size: 32px;
+        text-transform: uppercase;
+    }
+    &__poste {
+        font-size: 24px;
+        text-align: center;
+    }
+    p {
+        width: 80%;
+    }
+}
+
+.modalVisible {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .hero.equipe {
+        margin-top: 300px;
+    }
+    .hero.equipe.marginNoMsg {
+        margin-top: 10vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero.equipe.marginNoMsg {
+        margin-top: 12vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero.equipe.marginNoMsg {
+        margin-top: 15vh;
+    }
+}

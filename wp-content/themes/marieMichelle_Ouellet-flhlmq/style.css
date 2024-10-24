@@ -491,6 +491,10 @@ footer .footer__btn button {
 }
 
 @media screen and (min-width: 768px) {
+  .msgEtudantBG {
+    min-height: 120px;
+    max-height: 160px;
+  }
   .messageProjetEtudant {
     max-width: 95vw;
     margin: 0 auto;
@@ -511,8 +515,12 @@ footer .footer__btn button {
   }
 }
 @media screen and (min-width: 1400px) {
+  .msgEtudantBG {
+    max-height: 200px;
+  }
   .messageProjetEtudant {
     max-width: 1400px;
+    max-height: 120px;
     margin: 0 auto;
     grid-template-columns: 1000px auto auto;
     grid-template-rows: auto;
@@ -2067,6 +2075,194 @@ input:focus, textarea:focus {
   }
   .contact__wrapper {
     grid-template-columns: 1fr;
+  }
+}
+.titre {
+  text-align: center;
+  font-size: 64px;
+}
+
+.hero.equipe {
+  margin-top: 230px;
+}
+
+.hero {
+  width: 100%;
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.hero__titre {
+  margin: 5vh 0;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 64px;
+  margin-bottom: 69px;
+  color: #022B3A;
+  font-weight: 500;
+}
+.hero__img {
+  width: 100%;
+  height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin: 0;
+}
+.hero__page {
+  max-width: 1400px;
+  width: 100%;
+  margin: 5vh auto;
+  margin-bottom: 10vh;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.hero__page a {
+  transition-duration: 0.2s;
+  color: #022B3A;
+}
+.hero__page a:hover {
+  color: #1F7A8C;
+}
+
+.equipeConteneur {
+  width: 95%;
+  max-width: 1400px;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  -moz-column-gap: 1.5vw;
+       column-gap: 1.5vw;
+  row-gap: 5vh;
+}
+.equipeConteneur .membreEquipe {
+  width: 100%;
+  text-align: center;
+}
+.equipeConteneur .membreEquipe__img {
+  cursor: pointer;
+  width: 100%;
+  aspect-ratio: 1/1.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 25px;
+  transition-duration: 0.2s;
+}
+.equipeConteneur .membreEquipe__img:hover {
+  transform: translateY(-0.5em);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.equipeConteneur .membreEquipe__nom {
+  font-size: 32px;
+  color: #000;
+  text-transform: uppercase;
+}
+.equipeConteneur .membreEquipe__poste {
+  font-size: 20px;
+}
+
+.modalMembreEquipe {
+  z-index: 2000;
+  display: none;
+  padding: 2vw;
+  border-radius: 50px;
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  max-width: 1200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #022B3A;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+.modalMembreEquipe::after {
+  z-index: -1;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modalMembreEquipe__btnFermer {
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 25px;
+  background-color: #2A2A2A;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: end;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transition-duration: 0.2s;
+  padding: 20px;
+  font-size: 20px;
+  border: 1px solid #fff;
+}
+.modalMembreEquipe__btnFermer:hover {
+  background-color: #ffffff;
+  color: #2A2A2A;
+  border: 1px solid #2A2A2A;
+}
+.modalMembreEquipe__img {
+  justify-self: center;
+  width: 35vh;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 25px;
+}
+.modalMembreEquipe__nom {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+.modalMembreEquipe__poste {
+  font-size: 24px;
+  text-align: center;
+}
+.modalMembreEquipe p {
+  width: 80%;
+}
+
+.modalVisible {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .hero.equipe {
+    margin-top: 300px;
+  }
+  .hero.equipe.marginNoMsg {
+    margin-top: 10vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero.equipe.marginNoMsg {
+    margin-top: 12vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero.equipe.marginNoMsg {
+    margin-top: 15vh;
   }
 }
 @font-face {
