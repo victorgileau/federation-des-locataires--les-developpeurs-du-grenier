@@ -2131,7 +2131,9 @@ input:focus, textarea:focus {
   max-width: 1400px;
   margin: 100px auto;
   display: grid;
+  text-align: center;
   grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-template-rows: repeat(auto-fill, minmax(600px, auto));
   -moz-column-gap: 1.5vw;
        column-gap: 1.5vw;
   row-gap: 5vh;
@@ -2139,6 +2141,9 @@ input:focus, textarea:focus {
 .equipeConteneur .membreEquipe {
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .equipeConteneur .membreEquipe__img {
   cursor: pointer;
@@ -2150,6 +2155,7 @@ input:focus, textarea:focus {
      object-position: center;
   border-radius: 25px;
   transition-duration: 0.2s;
+  margin-bottom: 20px;
 }
 .equipeConteneur .membreEquipe__img:hover {
   transform: translateY(-0.5em);
@@ -2177,7 +2183,7 @@ input:focus, textarea:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #022B3A;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -2241,6 +2247,7 @@ input:focus, textarea:focus {
 }
 .modalMembreEquipe p {
   width: 80%;
+  text-align: center;
 }
 
 .modalVisible {
@@ -2253,6 +2260,20 @@ input:focus, textarea:focus {
   }
   .hero.equipe.marginNoMsg {
     margin-top: 10vh;
+  }
+  .equipeConteneur {
+    grid-template-columns: repeat(auto-fill, minmax(180px, auto));
+    grid-template-rows: repeat(auto-fill, minmax(250px, auto));
+  }
+  .modalMembreEquipe {
+    padding: 20px;
+  }
+  .modalMembreEquipe__img {
+    width: 70%;
+  }
+  .modalMembreEquipe p {
+    width: 100%;
+    text-align: center;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2282,7 +2303,7 @@ input:focus, textarea:focus {
 
 .pageErrorContainer {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   position: relative;
   padding: 20vh 0;
@@ -2318,14 +2339,10 @@ input:focus, textarea:focus {
   animation-direction: alternate;
   position: absolute;
   border-radius: 50%;
-  background-image: url(./medias/img/accueil_hero_01.jpg);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: 120%;
-  background-color: red;
-  width: 25vw;
-  height: 25vw;
-  margin: -12.5vw 0 0 -12.5vw;
+  background-color: #E1E5F2;
+  width: 70vmin;
+  height: 70vmin;
+  margin: -35vmin 0 0 -35vmin;
 }
 .underMove .cirle-2 {
   animation-name: pointerAnimation;
@@ -2335,14 +2352,10 @@ input:focus, textarea:focus {
   animation-direction: alternate;
   position: absolute;
   border-radius: 50%;
-  background-image: url(./medias/img/accueil_hero_01.jpg);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: 120%;
-  background-color: green;
-  width: 30vw;
-  height: 30vw;
-  margin: -15vw 0 0 -15vw;
+  background-color: #D7E0FF;
+  width: 75vmin;
+  height: 75vmin;
+  margin: -37.5vmin 0 0 -37.5vmin;
 }
 .underMove .cirle-3 {
   animation-name: pointerAnimation;
@@ -2352,14 +2365,10 @@ input:focus, textarea:focus {
   animation-direction: alternate;
   position: absolute;
   border-radius: 50%;
-  background-image: url(./medias/img/accueil_hero_01.jpg);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: 120%;
-  background-color: blue;
-  width: 35vw;
-  height: 35vw;
-  margin: -17.5vw 0 0 -17.5vw;
+  background-color: #1F7A8C;
+  width: 80vmin;
+  height: 80vmin;
+  margin: -40vmin 0 0 -40vmin;
 }
 .underMove .cirle-4 {
   animation-name: pointerAnimation;
@@ -2369,14 +2378,10 @@ input:focus, textarea:focus {
   animation-direction: alternate;
   position: absolute;
   border-radius: 50%;
-  background-image: url(./medias/img/accueil_hero_01.jpg);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: 120%;
-  background-color: yellow;
-  width: 40vw;
-  height: 40vw;
-  margin: -20vw 0 0 -20vw;
+  background-color: #022B3A;
+  width: 85vmin;
+  height: 85vmin;
+  margin: -42.5vmin 0 0 -42.5vmin;
 }
 
 .errorPage {
@@ -2395,13 +2400,14 @@ input:focus, textarea:focus {
   height: 100%;
 }
 .errorPage div.textPageErreur {
-  line-height: 30vw;
+  line-height: 55vmin;
   font-weight: 900;
   margin: 0;
-  font-size: 35vw;
-  color: #000;
+  font-size: 55vmin;
+  color: #2A2A2A;
 }
 .errorPage .text {
+  text-align: center;
   color: #fff;
   margin: 2vh 0;
   font-size: 24px;
@@ -2451,14 +2457,10 @@ input:focus, textarea:focus {
     animation-direction: alternate;
     position: absolute;
     border-radius: 50%;
-    background-image: url(./medias/img/accueil_hero_01.jpg);
-    background-blend-mode: multiply;
-    background-position: center;
-    background-size: 120%;
-    background-color: red;
-    width: 45vw;
-    height: 45vw;
-    margin: -22.5vw 0 0 -22.5vw;
+    background-color: #E1E5F2;
+    width: 55vw;
+    height: 55vw;
+    margin: -27.5vw 0 0 -27.5vw;
   }
   .underMove .cirle-2 {
     animation-name: pointerAnimation;
@@ -2468,14 +2470,10 @@ input:focus, textarea:focus {
     animation-direction: alternate;
     position: absolute;
     border-radius: 50%;
-    background-image: url(./medias/img/accueil_hero_01.jpg);
-    background-blend-mode: multiply;
-    background-position: center;
-    background-size: 120%;
-    background-color: blue;
-    width: 50vw;
-    height: 50vw;
-    margin: -25vw 0 0 -25vw;
+    background-color: #D7E0FF;
+    width: 60vw;
+    height: 60vw;
+    margin: -30vw 0 0 -30vw;
   }
   .underMove .cirle-3 {
     animation-name: pointerAnimation;
@@ -2485,14 +2483,10 @@ input:focus, textarea:focus {
     animation-direction: alternate;
     position: absolute;
     border-radius: 50%;
-    background-image: url(./medias/img/accueil_hero_01.jpg);
-    background-blend-mode: multiply;
-    background-position: center;
-    background-size: 120%;
-    background-color: green;
-    width: 55vw;
-    height: 55vw;
-    margin: -27.5vw 0 0 -27.5vw;
+    background-color: #1F7A8C;
+    width: 65vw;
+    height: 65vw;
+    margin: -32.5vw 0 0 -32.5vw;
   }
   .underMove .cirle-4 {
     animation-name: pointerAnimation;
@@ -2502,24 +2496,21 @@ input:focus, textarea:focus {
     animation-direction: alternate;
     position: absolute;
     border-radius: 50%;
-    background-image: url(./medias/img/accueil_hero_01.jpg);
-    background-blend-mode: multiply;
-    background-position: center;
-    background-size: 120%;
-    background-color: yellow;
-    width: 60vw;
-    height: 60vw;
-    margin: -30vw 0 0 -30vw;
+    background-color: #022B3A;
+    width: 70vw;
+    height: 70vw;
+    margin: -35vw 0 0 -35vw;
   }
-  .errorPage h1.textPageErreur {
-    line-height: 40vw;
-    font-size: 60vw;
+  .errorPage div.textPageErreur {
+    line-height: 55vw;
+    font-size: 55vw;
   }
   .errorPage .text {
     font-size: 24px;
   }
   .errorPage button {
-    font-size: 36px;
+    font-size: 24px;
+    border-radius: 50px;
   }
 }
 .about {

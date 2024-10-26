@@ -58,13 +58,18 @@
     max-width: 1400px;
     margin: 100px auto;
     display: grid;
+    text-align: center;
     grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-template-rows: repeat(auto-fill, minmax(600px, auto));
     column-gap: 1.5vw;
     row-gap: 5vh;
 
     .membreEquipe {
         width: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 
         &__img {
             cursor: pointer;
@@ -74,6 +79,7 @@
             object-position: center;
             border-radius: 25px;
             transition-duration: 0.2s;
+            margin-bottom: 20px;
 
             &:hover {
                 transform: translateY(-0.5em);
@@ -107,7 +113,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: variables.$bleuNuit;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -156,6 +162,7 @@
     }
     p {
         width: 80%;
+        text-align: center;
     }
 }
 
@@ -169,6 +176,20 @@
     }
     .hero.equipe.marginNoMsg {
         margin-top: 10vh;
+    }
+    .equipeConteneur {
+        grid-template-columns: repeat(auto-fill, minmax(180px, auto));
+        grid-template-rows: repeat(auto-fill, minmax(250px, auto));
+    }
+    .modalMembreEquipe {
+        padding: 20px;
+        &__img {
+            width: 70%;
+        }
+        p {
+            width: 100%;
+            text-align: center;
+        }
     }
 }
 

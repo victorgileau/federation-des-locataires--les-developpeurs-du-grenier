@@ -3,7 +3,7 @@
 
 .pageErrorContainer {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   position: relative;
   padding: 20vh 0;
@@ -38,23 +38,20 @@
   border-radius: 50%;
 
   $cirles: (
-    red: 25vw,
-    green: 30vw,
-    blue: 35vw,
-    yellow: 40vw
+    variables.$lavandreCendre: 70vmin,
+    variables.$lavandrepetant: 75vmin,
+    variables.$bleuSarcelle: 80vmin,
+    variables.$bleuNuit: 85vmin
   );
 
+
   
-  @each $color, $size in $cirles {
-    .cirle-#{index($cirles, ($color $size))} {
+  @each $inColor, $size in $cirles {
+    .cirle-#{index($cirles, ($inColor $size))} {
       @include animationApply;
       position: absolute;
       border-radius: 50%;
-      background-image: url(./medias/img/accueil_hero_01.jpg);
-      background-blend-mode: multiply;
-      background-position: center;
-      background-size: 120%;
-      background-color: $color;
+      background-color: $inColor;
       width: $size;
       height: $size;
       margin: (-$size/2) 0 0 (-$size/2);
@@ -78,14 +75,15 @@
   height: 100%;
 
   div.textPageErreur {
-    line-height: 30vw;
+    line-height: 55vmin;
     font-weight: 900;
     margin: 0;
-    font-size: 35vw;
-    color: #000;
+    font-size: 55vmin;
+    color: variables.$noirPoudre;
   }
 
   .text {
+    text-align: center;
     color: #fff;
     margin: 2vh 0;
     font-size: 24px;
@@ -119,10 +117,10 @@
   .underMove {
   
     $cirlesTwo: (
-      red: 45vw,
-      blue: 50vw,
-      green: 55vw,
-      yellow: 60vw
+      variables.$lavandreCendre: 55vw,
+      variables.$lavandrepetant: 60vw,
+      variables.$bleuSarcelle: 65vw,
+      variables.$bleuNuit: 70vw
     );
   
     @each $color, $size in $cirlesTwo {
@@ -130,10 +128,6 @@
         @include animationApply;
         position: absolute;
         border-radius: 50%;
-        background-image: url(./medias/img/accueil_hero_01.jpg);
-        background-blend-mode: multiply;
-        background-position: center;
-        background-size: 120%;
         background-color: $color;
         width: $size;
         height: $size;
@@ -144,9 +138,9 @@
 
   .errorPage {
   
-    h1.textPageErreur {
-      line-height: 40vw;
-      font-size: 60vw;
+    div.textPageErreur {
+      line-height: 55vw;
+      font-size: 55vw;
     }
   
     .text {
@@ -154,7 +148,8 @@
     }
   
     button {
-      font-size: 36px;
+      font-size: 24px;
+      border-radius: 50px;
     }
   }
 }
