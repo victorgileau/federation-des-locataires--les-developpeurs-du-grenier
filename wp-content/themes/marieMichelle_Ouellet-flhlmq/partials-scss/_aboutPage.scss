@@ -3,6 +3,11 @@
 @use "./mixins/mixins";
 @use "./variables";
 
+.surligne{
+  background-color: variables.$lavandreCendre;
+  font-weight: variables.$weightMedium;
+}
+
   .about {
     margin-bottom: 100px;
     margin-top: 100px;
@@ -23,7 +28,7 @@
       background-image: url("medias/img/hero_a_propos.jpg");
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: left;
+      background-position: center;
   
       &--topLayer {
         width: 100%;
@@ -40,13 +45,14 @@
   }
   
   .about__linktree--link {
-    width: 100%;
+    width: 95%;
     max-width: 1400px;
     margin: auto;
     font-size: 1.5em;
     font-weight: variables.$weightMedium;
   
     a {
+      
       color: variables.$noirPoudre;
       transition: 0.5s;
   
@@ -55,3 +61,100 @@
       }
     }
   }
+
+  .intro{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__alignement{
+    width: 95%;
+    margin-bottom: 100px;
+    border: 2px solid variables.$lavandreCendre;
+    border-radius: 30px;
+    padding: 30px;
+    display: grid;
+    height: 100%;
+    row-gap: 2em;
+    box-shadow: 0 0 30px 3px variables.$lavandreCendre;
+    &--img{
+      img{
+        width: 100%;
+        height: 110%;
+        object-fit: cover;
+      }
+      width: 100%;
+      overflow: hidden;
+      border-radius: 30px;
+      grid-row: 2 / 3;
+    }
+    
+    &--titre{
+      color: variables.$noirPoudre;
+      font-weight: variables.$weightSemi;
+      text-align: center;
+    }
+
+    &--text{
+      line-height: 30px;
+      text-align: left;
+      font-size: 18px;
+    }
+  }
+  }
+  
+  @media screen and (min-width: 768px) {
+}
+
+  @media screen and (min-width: 1080px) {
+    .intro{
+      
+      &__alignement{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 3em;
+      &--img{
+        height: 99%;
+        grid-row: 1 / 3;
+        
+      }
+      
+      &--titre{
+        text-align: left;
+        grid-row: 1 /2;
+        grid-column: 2 / 3;
+      }
+  
+      &--text{
+        font-size: 18px;
+        grid-row: 2 / 3;
+      }
+    }
+    }
+}
+
+/*---------------KENZA: media queries desktop---------------*/
+@media screen and (min-width: 1400px) {
+  .intro{
+    &__alignement{
+      width: 100%;
+    &--img{
+      height: 100%;
+      grid-row: 1 / 3;
+    }
+    
+    &--titre{
+      grid-row: 1 /2;
+      grid-column: 2 / 3;
+    }
+
+    &--text{
+      font-size: 20px;
+      grid-row: 2 / 3;
+    }
+  }
+  }
+}

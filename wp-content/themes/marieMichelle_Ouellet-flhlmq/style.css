@@ -1525,13 +1525,13 @@ footer .footer__btn button {
   }
 }
 .participations {
-  margin-bottom: 200px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
 }
 
 .participations__alignement {
-  width: 100%;
-  max-width: 1400px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1670,6 +1670,13 @@ footer .footer__btn button {
   position: absolute;
   width: 16px;
   margin-left: 5px;
+}
+
+.swiper-nav {
+  width: 90%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .swiperPubli {
@@ -1824,33 +1831,37 @@ footer .footer__btn button {
 }
 
 .section__droits .link__droits {
-  width: 100%;
+  width: 90%;
   max-width: 1400px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: right;
 }
 .section__droits .link__droits a {
   color: #1F7A8C;
   font-weight: 600;
   font-size: 1.5em;
+  transition: 0.5s;
+}
+.section__droits .link__droits a:hover {
+  color: #2A2A2A;
 }
 
 .droits {
-  width: 100%;
+  width: 90%;
   max-width: 1400px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
 
 .droit {
   margin-top: 50px;
+  padding: none;
   width: 100%;
-  padding: 0 20px;
-  width: 90%;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -1871,10 +1882,14 @@ footer .footer__btn button {
   color: #022B3A;
   font-weight: 500;
 }
-.droit__titre:hover p {
-  background-image: url(./medias/img/hero_background_svg.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
+.droit__titre p {
+  line-height: 30px;
+}
+.droit__titre p .surligne__droits {
+  transition: 0.25s;
+}
+.droit__titre p .surligne__droits:hover {
+  background-color: #E1E5F2;
 }
 .droit__desc {
   position: relative;
@@ -1930,26 +1945,30 @@ footer .footer__btn button {
   width: 100%;
 }
 
-.servicesHub__sousTitre {
-  width: 100%;
-  max-width: 1400px;
-  margin: auto;
-}
-
 .servicesHub__text {
-  width: 100%;
+  width: 90%;
   max-width: 1400px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 24px;
   font-weight: 300;
   margin-top: 20px;
   margin-bottom: 50px;
 }
 
-.servicesHub__linktree--link {
-  width: 100%;
+.servicesHub__sousTitre {
+  font-weight: 600;
+  width: 90%;
   max-width: 1400px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicesHub__linktree--link {
+  width: 90%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1.5em;
   font-weight: 500;
 }
@@ -1972,15 +1991,11 @@ footer .footer__btn button {
   .participation {
     width: 40%;
   }
-  .swiper-nav {
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
-  }
   .swiperPubli .swiper-slide a .publication {
     width: 100%;
   }
   .droit {
+    padding: 0 10px;
     width: 50%;
     justify-self: start;
   }
@@ -2513,6 +2528,11 @@ input:focus, textarea:focus {
     border-radius: 50px;
   }
 }
+.surligne {
+  background-color: #E1E5F2;
+  font-weight: 500;
+}
+
 .about {
   margin-bottom: 100px;
   margin-top: 100px;
@@ -2532,7 +2552,7 @@ input:focus, textarea:focus {
   background-image: url("medias/img/hero_a_propos.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: center;
 }
 .about__hero--topLayer {
   width: 100%;
@@ -2547,7 +2567,7 @@ input:focus, textarea:focus {
 }
 
 .about__linktree--link {
-  width: 100%;
+  width: 95%;
   max-width: 1400px;
   margin: auto;
   font-size: 1.5em;
@@ -2561,6 +2581,87 @@ input:focus, textarea:focus {
   color: #1F7A8C;
 }
 
+.intro {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.intro__alignement {
+  width: 95%;
+  margin-bottom: 100px;
+  border: 2px solid #E1E5F2;
+  border-radius: 30px;
+  padding: 30px;
+  display: grid;
+  height: 100%;
+  row-gap: 2em;
+  box-shadow: 0 0 30px 3px #E1E5F2;
+}
+.intro__alignement--img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 30px;
+  grid-row: 2/3;
+}
+.intro__alignement--img img {
+  width: 100%;
+  height: 110%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.intro__alignement--titre {
+  color: #2A2A2A;
+  font-weight: 600;
+  text-align: center;
+}
+.intro__alignement--text {
+  line-height: 30px;
+  text-align: left;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 1080px) {
+  .intro__alignement {
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 3em;
+         column-gap: 3em;
+  }
+  .intro__alignement--img {
+    height: 99%;
+    grid-row: 1/3;
+  }
+  .intro__alignement--titre {
+    text-align: left;
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .intro__alignement--text {
+    font-size: 18px;
+    grid-row: 2/3;
+  }
+}
+/*---------------KENZA: media queries desktop---------------*/
+@media screen and (min-width: 1400px) {
+  .intro__alignement {
+    width: 100%;
+  }
+  .intro__alignement--img {
+    height: 100%;
+    grid-row: 1/3;
+  }
+  .intro__alignement--titre {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .intro__alignement--text {
+    font-size: 20px;
+    grid-row: 2/3;
+  }
+}
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
