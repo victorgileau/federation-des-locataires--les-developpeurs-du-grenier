@@ -2624,6 +2624,30 @@ input:focus, textarea:focus {
   font-size: 18px;
 }
 
+/*---Mission---*/
+.mission__grid {
+  display: grid;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
+  font-size: 18px;
+}
+.mission__grid hr {
+  border-top: 1.9px solid #1F7A8C;
+}
+.mission__grid .card {
+  display: grid;
+}
+.mission__grid .card h3 {
+  color: #1F7A8C;
+}
+
+@media screen and (min-width: 768px) {
+  .mission__grid .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 @media screen and (min-width: 1080px) {
   .intro__alignement {
     grid-template-columns: 1fr 1fr;

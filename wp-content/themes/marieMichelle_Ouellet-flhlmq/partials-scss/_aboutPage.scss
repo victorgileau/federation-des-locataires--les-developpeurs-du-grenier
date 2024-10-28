@@ -106,8 +106,35 @@
     }
   }
   }
+
+  /*---Mission---*/
+
+.mission__grid{
+  display: grid;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
+  font-size: 18px;
+
+  hr{
+    border-top: 1.9px solid variables.$bleuSarcelle;
+  }
+  .card{
+    display: grid;
+    h3{
+      color: variables.$bleuSarcelle;
+    }
+  }
+}
   
   @media screen and (min-width: 768px) {
+    .mission__grid{
+
+      .card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 }
 
   @media screen and (min-width: 1080px) {
