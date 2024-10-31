@@ -2628,6 +2628,7 @@ input:focus, textarea:focus {
 /*---Mission---*/
 .mission__alignement--titre {
   font-weight: 600;
+  margin-bottom: 50px;
 }
 
 .mission {
@@ -2672,22 +2673,25 @@ input:focus, textarea:focus {
 /*---groupes---*/
 .groupes {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #2A2A2A;
   padding-top: 50px;
   padding-bottom: 100px;
 }
 .groupes__alignement {
   width: 90%;
+  height: 100%;
   max-width: 1400px;
   margin: auto;
 }
 .groupes__alignement h2 {
   font-weight: 600;
-  margin-bottom: 30px;
-  color: #D7E0FF;
+  margin-bottom: 50px;
+  color: #ffffff;
+  text-align: center;
 }
 .groupes__alignement .groupes__grid {
+  height: 90%;
   display: grid;
   gap: 2em;
   font-size: 18px;
@@ -2705,9 +2709,8 @@ input:focus, textarea:focus {
      object-fit: cover;
 }
 .groupes__alignement .groupes__grid .groupes__text {
-  color: #ffffff;
-  line-height: 30px;
-  grid-row: 2;
+  font-size: 24px;
+  color: #D7E0FF;
 }
 
 @media screen and (min-width: 768px) {
@@ -2720,13 +2723,6 @@ input:focus, textarea:focus {
   }
   .mission .mission__grid .card__column .svg__arrow {
     height: 30px;
-  }
-  .groupes__alignement .groupes__grid .groupes__img {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .groupes__alignement .groupes__grid .groupes__text {
-    grid-row: 1;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -2747,6 +2743,14 @@ input:focus, textarea:focus {
   .intro__alignement--text {
     font-size: 18px;
     grid-row: 2/3;
+  }
+  .groupes__alignement .groupes__grid .groupes__img {
+    height: 85%;
+    grid-area: 1/1/4/3;
+  }
+  .groupes__alignement .groupes__grid .groupes__text {
+    font-size: 2em;
+    grid-column: 3/5;
   }
 }
 /*---------------KENZA: media queries desktop---------------*/
@@ -2772,9 +2776,6 @@ input:focus, textarea:focus {
   .mission .mission__grid .card {
     display: grid;
     grid-template-columns: 300px 1fr;
-  }
-  .groupes__alignement .groupes__grid {
-    font-size: 20px;
   }
 }
 @font-face {
