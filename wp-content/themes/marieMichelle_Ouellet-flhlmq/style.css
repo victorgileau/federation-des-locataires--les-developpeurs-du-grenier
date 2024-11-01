@@ -2787,6 +2787,49 @@ input:focus, textarea:focus {
     grid-template-columns: 300px 1fr;
   }
 }
+.newsHub {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.newsHub__titre {
+  text-align: center;
+  margin-top: 200px;
+  font-size: 64px;
+  margin-bottom: 69px;
+  color: #022B3A;
+  font-weight: 500;
+}
+.newsHub__hero {
+  margin-bottom: 52px;
+  width: 100%;
+  height: 80vh;
+  background-image: url("medias/img/newsHub_hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.newsHub__hero--topLayer {
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 20%, #022B3A 150%);
+}
+
+.newsHub__linktree--link {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.newsHub__linktree--link a {
+  color: #2A2A2A;
+  transition: 0.5s;
+}
+.newsHub__linktree--link a:hover {
+  color: #1F7A8C;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
