@@ -10,7 +10,10 @@
 }
 
 .bold__font{
-  
+  font-family:"JustMe";
+  font-size: 55px;
+  color: variables.$blancSel;
+  line-height: 10px;
 }
 
   .about {
@@ -86,6 +89,7 @@
     height: 100%;
     row-gap: 2em;
     box-shadow: 0 0 30px 3px variables.$lavandreCendre;
+    background-color: variables.$blancSel;
     &--img{
       img{
         width: 100%;
@@ -123,6 +127,7 @@
     max-width: 1400px;
     margin: auto;
     margin-bottom: 100px;
+    margin-top: 100px;
     
   .mission__grid{
   display: grid;
@@ -169,43 +174,38 @@
   background-color: variables.$noirPoudre;
   padding-top: 50px;
   padding-bottom: 100px;
+  color: variables.$lavandrepetant;
 
   &__alignement{
   width: 90%;
   height: 100%;
   max-width: 1400px;
   margin: auto;
+  margin-top: 50px;
+  font-size: 1.5em;
   
-    h2{
+    
+
+    .groupes__grid{
+      
+      display: grid;
+
+      h2{
       font-weight: variables.$weightSemi;
       margin-bottom: 50px;
       color: variables.$blancSel;
       text-align: center;
-    }
-    .groupes__grid{
-      height: 90%;
-      display: grid;
-      gap: 2em;
-      font-size: 18px;
-
-      .groupes__img{
-        width: 100%;
-        border-radius: 30px;
-        overflow: hidden;
-        grid-row: 1;
-
-        img{
-          width: 100%;
-          height: 110%;
-          object-fit: cover;
-        }
       }
 
       .groupes__text{
+        margin-top: 50px;
+        line-height: 50px;
+        text-align: center;
         font-size: 24px;
-        color: variables.$lavandrepetant;
       }
+      
     }
+
   }
   
 }
@@ -230,7 +230,27 @@
       }
     }
 
+    .groupes{
+      height: 75vh;
+
+      &__alignement{
+
+        .groupes__grid{
+          column-gap: 2em;
+          h2{
+            grid-row: 1;
+            grid-column: 1 / 4;
+          }
+          .groupes__text{
+            font-size: 30px;
+            grid-row: 2;
+          }
+          
+        }
     
+      }
+      
+    }
 
     
 }
@@ -260,26 +280,12 @@
     }
     
     }
-    .groupes{
-    
-      &__alignement{
 
-      
-
-        .groupes__grid{
-          .groupes__img{
-            height: 85%;
-            grid-area: 1 / 1 / 4 / 3;
-          }
-    
-          .groupes__text{
-            font-size: 2em;
-            grid-column: 3 / 5;
-          }
-        }
-      }
-      
+    .bold__font{
+      font-size: 90px;
     }
+
+    
 }
 
 /*---------------KENZA: media queries desktop---------------*/
