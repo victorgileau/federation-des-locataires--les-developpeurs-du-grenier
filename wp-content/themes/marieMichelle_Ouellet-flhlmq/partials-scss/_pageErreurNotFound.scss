@@ -54,7 +54,7 @@
       background-color: $inColor;
       width: $size;
       height: $size;
-      margin: (-$size/2) 0 0 (-$size/2);
+      margin: calc(-1 * $size/2) 0 0 calc(-1 * $size/2);
     }
   }
 }

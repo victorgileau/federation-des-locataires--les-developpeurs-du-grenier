@@ -12,11 +12,12 @@
 }
 
 .hero {
-
+    
     width: 100%;
     padding: 0;
     margin-left: 0;
     margin-right: 0;
+    position: relative;
 
     &__titre {
         margin: 5vh 0;
@@ -34,6 +35,15 @@
         object-fit: cover;
         object-position: center;
         margin: 0;
+        z-index: -1;
+        position: relative;
+    }
+
+    &__bgHero {
+        width: auto;
+        height: 80vh;
+        background-image: linear-gradient(rgb(0, 0, 0, 0) 20%, variables.$bleuNuit 150%);
+        background-size: cover;
     }
 
     &__page {

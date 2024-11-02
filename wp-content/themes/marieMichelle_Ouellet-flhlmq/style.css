@@ -2106,6 +2106,7 @@ input:focus, textarea:focus {
   padding: 0;
   margin-left: 0;
   margin-right: 0;
+  position: relative;
 }
 .hero__titre {
   margin: 5vh 0;
@@ -2124,6 +2125,14 @@ input:focus, textarea:focus {
   -o-object-position: center;
      object-position: center;
   margin: 0;
+  z-index: -1;
+  position: relative;
+}
+.hero__bgHero {
+  width: auto;
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 20%, #022B3A 150%);
+  background-size: cover;
 }
 .hero__page {
   max-width: 1400px;
