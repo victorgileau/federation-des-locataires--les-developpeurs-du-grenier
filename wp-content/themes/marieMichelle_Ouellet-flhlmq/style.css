@@ -3067,14 +3067,14 @@ cite::after {
 .servicePage__sectionUn {
   min-height: 350px;
   display: grid;
-  grid-template-columns: minmax(auto, 400px) auto;
-  padding: 5vh 0;
+  grid-template-columns: auto;
+  padding: 5vh 2vw;
 }
 .servicePage__sectionUn .img {
   align-self: center;
   justify-self: center;
-  width: 80%;
-  aspect-ratio: 1/1;
+  width: 95%;
+  aspect-ratio: 1.5/1;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -3100,7 +3100,7 @@ cite::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5vh 2vw;
+  padding: 5vh 5vw;
   position: relative;
 }
 .servicePage__sectionDeux h2 {
@@ -3123,6 +3123,19 @@ cite::after {
   z-index: -1;
 }
 
+@media screen and (min-width: 768px) {
+  .servicePage__sectionUn {
+    padding: 5vh 0;
+    grid-template-columns: minmax(auto, 400px) auto;
+  }
+  .servicePage__sectionUn .img {
+    width: 80%;
+    aspect-ratio: 1/1;
+  }
+  .servicePage__sectionDeux {
+    padding: 5vh 2vw;
+  }
+}
 @font-face {
   font-family: "Raleway";
   src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
