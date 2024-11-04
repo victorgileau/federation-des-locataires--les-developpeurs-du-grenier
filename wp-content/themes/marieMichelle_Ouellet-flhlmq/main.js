@@ -186,11 +186,6 @@ document.body.addEventListener("mousemove", evt => {
         const mouseX = evt.clientX;
         const mouseY = evt.clientY;
         
-        gsap.set("#move", {
-          x: mouseX,
-          y: mouseY
-        })
-        
         gsap.to(".cirle", {
           x: mouseX,
           y: mouseY,

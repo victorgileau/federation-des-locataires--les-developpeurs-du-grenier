@@ -2242,7 +2242,7 @@ input:focus, textarea:focus {
   aspect-ratio: 1/1;
   border-radius: 50%;
   transition-duration: 0.2s;
-  padding: 20px;
+  padding: 15px;
   font-size: 20px;
   border: 1px solid #fff;
 }
@@ -2837,6 +2837,82 @@ input:focus, textarea:focus {
 }
 .newsHub__linktree--link a:hover {
   color: #1F7A8C;
+}
+
+.conteneurServicePage {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.servicePage {
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 60vh;
+}
+.servicePage h2 {
+  color: #022B3A;
+}
+.servicePage .text {
+  color: #022B3A;
+}
+.servicePage__sectionUn {
+  min-height: 350px;
+  display: grid;
+  grid-template-columns: minmax(auto, 400px) auto;
+  padding: 5vh 0;
+}
+.servicePage__sectionUn .img {
+  align-self: center;
+  justify-self: center;
+  width: 80%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 25px;
+}
+.servicePage__sectionUn .contenuText {
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.servicePage__sectionUn .contenuText h2 {
+  color: #022B3A;
+  margin-bottom: 25px;
+}
+.servicePage__sectionUn .contenuText .text {
+  color: #022B3A;
+}
+.servicePage__sectionDeux {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vh 2vw;
+  position: relative;
+}
+.servicePage__sectionDeux h2 {
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+.servicePage__sectionDeux .text {
+  color: #ffffff;
+}
+.servicePage__sectionDeux .text--servSectionDeuxParMargin {
+  margin-bottom: 25px;
+}
+.servicePage__sectionDeux::before {
+  content: "";
+  position: absolute;
+  left: -50vw;
+  width: 200vw;
+  height: 100%;
+  background-color: #022B3A;
+  z-index: -1;
 }
 
 @font-face {
