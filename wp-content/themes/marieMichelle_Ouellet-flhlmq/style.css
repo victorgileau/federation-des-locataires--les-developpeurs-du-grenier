@@ -2732,21 +2732,6 @@ input:focus, textarea:focus {
   .mission .mission__grid .card__column .svg__arrow {
     height: 30px;
   }
-  .groupes {
-    height: 75vh;
-  }
-  .groupes__alignement .groupes__grid {
-    -moz-column-gap: 2em;
-         column-gap: 2em;
-  }
-  .groupes__alignement .groupes__grid h2 {
-    grid-row: 1;
-    grid-column: 1/4;
-  }
-  .groupes__alignement .groupes__grid .groupes__text {
-    font-size: 30px;
-    grid-row: 2;
-  }
 }
 @media screen and (min-width: 1080px) {
   .intro__alignement {
@@ -2769,6 +2754,22 @@ input:focus, textarea:focus {
   }
   .bold__font {
     font-size: 90px;
+  }
+  .groupes {
+    height: 75vh;
+  }
+  .groupes__alignement .groupes__grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    -moz-column-gap: 2em;
+         column-gap: 2em;
+  }
+  .groupes__alignement .groupes__grid h2 {
+    grid-row: 1;
+    grid-column: 1/4;
+  }
+  .groupes__alignement .groupes__grid .groupes__text {
+    font-size: 30px;
+    grid-row: 2;
   }
 }
 /*---------------KENZA: media queries desktop---------------*/
@@ -2794,6 +2795,19 @@ input:focus, textarea:focus {
   .mission .mission__grid .card {
     display: grid;
     grid-template-columns: 300px 1fr;
+  }
+  .groupes__alignement .groupes__grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    -moz-column-gap: 2em;
+         column-gap: 2em;
+  }
+  .groupes__alignement .groupes__grid h2 {
+    grid-row: 1;
+    grid-column: 1/4;
+  }
+  .groupes__alignement .groupes__grid .groupes__text {
+    font-size: 30px;
+    grid-row: 2;
   }
 }
 .newsHub {
@@ -2839,6 +2853,119 @@ input:focus, textarea:focus {
   color: #1F7A8C;
 }
 
+/*Nouvelles*/
+.actus__alignement {
+  width: 90%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.actualite {
+  margin-bottom: 50px;
+  padding: none;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.actualite__date {
+  margin-bottom: 20px;
+  color: #022B3A;
+  font-weight: 600;
+  grid-row: 1;
+  height: 1%;
+}
+.actualite:nth-of-type(1) .actualite__img {
+  background-image: url("medias/img/actualites_nouvelle_1.jpg");
+}
+.actualite:nth-of-type(2) .actualite__img {
+  background-image: url("medias/img/actualites_nouvelle_2.jpg");
+}
+.actualite:nth-of-type(3) .actualite__img {
+  background-image: url("medias/img/actualites_nouvelle_3.jpg");
+}
+.actualite:nth-of-type(4) .actualite__img {
+  background-image: url("medias/img/actualites_nouvelle_4.jpg");
+}
+.actualite:nth-of-type(5) .actualite__img {
+  background-image: url("medias/img/actualites_nouvelle_5.jpg");
+}
+.actualite:nth-of-type(6) .actualite__img {
+  background-image: url("medias/img/actualites_nouvelle_6.jpg");
+}
+.actualite:nth-of-type(7) .actualite__img {
+  background-image: url("medias/img/actualites_nouvelle_7.jpg");
+}
+.actualite:nth-of-type(8) .actualite__img {
+  background-image: url("medias/img/actualites_nouvelle_8.jpg");
+}
+.actualite:nth-of-type(9) .actualite__img {
+  background-image: url("medias/img/actualites_nouvelle_9.jpg");
+}
+.actualite__desc {
+  font-size: 20px;
+  grid-row: 2;
+  padding: 10px 0;
+}
+.actualite__desc p {
+  line-height: 20px;
+}
+.actualite__desc:hover p {
+  background-image: url(./medias/img/hero_background_svg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.actualite__img {
+  position: relative;
+  grid-row: 3/6;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 30vh;
+  border-radius: 25px;
+}
+.actualite__btn {
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 25px;
+  background-color: #022B3A;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 10px;
+  grid-row: 6;
+  width: 100px;
+  max-height: 40px;
+}
+.actualite__btn:hover {
+  background-color: #ffffff;
+  color: #022B3A;
+  border: 1px solid #022B3A;
+}
+
+@media screen and (min-width: 768px) {
+  .actualite {
+    padding: 0 10px;
+    width: 50%;
+    justify-self: start;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .actualite {
+    width: 33%;
+  }
+}
 .conteneurServicePage {
   width: 100%;
   position: relative;
