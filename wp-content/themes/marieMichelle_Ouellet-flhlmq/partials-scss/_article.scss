@@ -2,10 +2,11 @@
 @use "mixins/mixins";
 
 .article {
-    height: 100vh;
+    min-height: 250vh;
+    margin: 0 auto;
+    width: 1400px;
     &__content {
-        margin: 0 auto;
-        width: 1400px;
+        margin-bottom: 100px;
     }
 
     &__img {
@@ -13,6 +14,78 @@
         height: 500px;
         background-image: url("../medias/img/petition_hlm.png");
         background-size: cover;
-        margin-bottom: 50px;
+    }
+
+    &__preview {
+        width: 100%;
+        height: 30vh;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__info {
+        width: 100%;
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: 1fr 1fr;
+        margin: 20px 0;
+    }
+
+    &__tag {
+        @include mixins.btnBleu;
+    }
+    &__time {
+        text-align: right;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+}
+
+.alt {
+    color: #1F7A8C;
+}
+
+cite {
+    position: relative;
+&::after {
+    margin-left: -0px;
+  margin-right: 20px;
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+}
+}
+
+@media screen and (max-width: 1400px) {
+    .article {
+        padding: 2vw;
+        width: 100%;
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .article {
+        &__info {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            text-align: center;
+            gap: 20px
+        }
+        &__time {
+            text-align: center;
+        }
     }
 }

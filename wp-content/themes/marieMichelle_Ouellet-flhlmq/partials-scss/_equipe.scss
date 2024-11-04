@@ -20,13 +20,14 @@
     position: relative;
 
     &__titre {
-        margin: 5vh 0;
+        margin: 5vh auto;
         text-align: center;
         margin-top: 100px;
         font-size: 64px;
         margin-bottom: 69px;
         color: variables.$bleuNuit;
         font-weight: 500;
+        max-width: 1400px;
     }
 
     &__img {
