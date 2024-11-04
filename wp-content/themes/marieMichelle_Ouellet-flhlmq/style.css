@@ -2865,7 +2865,7 @@ input:focus, textarea:focus {
   margin-bottom: 50px;
 }
 
-.actualite {
+.actualiteHub {
   margin-bottom: 50px;
   padding: none;
   width: 100%;
@@ -2874,54 +2874,54 @@ input:focus, textarea:focus {
   flex-direction: column;
   justify-content: space-around;
 }
-.actualite__date {
+.actualiteHub__date {
   margin-bottom: 20px;
   color: #022B3A;
   font-weight: 600;
   grid-row: 1;
   height: 1%;
 }
-.actualite:nth-of-type(1) .actualite__img {
+.actualiteHub:nth-of-type(1) .actualiteHub__img {
   background-image: url("medias/img/actualites_nouvelle_1.jpg");
 }
-.actualite:nth-of-type(2) .actualite__img {
+.actualiteHub:nth-of-type(2) .actualiteHub__img {
   background-image: url("medias/img/actualites_nouvelle_2.jpg");
 }
-.actualite:nth-of-type(3) .actualite__img {
+.actualiteHub:nth-of-type(3) .actualiteHub__img {
   background-image: url("medias/img/actualites_nouvelle_3.jpg");
 }
-.actualite:nth-of-type(4) .actualite__img {
+.actualiteHub:nth-of-type(4) .actualiteHub__img {
   background-image: url("medias/img/actualites_nouvelle_4.jpg");
 }
-.actualite:nth-of-type(5) .actualite__img {
+.actualiteHub:nth-of-type(5) .actualiteHub__img {
   background-image: url("medias/img/actualites_nouvelle_5.jpg");
 }
-.actualite:nth-of-type(6) .actualite__img {
+.actualiteHub:nth-of-type(6) .actualiteHub__img {
   background-image: url("medias/img/actualites_nouvelle_6.jpg");
 }
-.actualite:nth-of-type(7) .actualite__img {
+.actualiteHub:nth-of-type(7) .actualiteHub__img {
   background-image: url("medias/img/actualites_nouvelle_7.jpg");
 }
-.actualite:nth-of-type(8) .actualite__img {
+.actualiteHub:nth-of-type(8) .actualiteHub__img {
   background-image: url("medias/img/actualites_nouvelle_8.jpg");
 }
-.actualite:nth-of-type(9) .actualite__img {
+.actualiteHub:nth-of-type(9) .actualiteHub__img {
   background-image: url("medias/img/actualites_nouvelle_9.jpg");
 }
-.actualite__desc {
+.actualiteHub__desc {
   font-size: 20px;
   grid-row: 2;
   padding: 10px 0;
 }
-.actualite__desc p {
+.actualiteHub__desc p {
   line-height: 20px;
 }
-.actualite__desc:hover p {
+.actualiteHub__desc:hover p {
   background-image: url(./medias/img/hero_background_svg.svg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-.actualite__img {
+.actualiteHub__img {
   position: relative;
   grid-row: 3/6;
   background-size: cover;
@@ -2930,7 +2930,7 @@ input:focus, textarea:focus {
   height: 30vh;
   border-radius: 25px;
 }
-.actualite__btn {
+.actualiteHub__btn {
   border: none;
   transition-property: background-color;
   transition-duration: 0.2s;
@@ -2948,21 +2948,21 @@ input:focus, textarea:focus {
   width: 100px;
   max-height: 40px;
 }
-.actualite__btn:hover {
+.actualiteHub__btn:hover {
   background-color: #ffffff;
   color: #022B3A;
   border: 1px solid #022B3A;
 }
 
 @media screen and (min-width: 768px) {
-  .actualite {
+  .actualiteHub {
     padding: 0 10px;
     width: 50%;
     justify-self: start;
   }
 }
 @media screen and (min-width: 1440px) {
-  .actualite {
+  .actualiteHub {
     width: 33%;
   }
 }

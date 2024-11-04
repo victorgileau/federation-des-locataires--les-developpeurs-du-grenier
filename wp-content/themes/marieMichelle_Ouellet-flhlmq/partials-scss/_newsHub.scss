@@ -65,7 +65,7 @@
     margin-bottom: 50px;
   }
   
-  .actualite{
+  .actualiteHub{
     margin-bottom: 50px;
     padding: none;
     width: 100%;
@@ -84,7 +84,7 @@
   
     @for $i from 1 through 9 {
       &:nth-of-type(#{$i}) {
-        .actualite__img {
+        .actualiteHub__img {
           background-image: url("medias/img/actualites_nouvelle_#{$i}.jpg");
         }
   
@@ -131,7 +131,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    .actualite{
+    .actualiteHub{
       padding: 0 10px;
       width: 50%;
       justify-self: start;
@@ -140,7 +140,7 @@
   }
   
   @media screen and (min-width: 1440px) {
-    .actualite {
+    .actualiteHub{
       width: 33%;
     }
   }
