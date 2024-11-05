@@ -90,7 +90,7 @@ if (document.querySelector('.swiperActialite') != null) {
 /*--swiper servicesHub 1 (Kenza)--*/
 if (document.querySelector('.swiperPubli') != null) {
         let swiperPubli = new Swiper(".swiperPubli", {
-                slidesPerView: 1,
+                slidesPerView: 1.5,
                 centeredSlides: true,
                 grabCursor: true,
                 spaceBetween: 10,
@@ -100,15 +100,11 @@ if (document.querySelector('.swiperPubli') != null) {
                 },
                 breakpoints: {
                         768: {
-                                slidesPerView:3,
-        
-                        },
-                        849: {
-                                slidesPerView:4,
+                                slidesPerView:3.5,
         
                         },
                         1400: {
-                                slidesPerView: 5,
+                                slidesPerView: 5.5,
         
                         },
                 },

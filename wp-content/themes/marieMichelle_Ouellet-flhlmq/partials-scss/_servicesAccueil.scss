@@ -39,6 +39,7 @@
         min-height: 350px;
         margin-top: 20px;
         .service {
+          text-decoration: none;
             margin: 20px;
             padding: 25px;
             border-radius: 25px;
@@ -95,6 +96,7 @@
                 height: 35px;
                 grid-column: 1;
                 grid-row: 4;
+                cursor: pointer;
             
             .btn__fleche{
                 position: absolute;
