@@ -77,11 +77,20 @@
   background-color: #022B3A;
   color: #ffffff;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.btnBleu a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .btnBleu:hover {
   background-color: #ffffff;
   color: #022B3A;
   border: 1px solid #022B3A;
+}
+.btnBleu:hover a {
+  color: #022B3A;
+  text-decoration: none;
 }
 
 .btnB {
@@ -99,10 +108,18 @@
   border: 1px solid #022B3A;
   font-weight: bold;
 }
+.btnB a {
+  color: #022B3A;
+  text-decoration: none;
+}
 .btnB:hover {
   background-color: #022B3A;
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+.btnB:hover a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .burgerIcon {
@@ -446,10 +463,18 @@ footer .footer__btn button {
   align-self: center;
   justify-self: center;
 }
+.messageProjetEtudant__btn a {
+  color: #022B3A;
+  text-decoration: none;
+}
 .messageProjetEtudant__btn:hover {
   background-color: #022B3A;
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+.messageProjetEtudant__btn:hover a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .messageProjetEtudant__btn a {
   text-decoration: none;
@@ -643,6 +668,7 @@ footer .footer__btn button {
   background-color: #D7E0FF;
   color: #2A2A2A;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0);
   position: relative;
   padding-left: 0.5em;
   width: 120px;
@@ -650,10 +676,18 @@ footer .footer__btn button {
   grid-column: 1;
   grid-row: 4;
 }
+.services .services__cards .service__btn a {
+  color: #2A2A2A;
+  text-decoration: none;
+}
 .services .services__cards .service__btn:hover {
   background-color: #2A2A2A;
   color: #D7E0FF;
   border: 1px solid #D7E0FF;
+}
+.services .services__cards .service__btn:hover a {
+  color: #D7E0FF;
+  text-decoration: none;
 }
 .services .services__cards .service__btn .btn__fleche {
   position: absolute;
@@ -848,6 +882,7 @@ footer .footer__btn button {
   height: auto;
 }
 .hero__container {
+  padding: 0 10px;
   margin: auto;
   height: 100%;
   max-width: 1400px;
@@ -862,21 +897,23 @@ footer .footer__btn button {
   grid-row: 1;
   display: grid;
   grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
 }
 .hero__container .info__nomEntreprise {
+  margin: 5vh 0;
   font-size: 20px;
   grid-row: 1;
   grid-column: 1;
   align-self: center;
 }
 .hero__container .info__msgEntreprise {
-  line-height: 75px;
   grid-row: 2;
   grid-column: 1;
   align-self: center;
-  font-size: 48px;
+  font-size: 64px;
 }
 .hero__container .info__msgEntreprise em {
+  white-space: nowrap;
   font-style: normal;
   font-size: 100px;
   background-image: url(./medias/img/hero_background_svg.svg);
@@ -892,7 +929,7 @@ footer .footer__btn button {
 }
 .hero__container .info__btn {
   width: 250px;
-  margin: 2vh 0;
+  margin: 2vh 0 0 0;
   align-self: center;
   font-size: 24px;
   padding: 1vh 3vw;
@@ -909,14 +946,23 @@ footer .footer__btn button {
   border-radius: 25px;
   background-color: #2A2A2A;
   color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0);
   font-weight: bold;
   justify-self: center;
   grid-row: 3;
+}
+.hero__container .info__btn--un a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .hero__container .info__btn--un:hover {
   background-color: #ffffff;
   color: #2A2A2A;
   border: 1px solid #2A2A2A;
+}
+.hero__container .info__btn--un:hover a {
+  color: #022B3A;
+  text-decoration: none;
 }
 .hero__container .info__btn--deux {
   transition-property: background-color;
@@ -934,10 +980,18 @@ footer .footer__btn button {
   justify-self: center;
   grid-row: 4;
 }
+.hero__container .info__btn--deux a {
+  color: #022B3A;
+  text-decoration: none;
+}
 .hero__container .info__btn--deux:hover {
   background-color: #022B3A;
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+.hero__container .info__btn--deux:hover a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .hero__container .info__btn--deux svg {
   margin-left: 10px;
@@ -972,6 +1026,11 @@ footer .footer__btn button {
   border-radius: 25px;
 }
 
+@media screen and (max-width: 450px) {
+  .hero__container .info__msgEntreprise em {
+    white-space: wrap;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero.marginNoMsg {
     margin-top: 6vh;
@@ -983,12 +1042,12 @@ footer .footer__btn button {
     grid-template-rows: auto auto auto;
   }
   .hero__container .info__nomEntreprise {
+    margin: 5vh 0;
     font-size: 24px;
     grid-column: span 2;
   }
   .hero__container .info__msgEntreprise {
     font-size: 70px;
-    line-height: 75px;
     grid-column: span 2;
   }
   .hero__container .info__btn {
@@ -1024,14 +1083,15 @@ footer .footer__btn button {
     grid-template-rows: none;
   }
   .hero__container .info__nomEntreprise {
+    margin: 5vh 0;
+    width: 90%;
     font-size: 24px;
-    align-self: center;
+    align-self: end;
     grid-row: 2/3;
     grid-column: 1/3;
   }
   .hero__container .info__msgEntreprise {
     font-size: 70px;
-    line-height: 120px;
     align-self: center;
     grid-row: 3/4;
     grid-column: 1/3;
@@ -1070,6 +1130,7 @@ footer .footer__btn button {
   height: 5vh;
   position: relative;
   width: 100%;
+  top: -8vh;
   margin: auto;
   display: flex;
   justify-content: end;
@@ -1077,6 +1138,7 @@ footer .footer__btn button {
 .swiper-nav button {
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  z-index: 10;
 }
 .swiper-nav svg {
   width: 40px;
@@ -1130,7 +1192,7 @@ footer .footer__btn button {
   max-width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 20px 80px auto 10px;
+  grid-template-rows: 20px 80px auto auto;
 }
 .actualite__date {
   margin-bottom: 20px;
@@ -1145,12 +1207,15 @@ footer .footer__btn button {
   padding: 10px 0;
 }
 .actualite__desc p {
+  display: inline;
   line-height: 20px;
 }
+.actualite__desc p a {
+  color: #2A2A2A;
+  text-decoration: none;
+}
 .actualite__desc:hover p {
-  background-image: url(./medias/img/hero_background_svg.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #E1E5F2;
 }
 .actualite__img {
   position: relative;
@@ -1174,24 +1239,36 @@ footer .footer__btn button {
   background-color: #022B3A;
   color: #ffffff;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0);
   margin-top: 10px;
   grid-row: 6;
   width: 100px;
   max-height: 40px;
+}
+.actualite__btn a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .actualite__btn:hover {
   background-color: #ffffff;
   color: #022B3A;
   border: 1px solid #022B3A;
 }
+.actualite__btn:hover a {
+  color: #022B3A;
+  text-decoration: none;
+}
 
 @media screen and (max-width: 1400px) {
+  .swiper-nav {
+    top: -5vh;
+  }
   .swiper {
     height: 70%;
   }
   .actualite {
     width: 500px;
-    grid-template-rows: 20px 80px auto 20px;
+    grid-template-rows: 20px 100px auto 20px;
   }
   .actualite__date {
     font-size: 20px;
@@ -1201,11 +1278,15 @@ footer .footer__btn button {
   }
 }
 @media screen and (max-width: 768px) {
+  .swiper-nav {
+    top: -2vh;
+  }
   .swiper {
     height: 70%;
+    overflow-x: hidden;
   }
   .actualite {
-    grid-template-rows: 20px 80px auto 20px;
+    grid-template-rows: minmax(20px, 40px) 100px minmax(200px, auto) auto;
   }
   .actualite__date {
     font-size: 20px;
@@ -1299,10 +1380,18 @@ footer .footer__btn button {
   height: 2em;
   border-radius: 100px;
 }
+.membre .appelAction__btn a {
+  color: #022B3A;
+  text-decoration: none;
+}
 .membre .appelAction__btn:hover {
   background-color: #022B3A;
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+.membre .appelAction__btn:hover a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -1377,11 +1466,20 @@ footer .footer__btn button {
   background-color: #ffffff;
   color: #1F7A8C;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.btnBs a {
+  color: #1F7A8C;
+  text-decoration: none;
 }
 .btnBs:hover {
   background-color: #1F7A8C;
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+.btnBs:hover a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .recherchebar {
@@ -1654,6 +1752,7 @@ footer .footer__btn button {
   background-color: #2A2A2A;
   color: #D7E0FF;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0);
   position: relative;
   padding-left: 0.5em;
   width: 120px;
@@ -1661,10 +1760,18 @@ footer .footer__btn button {
   grid-column: 1;
   grid-row: 4;
 }
+.participation__btn a {
+  color: #D7E0FF;
+  text-decoration: none;
+}
 .participation__btn:hover {
   background-color: #D7E0FF;
   color: #2A2A2A;
   border: 1px solid #2A2A2A;
+}
+.participation__btn:hover a {
+  color: #2A2A2A;
+  text-decoration: none;
 }
 .participation__btn .btn__fleche {
   position: absolute;
@@ -1774,6 +1881,7 @@ footer .footer__btn button {
   background-color: #ffffff;
   color: #1F7A8C;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0);
   z-index: 2;
   transition: 0.5s;
   opacity: 0;
@@ -1782,10 +1890,18 @@ footer .footer__btn button {
   width: 120px;
   height: 35px;
 }
+.swiperPubli .swiper-slide a .publication__btn a {
+  color: #1F7A8C;
+  text-decoration: none;
+}
 .swiperPubli .swiper-slide a .publication__btn:hover {
   background-color: #1F7A8C;
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+.swiperPubli .swiper-slide a .publication__btn:hover a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .swiperPubli .swiper-slide a .publication__btn .btn__fleche {
   position: absolute;
@@ -2047,13 +2163,22 @@ footer .footer__btn button {
   border-radius: 25px;
   background-color: #2A2A2A;
   color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0);
   font-weight: bold;
   display: inline-block;
+}
+.contact__btn a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .contact__btn:hover {
   background-color: #ffffff;
   color: #2A2A2A;
   border: 1px solid #2A2A2A;
+}
+.contact__btn:hover a {
+  color: #022B3A;
+  text-decoration: none;
 }
 .contact__info {
   text-align: left;
@@ -2237,6 +2362,7 @@ input:focus, textarea:focus {
   border-radius: 25px;
   background-color: #2A2A2A;
   color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0);
   font-weight: bold;
   cursor: pointer;
   align-self: end;
@@ -2247,10 +2373,18 @@ input:focus, textarea:focus {
   font-size: 20px;
   border: 1px solid #fff;
 }
+.modalMembreEquipe__btnFermer a {
+  color: #ffffff;
+  text-decoration: none;
+}
 .modalMembreEquipe__btnFermer:hover {
   background-color: #ffffff;
   color: #2A2A2A;
   border: 1px solid #2A2A2A;
+}
+.modalMembreEquipe__btnFermer:hover a {
+  color: #022B3A;
+  text-decoration: none;
 }
 .modalMembreEquipe__img {
   justify-self: center;
@@ -2354,11 +2488,20 @@ input:focus, textarea:focus {
   background-color: #022B3A;
   color: #ffffff;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.article__tag a {
+  color: #ffffff;
+  text-decoration: none;
 }
 .article__tag:hover {
   background-color: #ffffff;
   color: #022B3A;
   border: 1px solid #022B3A;
+}
+.article__tag:hover a {
+  color: #022B3A;
+  text-decoration: none;
 }
 .article__time {
   text-align: right;
@@ -2532,10 +2675,18 @@ cite::after {
   font-weight: bold;
   font-size: 24px;
 }
+.errorPage button a {
+  color: #022B3A;
+  text-decoration: none;
+}
 .errorPage button:hover {
   background-color: #022B3A;
   color: #ffffff;
   border: 1px solid #ffffff;
+}
+.errorPage button:hover a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 @keyframes pointerAnimation {
@@ -3024,15 +3175,24 @@ cite::after {
   background-color: #022B3A;
   color: #ffffff;
   font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0);
   margin-top: 10px;
   grid-row: 6;
   width: 100px;
   max-height: 40px;
 }
+.actualiteHub__btn a {
+  color: #ffffff;
+  text-decoration: none;
+}
 .actualiteHub__btn:hover {
   background-color: #ffffff;
   color: #022B3A;
   border: 1px solid #022B3A;
+}
+.actualiteHub__btn:hover a {
+  color: #022B3A;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -3062,6 +3222,8 @@ cite::after {
   color: #022B3A;
 }
 .servicePage .text {
+  line-height: 24px;
+  font-size: 18px;
   color: #022B3A;
 }
 .servicePage__sectionUn {

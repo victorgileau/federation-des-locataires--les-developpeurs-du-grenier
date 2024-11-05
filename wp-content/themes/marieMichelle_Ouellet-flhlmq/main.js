@@ -64,7 +64,7 @@ if (document.querySelector('.hero_swiper') != null) {
 
 if (document.querySelector('.swiperActialite') != null) {
         let swiperDeux = new Swiper(".swiperActialite", {
-                slidesPerView: 1,
+                slidesPerView: 1.5,
                 spaceBetween: 0,
                 loop: true,
                 navigation: {
@@ -73,11 +73,11 @@ if (document.querySelector('.swiperActialite') != null) {
                 },
                 breakpoints: {
                         768: {
-                                slidesPerView: 2,
+                                slidesPerView: 2.5,
                                 loop: true,
                         },
                         1400: {
-                                slidesPerView: 3,
+                                slidesPerView: 3.5,
                                 loop: true,
                         },
                 },
@@ -182,15 +182,20 @@ for (let i = 0; i < arrayMembre.length; i++) {
 
 /*--code error 404 --*/
 
-document.body.addEventListener("mousemove", evt => {
-        const mouseX = evt.clientX;
-        const mouseY = evt.clientY;
-        
-        gsap.to(".cirle", {
-          x: mouseX,
-          y: mouseY,
-          stagger: -0.1
-        })
-      });
+
+
+if (document.querySelector('.cirle') != null) {
+        document.body.addEventListener("mousemove", evt => {
+                const mouseX = evt.clientX;
+                const mouseY = evt.clientY;
+                
+                gsap.to(".cirle", {
+                  x: mouseX,
+                  y: mouseY,
+                  stagger: -0.1
+                })
+              });
+}
+
 
 /*--fin code error 404 --*/
