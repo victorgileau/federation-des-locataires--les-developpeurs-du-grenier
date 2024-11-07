@@ -1,3 +1,4 @@
+/* Victor */
 @use './variables';
 @use './mixins/mixins';
 
@@ -54,6 +55,7 @@
                     background-position: center;
                     background-size: contain;
                     font-family: 'JustMe';
+
                     strong {
                         font-weight: normal;
                         font-family: 'JustMe';
@@ -79,13 +81,16 @@
                     @include mixins.btnBlanc;
                     justify-self: center;
                     grid-row: 4;
+
                     svg {
                         margin-left: 10px;
                         width: 25px;
+
                         path {
                             fill: variables.$bleuNuit;
                         }
                     }
+
                     &:hover {
                         svg {
                             path {
@@ -142,8 +147,10 @@
     .hero.marginNoMsg {
         margin-top: 6vh;
     }
+
     .hero {
         margin-top: 200px;
+
         &__container {
             .info {
                 grid-template-rows: auto auto auto;
@@ -186,8 +193,10 @@
     .hero.marginNoMsg {
         margin-top: 6vh;
     }
+
     .hero {
         margin-top: 150px;
+
         &__container {
             grid-template-columns: 60% 40%;
 

@@ -1,3 +1,4 @@
+/* Victor */
 @use './variables';
 
 .conteneurServicePage {
@@ -10,20 +11,23 @@
     max-width: 1400px;
     margin: 0 auto;
     min-height: 60vh;
-    
+
     h2 {
         color: variables.$bleuNuit;
     }
+
     .text {
         line-height: 24px;
         font-size: 18px;
         color: variables.$bleuNuit;
     }
+
     &__sectionUn {
         min-height: 350px;
         display: grid;
         grid-template-columns: auto;
         padding: 5vh 2vw;
+
         .img {
             align-self: center;
             justify-self: center;
@@ -33,23 +37,27 @@
             object-position: center;
             border-radius: 25px;
         }
+
         .contenuText {
             padding: 2vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
             height: 100%;
+
             h2 {
                 color: variables.$bleuNuit;
                 margin-bottom: 25px;
             }
+
             .text {
                 color: variables.$bleuNuit;
-                
+
             }
-            
+
         }
     }
+
     &__sectionDeux {
         min-height: 400px;
         display: flex;
@@ -57,16 +65,20 @@
         justify-content: center;
         padding: 5vh 5vw;
         position: relative;
+
         h2 {
             color: variables.$blancSel;
             margin-bottom: 25px;
         }
+
         .text {
             color: variables.$blancSel;
+
             &--servSectionDeuxParMargin {
                 margin-bottom: 25px;
             }
         }
+
         &::before {
             content: '';
             position: absolute;
@@ -84,11 +96,13 @@
         &__sectionUn {
             padding: 5vh 0;
             grid-template-columns: minmax(auto, 400px) auto;
+
             .img {
                 width: 80%;
                 aspect-ratio: 1/1;
             }
         }
+
         &__sectionDeux {
             padding: 5vh 2vw;
         }

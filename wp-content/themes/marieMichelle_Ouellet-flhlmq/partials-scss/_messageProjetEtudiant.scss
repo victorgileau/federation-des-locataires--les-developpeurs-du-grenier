@@ -1,3 +1,4 @@
+/* Victor */
 @use './variables';
 @use './mixins/mixins';
 
@@ -28,6 +29,7 @@
         color: variables.$blancSel;
         grid-row: 2;
     }
+
     &__btn {
         grid-row: 3;
         @include mixins.btnBlanc;
@@ -36,24 +38,30 @@
         width: 100px;
         align-self: center;
         justify-self: center;
+
         a {
             text-decoration: none;
             color: variables.$noirPoudre;
         }
+
         svg {
             margin-left: 5px;
             align-self: center;
             width: 2vh;
+
             path {
-              fill: variables.$noirPoudre;
+                fill: variables.$noirPoudre;
             }
         }
+
         &:hover {
             background-color: variables.$noirPoudre;
             color: variables.$blancSel;
+
             a {
                 color: variables.$blancSel;
             }
+
             svg {
                 path {
                     fill: variables.$blancSel;
@@ -61,21 +69,25 @@
             }
         }
     }
+
     &__closeBtn {
         margin-right: 25px;
         justify-self: end;
         grid-row: 1;
+
         svg {
             width: 24px;
             aspect-ratio: 1/1;
+
             path {
-              transition-duration: 0.2s;
-              transition-timing-function: linear;
+                transition-duration: 0.2s;
+                transition-timing-function: linear;
             }
+
             &:hover {
-              path {
-                stroke: variables.$lavandrepetant;
-              }
+                path {
+                    stroke: variables.$lavandrepetant;
+                }
             }
         }
     }
@@ -86,20 +98,24 @@
         min-height: 120px;
         max-height: 160px;
     }
+
     .messageProjetEtudant {
         max-width: 95vw;
         margin: 0 auto;
         grid-template-columns: 50% auto 5%;
         grid-template-rows: none;
+
         &__msg {
             padding: 0;
             text-align: left;
             grid-row: none;
         }
+
         &__btn {
             grid-row: none;
             justify-self: end;
         }
+
         &__closeBtn {
             grid-row: none;
         }
@@ -110,21 +126,25 @@
     .msgEtudantBG {
         max-height: 200px;
     }
+
     .messageProjetEtudant {
         max-width: 1400px;
         max-height: 120px;
         margin: 0 auto;
         grid-template-columns: 1000px auto auto;
         grid-template-rows: auto;
+
         &__msg {
             grid-row: 1;
             padding: 0;
             text-align: left;
         }
+
         &__btn {
             grid-row: 1;
             justify-self: end;
         }
+
         &__closeBtn {
             grid-row: 1;
             margin: 0;

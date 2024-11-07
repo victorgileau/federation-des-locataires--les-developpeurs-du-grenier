@@ -25,16 +25,18 @@
     font-family: 'Raleway';
     src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format('truetype');
 }
+
 @font-face {
     font-family: 'JustMe';
     src: url(./medias/fonts/Just_Me_Again_Down_Here/JustMeAgainDownHere-Regular.ttf) format('truetype');
 }
 
 /*---------------KENZA: size telephone---------------*/
-html{
-    height:100%;
+html {
+    height: 100%;
 }
-*{
+
+* {
     font-family: Raleway;
 }
 
@@ -45,23 +47,23 @@ body {
     background-color: variables.$blancSel;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-h1{
+h1 {
     font-size: 36px;
     color: variables.$blancSel;
     font-weight: bold;
 }
 
-h2{
+h2 {
     font-size: 32px;
     color: variables.$noirPoudre;
     font-weight: bold;
 }
 
-h3{
+h3 {
     font-size: 24px;
     color: variables.$noirPoudre;
     font-weight: medium;
@@ -71,37 +73,37 @@ h3{
 
 @media screen and (min-width: 768px) {
 
-    
-    h1{
+
+    h1 {
         font-size: 64px;
     }
-    
-    h2{
+
+    h2 {
         font-size: 48px;
     }
-    
-    h3{
+
+    h3 {
         font-size: 32px;
     }
- }
+}
 
 /*---------------KENZA: media queries desktop---------------*/
 @media screen and (min-width: 1400px) {
 
 
-    h1{
+    h1 {
         font-size: 96px;
     }
-    
-    h2{
+
+    h2 {
         font-size: 64px;
     }
-    
-    h3{
+
+    h3 {
         font-size: 32px;
     }
-        }
+}
 
 header ul li a {
-  color: variables.$noirPoudre;
+    color: variables.$noirPoudre;
 }

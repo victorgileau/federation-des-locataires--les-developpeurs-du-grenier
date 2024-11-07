@@ -195,6 +195,14 @@
     margin-top: 250px;
   }
 }
+@media screen and (max-width: 1300px) {
+  .btnBleu {
+    font-size: 18px;
+  }
+  .btnB {
+    font-size: 18px;
+  }
+}
 @media screen and (min-width: 1400px) {
   .nav-content {
     width: 1400px;
@@ -214,6 +222,141 @@
   margin-top: 0;
 }
 
+/* Code trouvé en ligne: https://www.sliderrevolution.com/resources/css-hamburger-menu/, modifié par Joshua*/
+.boxBurger {
+  border-radius: 2px;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 35px;
+  height: 35px;
+}
+
+.burgerBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  cursor: pointer;
+}
+
+.spanBurger {
+  display: block;
+  width: 50%;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  height: 4px;
+  background: #000;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.spanBurger + .spanBurger {
+  margin-top: 8px;
+}
+
+.active .spanBurger:nth-child(1) {
+  animation: ease 0.7s top forwards;
+}
+
+.not-active .spanBurger:nth-child(1) {
+  animation: ease 0.7s top-2 forwards;
+}
+
+.active .spanBurger:nth-child(2) {
+  animation: ease 0.7s scaled forwards;
+}
+
+.not-active .spanBurger:nth-child(2) {
+  animation: ease 0.7s scaled-2 forwards;
+}
+
+.active .spanBurger:nth-child(3) {
+  animation: ease 0.7s bottom forwards;
+}
+
+.not-active .spanBurger:nth-child(3) {
+  animation: ease 0.7s bottom-2 forwards;
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 22px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 5px;
+    transform: rotate(45deg);
+  }
+}
+@keyframes top-2 {
+  0% {
+    top: 22px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 22px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 22px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 20px;
+    transform: rotate(135deg);
+  }
+}
+@keyframes bottom-2 {
+  0% {
+    bottom: 22px;
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: 22px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Fin du code en ligne burger */
+/* Kenza */
 /*-----------------KENZA: footer pour telephone !--------------------*/
 footer {
   display: block;
@@ -417,6 +560,7 @@ footer .footer__btn button {
     margin-top: 50px;
   }
 }
+/* Victor */
 /*--Ajout code message Projet étudant--*/
 .msgEtudantBG {
   background-color: #2A2A2A;
@@ -569,6 +713,7 @@ footer .footer__btn button {
 }
 
 /*--Fin Ajout code message Projet étudant--*/
+/* Kenza */
 .services {
   width: 100%;
   height: 100%;
@@ -731,6 +876,7 @@ footer .footer__btn button {
     width: 20%;
   }
 }
+/* Kenza avec l'aide de Victor */
 .temoignages {
   /*Victor*/
   /*display: grid;
@@ -873,6 +1019,7 @@ footer .footer__btn button {
     font-size: 24px;
   }
 }
+/* Victor */
 .hero.marginNoMsg {
   margin-top: 10vh;
 }
@@ -1116,6 +1263,7 @@ footer .footer__btn button {
     grid-row: 1;
   }
 }
+/* Victor */
 .actualites {
   width: 100%;
   max-width: 1400px;
@@ -1309,6 +1457,7 @@ footer .footer__btn button {
     margin-bottom: 10vh;
   }
 }
+/* Victor */
 .membre {
   width: 100%;
   height: 100vh;
@@ -1420,6 +1569,7 @@ footer .footer__btn button {
     background-size: 180%;
   }
 }
+/* Joshua */
 .apropos {
   position: relative;
   display: flex;
@@ -1497,6 +1647,7 @@ footer .footer__btn button {
   text-decoration: none;
 }
 
+/* Joshua */
 .recherchebar {
   width: 100%;
   background-color: #E1E5F2;
@@ -1516,7 +1667,7 @@ footer .footer__btn button {
 }
 
 .search {
-  --padding: 1vw;
+  --padding: 0.2vw;
   justify-self: end;
   width: 100%;
   display: flex;
@@ -1535,6 +1686,10 @@ footer .footer__btn button {
   width: 100%;
 }
 
+.search span {
+  margin-left: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .recherchebar__content {
     grid-template-columns: 1fr 2fr;
@@ -1543,14 +1698,14 @@ footer .footer__btn button {
     margin: 0 auto;
   }
   .search {
-    width: 35vw;
+    width: 45vw;
     justify-self: end;
-    max-width: 500px;
+    max-width: 700px;
   }
   .search-input {
     font-size: 16px;
-    width: 35vw;
-    max-width: 500px;
+    width: 45vw;
+    max-width: 700px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -1558,7 +1713,18 @@ footer .footer__btn button {
     width: 1400px;
     margin: 0 auto;
   }
+  .search {
+    width: 45vw;
+    justify-self: end;
+    max-width: 700px;
+  }
+  .search-input {
+    font-size: 16px;
+    width: 45vw;
+    max-width: 700px;
+  }
 }
+/* Joshua */
 .abonnement {
   width: 100%;
   padding: 50px 0;
@@ -1587,6 +1753,7 @@ footer .footer__btn button {
   background: transparent;
   width: 25vmin;
   padding: 1.3vmin;
+  border: 1px solid #2A2A2A;
 }
 .membership__text {
   color: black;
@@ -1597,7 +1764,7 @@ footer .footer__btn button {
 }
 .membership__btn {
   justify-self: center;
-  font-size: 1vw;
+  font-size: 18px;
   padding: 1.3vmin;
 }
 .membership__content {
@@ -1619,7 +1786,7 @@ footer .footer__btn button {
     width: 40vmin;
   }
   .membership__btn {
-    font-size: 2vw;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1634,7 +1801,7 @@ footer .footer__btn button {
     padding: 1.5vmin;
   }
   .membership__btn {
-    font-size: 5vmin;
+    font-size: 18px;
   }
 }
 .participations {
@@ -2156,6 +2323,7 @@ footer .footer__btn button {
     width: 100%;
   }
 }
+/* Joshua */
 .contact {
   margin-top: 10vh;
   min-height: 50vh;
@@ -2224,19 +2392,24 @@ footer .footer__btn button {
 .contact__info i {
   margin-right: 10px;
 }
+.contact__title {
+  font-weight: 500;
+}
 
 .form-group {
   margin-bottom: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 12px;
   border-radius: 8px;
   border: none;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
   box-shadow: 0 0 8px #bbb;
 }
@@ -2249,6 +2422,7 @@ input:focus, textarea:focus {
     grid-template-columns: 1fr;
   }
 }
+/* Victor */
 .titre {
   text-align: center;
   font-size: 64px;
@@ -2482,6 +2656,7 @@ input:focus, textarea:focus {
     margin-top: 15vh;
   }
 }
+/* Joshua */
 .article {
   min-height: 100vh;
   margin: 0 auto;
@@ -2576,6 +2751,14 @@ input:focus, textarea:focus {
 .article__content p, .article__content h3, .article__content cite, .article__content cite::after {
   margin-bottom: 2vw;
 }
+.article__link {
+  text-decoration: none;
+  color: #1F7A8C;
+  transition-duration: 0.2s;
+}
+.article__link:hover {
+  color: #022B3A;
+}
 
 .preview-title {
   max-width: 1400px;
@@ -2602,8 +2785,7 @@ cite::after {
 
 @media screen and (max-width: 1400px) {
   .article {
-    padding: 2vw;
-    width: 100%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2622,6 +2804,8 @@ cite::after {
   width: 100% !important;
 }
 
+/* Victor */
+/* Animation code original trouvé en ligne modifié: https://codepen.io/carolineartz/pen/rNaGQYo */
 .pageErrorContainer {
   height: 100vh;
   width: 100%;
@@ -3292,6 +3476,7 @@ cite::after {
     width: 33%;
   }
 }
+/* Victor */
 .conteneurServicePage {
   width: 100%;
   position: relative;

@@ -1,3 +1,4 @@
+/* Victor */
 @use './variables';
 @use './mixins/mixins';
 
@@ -12,7 +13,7 @@
 }
 
 .hero {
-    
+
     width: 100%;
     padding: 0;
     margin-left: 0;
@@ -54,9 +55,11 @@
         margin-bottom: 10vh;
         font-size: 1.5em;
         font-weight: 500;
+
         a {
             transition-duration: 0.2s;
             color: variables.$bleuNuit;
+
             &:hover {
                 color: variables.$bleuSarcelle;
             }
@@ -167,10 +170,12 @@
         font-size: 32px;
         text-transform: uppercase;
     }
+
     &__poste {
         font-size: 24px;
         text-align: center;
     }
+
     p {
         width: 80%;
         text-align: center;
@@ -193,18 +198,23 @@
     .hero.equipe {
         margin-top: 300px;
     }
+
     .hero.equipe.marginNoMsg {
         margin-top: 10vh;
     }
+
     .equipeConteneur {
         grid-template-columns: repeat(auto-fill, minmax(180px, auto));
         grid-template-rows: repeat(auto-fill, minmax(250px, auto));
     }
+
     .modalMembreEquipe {
         padding: 20px;
+
         &__img {
             width: 70%;
         }
+
         p {
             width: 100%;
             text-align: center;

@@ -1,3 +1,4 @@
+/* Joshua */
 @use "variables";
 @use "mixins/mixins";
 
@@ -6,6 +7,7 @@
     margin: 0 auto;
     width: 1400px;
     font-size: 18px;
+
     &__content {
         margin-bottom: 100px;
     }
@@ -14,6 +16,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: space-between;
+
         :nth-child(2) {
             text-align: right;
         }
@@ -27,23 +30,25 @@
         margin-bottom: 10vh;
         font-size: 1.5em;
         font-weight: 500;
+
         a {
             transition-duration: 0.2s;
             color: variables.$bleuNuit;
+
             &:hover {
                 color: variables.$bleuSarcelle;
             }
         }
     }
 
-    
+
     &__img {
         width: 100vw;
         height: 500px;
         background-image: url("../medias/img/petition_hlm.png");
         background-size: cover;
     }
-    
+
 
     &__preview {
         width: 100%;
@@ -66,6 +71,7 @@
     &__tag {
         @include mixins.btnBleu;
     }
+
     &__time {
         text-align: right;
     }
@@ -76,8 +82,20 @@
         object-fit: cover;
     }
 
-    &__content p, &__content h3, &__content cite, &__content cite::after {
+    &__content p,
+    &__content h3,
+    &__content cite,
+    &__content cite::after {
         margin-bottom: 2vw;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: variables.$bleuSarcelle;
+        transition-duration: 0.2s;
+        &:hover {
+            color: variables.$bleuNuit;
+        }
     }
 
 }
@@ -94,21 +112,21 @@
 cite {
     position: relative;
     margin-left: 10px;
-&::after {
-    position: absolute;
-    content: '';
-    width: 2px;
-    height: 100%;
-    left: -10px;
-    top: 0;
-    background-color: black;
-}
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 100%;
+        left: -10px;
+        top: 0;
+        background-color: black;
+    }
 }
 
 @media screen and (max-width: 1400px) {
     .article {
-        padding: 2vw;
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -120,6 +138,7 @@ cite {
             text-align: center;
             gap: 20px
         }
+
         &__time {
             text-align: center;
         }

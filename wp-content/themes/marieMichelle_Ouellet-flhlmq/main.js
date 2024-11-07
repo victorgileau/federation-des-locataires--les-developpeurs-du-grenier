@@ -195,3 +195,27 @@ if (document.querySelector('.cirle') != null) {
 
 
 /*--fin code error 404 --*/
+
+/* Code burger trouvé en ligne (https://www.sliderrevolution.com/resources/css-hamburger-menu/), modifié par Joshua et Victor*/
+
+let btn = document.querySelector('.burgerBtn');
+
+if (btn != null) {
+        btn.addEventListener("click", () => {
+                if (btn.classList.contains('not-active')) {
+                        btn.classList.add('active');
+                        btn.classList.remove('not-active');
+                } else if (btn.classList.contains('active')) {
+                        btn.classList.add('not-active');
+                        btn.classList.remove('active');
+                        console.log("WAAHH")
+                }
+                
+                
+        })
+}
+/*
+btn.on('click', function() {
+  this.toggleClass('active not-active');
+}); 
+*/

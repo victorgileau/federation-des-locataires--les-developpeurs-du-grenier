@@ -13,14 +13,17 @@
     color: variables.$bleuNuit;
     border: 1px solid variables.$bleuNuit;
     font-weight: bold;
+
     a {
         color: variables.$bleuNuit;
         text-decoration: none;
     }
+
     &:hover {
         background-color: variables.$bleuNuit;
         color: variables.$blancSel;
         border: 1px solid variables.$blancSel;
+
         a {
             color: variables.$blancSel;
             text-decoration: none;
@@ -40,16 +43,19 @@
     border-radius: 25px;
     background-color: variables.$noirPoudre;
     color: variables.$blancSel;
-    border: 1px solid rgba(0,0,0,0);
+    border: 1px solid rgba(0, 0, 0, 0);
     font-weight: bold;
+
     a {
         color: variables.$blancSel;
         text-decoration: none;
     }
+
     &:hover {
         background-color: variables.$blancSel;
         color: variables.$noirPoudre;
         border: 1px solid variables.$noirPoudre;
+
         a {
             color: variables.$bleuNuit;
             text-decoration: none;
@@ -72,15 +78,18 @@
     background-color: variables.$bleuNuit;
     color: variables.$blancSel;
     font-weight: bold;
-    border: 1px solid rgba(0,0,0,0);
+    border: 1px solid rgba(0, 0, 0, 0);
+
     a {
         color: variables.$blancSel;
         text-decoration: none;
     }
+
     &:hover {
         background-color: variables.$blancSel;
         color: variables.$bleuNuit;
         border: 1px solid variables.$bleuNuit ;
+
         a {
             color: variables.$bleuNuit;
             text-decoration: none;
@@ -101,15 +110,18 @@
     background-color: variables.$lavandrepetant;
     color: variables.$noirPoudre;
     font-weight: bold;
-    border: 1px solid rgba(0,0,0,0);
+    border: 1px solid rgba(0, 0, 0, 0);
+
     a {
         color: variables.$noirPoudre;
         text-decoration: none;
     }
+
     &:hover {
         background-color: variables.$noirPoudre;
         color: variables.$lavandrepetant;
         border: 1px solid variables.$lavandrepetant ;
+
         a {
             color: variables.$lavandrepetant;
             text-decoration: none;
@@ -130,15 +142,18 @@
     background-color: variables.$lavandrepetant;
     color: variables.$noirPoudre;
     font-weight: bold;
-    border: 1px solid rgba(0,0,0,0);
+    border: 1px solid rgba(0, 0, 0, 0);
+
     a {
         color: variables.$noirPoudre;
         text-decoration: none;
     }
+
     &:hover {
         background-color: variables.$noirPoudre;
         color: variables.$lavandrepetant;
         border: 1px solid variables.$lavandrepetant ;
+
         a {
             color: variables.$lavandrepetant;
             text-decoration: none;
@@ -159,15 +174,18 @@
     background-color: variables.$blancSel;
     color: variables.$bleuSarcelle;
     font-weight: bold;
-    border: 1px solid rgba(0,0,0,0);
+    border: 1px solid rgba(0, 0, 0, 0);
+
     a {
         color: variables.$bleuSarcelle;
         text-decoration: none;
     }
+
     &:hover {
         background-color: variables.$bleuSarcelle;
         color: variables.$blancSel;
         border: 1px solid variables.$blancSel;
+
         a {
             color: variables.$blancSel;
             text-decoration: none;
@@ -188,15 +206,18 @@
     background-color: variables.$noirPoudre;
     color: variables.$lavandrepetant;
     font-weight: bold;
-    border: 1px solid rgba(0,0,0,0);
+    border: 1px solid rgba(0, 0, 0, 0);
+
     a {
         color: variables.$lavandrepetant;
         text-decoration: none;
     }
+
     &:hover {
         background-color: variables.$lavandrepetant;
         color: variables.$noirPoudre;
         border: 1px solid variables.$noirPoudre;
+
         a {
             color: variables.$noirPoudre;
             text-decoration: none;
@@ -217,15 +238,18 @@
     background-color: variables.$blancSel;
     color: variables.$bleuSarcelle;
     font-weight: bold;
-    border: 1px solid rgba(0,0,0,0);
+    border: 1px solid rgba(0, 0, 0, 0);
+
     a {
         color: variables.$bleuSarcelle;
         text-decoration: none;
     }
+
     &:hover {
         background-color: variables.$bleuSarcelle;
         color: variables.$blancSel;
         border: 1px solid variables.$blancSel;
+
         a {
             color: variables.$blancSel;
             text-decoration: none;

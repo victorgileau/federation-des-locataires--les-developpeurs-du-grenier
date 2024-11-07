@@ -1,188 +1,202 @@
+/* Kenza avec l'aide de Victor */
 @use "./variables";
 
-.temoignages{
-  
+.temoignages {
+
   /*Victor*/
-    /*display: grid;
+  /*display: grid;
     grid-template-areas:
   "svg svg svg"
   "titre titre titre"
   "margeTem margeTem margeTem";*/
- 
-    /*fin Victor*/
-    //overflow-x: hidden;
+
+  /*fin Victor*/
+  //overflow-x: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+
+  height: 150vh;
+  max-height: 170vh;
+  background: linear-gradient(variables.$blancSel, variables.$noirPoudre 1%, variables.$noirPoudre 50%, variables.$blancSel 100%);
+
+  svg {
+    position: absolute;
+    top: 0;
+    grid-area: svg;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    
+    overflow-x: hidden;
 
-    height: 150vh;
-    max-height: 170vh;
-    background: linear-gradient( variables.$blancSel, variables.$noirPoudre 1%, variables.$noirPoudre 50%, variables.$blancSel 100%);
-    svg{
-      position: absolute;
-      top: 0;
-      grid-area: svg;
-        width: 100%;
-        overflow-x: hidden;
-        path {
-          width: 110%;
-        }
+    path {
+      width: 110%;
     }
-    &__titre{
-      text-align: center;
-      grid-area: titre;
-        margin-top: 50px;
-        color: variables.$lavandreCendre;
-    }
+  }
 
-    .temoignage--un {
-      grid-area: myArea1;
-    }
+  &__titre {
+    text-align: center;
+    grid-area: titre;
+    margin-top: 50px;
+    color: variables.$lavandreCendre;
+  }
 
-    .temoignage--deux {
-      grid-area: myArea2;
-    }
+  .temoignage--un {
+    grid-area: myArea1;
+  }
 
-    .temoignage--trois {
-      grid-area: myArea3;
-    }
+  .temoignage--deux {
+    grid-area: myArea2;
+  }
 
-    .marge__tem{
-      //grid-area: margeTem;
-      display: grid;
-      grid-template-areas:
+  .temoignage--trois {
+    grid-area: myArea3;
+  }
+
+  .marge__tem {
+    //grid-area: margeTem;
+    display: grid;
+    grid-template-areas:
       "myArea1 myArea1 myArea1"
       "myArea2 myArea2 myArea2"
       "myArea3 myArea3 myArea3";
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
-      .temoignage {
-      
-        &:nth-of-type(){
-          background-color: variables.$lavandreCendre;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .temoignage {
+
+      &:nth-of-type() {
+        background-color: variables.$lavandreCendre;
+      }
+
+      color: variables.$blancSel;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 50px;
+
+      @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}) .tem__img {
+          background-image: url("./medias/img/accueil_temoin_0#{$i}.jpg");
         }
-          color: variables.$blancSel;
-          margin-left: 10px;
-          margin-right: 10px;
-          margin-top: 50px;
-  
-          @for $i from 1 through 3 {
-              &:nth-of-type(#{$i}) .tem__img {
-                  background-image: url("./medias/img/accueil_temoin_0#{$i}.jpg");
-              }
-          }
-          
-          &__titre {
-            grid-column: span 4;
-              margin-top: 20px;
-              margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            p {
-              margin-top: 20px;
-              margin-bottom: 20px;
-              font-weight: variables.$weightLight;
-              font-size: 20px;
-            }
-          }
-          div.tem.cat{
-            background-color: variables.$lavandrepetant;
-          }
-          .tem {
-            
-              margin-top: 20px;
-              margin-bottom: 20px;
-            box-shadow: 5px 5px 25px #000;
-            border-radius: 0 25px 25px 25px;
-            height: 20vh;
-            width: 100%;
-            overflow: hidden;
-            background-color: variables.$blancSel;
-            color: variables.$noirPoudre;
-            display: grid;
-            grid-template-rows: 20vh;
-            column-gap: 5px;
-  
-            
-            &__img {
-              grid-column: 1;
-              background-size: cover;
-              background-position: center;
-              aspect-ratio: 1/1;
-              height: 100%;
-              width: 90%;
-            }
-            &__info {
-              padding-left: 0;
-              padding-right: 10px;
-              width: 100%;
-              font-style: italic;
-              font-size: 14px;
-              align-self: center;
-              grid-column: 2 / span 4;
-            }
-          }
-          
+      }
+
+      &__titre {
+        grid-column: span 4;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+
+        p {
+          margin-top: 20px;
+          margin-bottom: 20px;
+          font-weight: variables.$weightLight;
+          font-size: 20px;
         }
+      }
+
+      div.tem.cat {
+        background-color: variables.$lavandrepetant;
+      }
+
+      .tem {
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 5px 5px 25px #000;
+        border-radius: 0 25px 25px 25px;
+        height: 20vh;
+        width: 100%;
+        overflow: hidden;
+        background-color: variables.$blancSel;
+        color: variables.$noirPoudre;
+        display: grid;
+        grid-template-rows: 20vh;
+        column-gap: 5px;
+
+
+        &__img {
+          grid-column: 1;
+          background-size: cover;
+          background-position: center;
+          aspect-ratio: 1/1;
+          height: 100%;
+          width: 90%;
+        }
+
+        &__info {
+          padding-left: 0;
+          padding-right: 10px;
+          width: 100%;
+          font-style: italic;
+          font-size: 14px;
+          align-self: center;
+          grid-column: 2 / span 4;
+        }
+      }
 
     }
 
-    
-      
+  }
+
+
+
 }
 
 
-  @media screen and (min-width: 768px) {
-    .temoignages{
+@media screen and (min-width: 768px) {
+  .temoignages {
+    grid-template-areas:
+      "svg svg svg"
+      "titre titre titre";
+
+    .marge__tem {
+      width: 90%;
       grid-template-areas:
-    "svg svg svg"
-    "titre titre titre";
-      .marge__tem{
-        width: 90%;
-        grid-template-areas:
-      "myArea1 myArea1 myArea1"
-      "myArea2 myArea2 myArea2"
-      "myArea3 myArea3 myArea3";
-        .temoignage{
-    .tem{
-      &__info {
-        font-size: 16px;
-      }
-    }
-        }
-      }
-    }
+        "myArea1 myArea1 myArea1"
+        "myArea2 myArea2 myArea2"
+        "myArea3 myArea3 myArea3";
 
-  }
-
-  @media screen and (min-width: 1440px) {
-    .temoignages{
-      grid-template-areas:
-  "svg svg svg"
-  "titre titre titre";
-        .marge__tem{
-          grid-template-areas:
-      "myArea1 myArea1 ."
-      ". myArea2 myArea2"
-      "myArea3 myArea3 .";
-          .temoignage {
-            .tem {
-              
-              &__img {
-                background-position-y: 50%;
-              }
-
-              &__info {
-                font-size: 24px;
-              }
-              
-            }
+      .temoignage {
+        .tem {
+          &__info {
+            font-size: 16px;
           }
         }
+      }
     }
-    
   }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .temoignages {
+    grid-template-areas:
+      "svg svg svg"
+      "titre titre titre";
+
+    .marge__tem {
+      grid-template-areas:
+        "myArea1 myArea1 ."
+        ". myArea2 myArea2"
+        "myArea3 myArea3 .";
+
+      .temoignage {
+        .tem {
+
+          &__img {
+            background-position-y: 50%;
+          }
+
+          &__info {
+            font-size: 24px;
+          }
+
+        }
+      }
+    }
+  }
+
+}

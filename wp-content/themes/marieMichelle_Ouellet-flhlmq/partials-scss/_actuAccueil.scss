@@ -1,7 +1,13 @@
+/* Victor */
 @use './variables';
 @use './mixins/mixins';
 
-$imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accueil_carte_01.jpg', nouv3: './medias/img/accueil_carte_02.jpg', nouv4: './medias/img/accueil_carte_03.jpg');
+$imgArr: (
+    nouv1: './medias/img/accueil_carte_01.jpg',
+    nouv2: './medias/img/accueil_carte_01.jpg',
+    nouv3: './medias/img/accueil_carte_02.jpg',
+    nouv4: './medias/img/accueil_carte_03.jpg'
+);
 
 .actualites {
     width: 100%;
@@ -9,6 +15,7 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
     margin: auto;
     height: 80vh;
     position: relative;
+
     &__titre {
         width: 100%;
         justify-self: center;
@@ -71,8 +78,9 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
         height: 100%;
         display: flex;
         justify-content: center;
-        
+
     }
+
     @each $num, $srcImg in $imgArr {
         .swiper-slide--#{$num} {
             .actualite {
@@ -109,6 +117,7 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
         p {
             display: inline;
             line-height: 20px;
+
             a {
                 color: variables.$noirPoudre;
                 text-decoration: none;
@@ -147,6 +156,7 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
     .swiper-nav {
         top: 0;
     }
+
     .swiper {
         height: 70%;
     }
@@ -175,7 +185,7 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
     .swiper-nav {
         top: 2vh;
         height: 10vh;
-        
+
     }
 
     .swiper {
