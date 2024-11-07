@@ -5,16 +5,45 @@
     min-height: 100vh;
     margin: 0 auto;
     width: 1400px;
+    font-size: 18px;
     &__content {
         margin-bottom: 100px;
     }
 
+    &__buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: space-between;
+        :nth-child(2) {
+            text-align: right;
+        }
+    }
+
+
+    &__page {
+        max-width: 1400px;
+        width: 100%;
+        margin: 5vh auto;
+        margin-bottom: 10vh;
+        font-size: 1.5em;
+        font-weight: 500;
+        a {
+            transition-duration: 0.2s;
+            color: variables.$bleuNuit;
+            &:hover {
+                color: variables.$bleuSarcelle;
+            }
+        }
+    }
+
+    
     &__img {
         width: 100vw;
         height: 500px;
         background-image: url("../medias/img/petition_hlm.png");
         background-size: cover;
     }
+    
 
     &__preview {
         width: 100%;
@@ -53,20 +82,24 @@
 
 }
 
+.preview-title {
+    max-width: 1400px;
+    margin: auto;
+}
+
 .alt {
     color: #1F7A8C;
 }
 
 cite {
     position: relative;
+    margin-left: 10px;
 &::after {
-    margin-left: -0px;
-  margin-right: 20px;
     position: absolute;
     content: '';
     width: 2px;
     height: 100%;
-    left: 0;
+    left: -10px;
     top: 0;
     background-color: black;
 }
@@ -76,7 +109,6 @@ cite {
     .article {
         padding: 2vw;
         width: 100%;
-        
     }
 }
 
@@ -92,4 +124,9 @@ cite {
             text-align: center;
         }
     }
+}
+
+.noMorePadding {
+    margin: 0 !important;
+    width: 100% !important;
 }

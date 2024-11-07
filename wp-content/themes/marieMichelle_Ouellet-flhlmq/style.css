@@ -2158,7 +2158,7 @@ footer .footer__btn button {
 }
 .contact {
   margin-top: 10vh;
-  min-height: 70vh;
+  min-height: 50vh;
   text-align: center;
   padding: 50px;
 }
@@ -2481,9 +2481,33 @@ input:focus, textarea:focus {
   min-height: 100vh;
   margin: 0 auto;
   width: 1400px;
+  font-size: 18px;
 }
 .article__content {
   margin-bottom: 100px;
+}
+.article__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: space-between;
+}
+.article__buttons :nth-child(2) {
+  text-align: right;
+}
+.article__page {
+  max-width: 1400px;
+  width: 100%;
+  margin: 5vh auto;
+  margin-bottom: 10vh;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.article__page a {
+  transition-duration: 0.2s;
+  color: #022B3A;
+}
+.article__page a:hover {
+  color: #1F7A8C;
 }
 .article__img {
   width: 100vw;
@@ -2548,21 +2572,25 @@ input:focus, textarea:focus {
   margin-bottom: 2vw;
 }
 
+.preview-title {
+  max-width: 1400px;
+  margin: auto;
+}
+
 .alt {
   color: #1F7A8C;
 }
 
 cite {
   position: relative;
+  margin-left: 10px;
 }
 cite::after {
-  margin-left: 0px;
-  margin-right: 20px;
   position: absolute;
   content: "";
   width: 2px;
   height: 100%;
-  left: 0;
+  left: -10px;
   top: 0;
   background-color: black;
 }
@@ -2584,6 +2612,11 @@ cite::after {
     text-align: center;
   }
 }
+.noMorePadding {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
 .pageErrorContainer {
   height: 100vh;
   width: 100%;
