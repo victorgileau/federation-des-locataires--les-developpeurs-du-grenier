@@ -1,4 +1,4 @@
-//Kenza
+//A PROPOS KENZA
 
 @use "./mixins/mixins";
 @use "./variables";
@@ -182,6 +182,7 @@
   margin: auto;
   margin-top: 50px;
   font-size: 1.5em;
+
   
     
 
@@ -198,7 +199,7 @@
 
       .groupes__text{
         margin-top: 50px;
-        line-height: 50px;
+        line-height: 40px;
         text-align: center;
         font-size: 24px;
       }
@@ -229,8 +230,27 @@
       }
     }
 
-    
+    .groupes{
 
+      &__alignement{
+
+        .groupes__grid{
+          grid-template-columns: repeat(repeat(auto-fit, 150px));
+          column-gap: 2em;
+          h2{
+            grid-row: 1;
+            grid-column: 1 / 4;
+          }
+          .groupes__text{
+            font-size: 30px;
+            grid-row: 2;
+          }
+          
+        }
+    
+      }
+      
+    }
     
 }
 
