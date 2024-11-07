@@ -181,6 +181,14 @@
     display: flex;
 }
 
+@media screen and (max-width: 1400px) {
+    .hero {
+        &__page {
+            width: 90%;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .hero.equipe {
         margin-top: 300px;

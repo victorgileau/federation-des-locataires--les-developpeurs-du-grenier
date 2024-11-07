@@ -2445,6 +2445,11 @@ input:focus, textarea:focus {
   display: flex;
 }
 
+@media screen and (max-width: 1400px) {
+  .hero__page {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero.equipe {
     margin-top: 300px;
