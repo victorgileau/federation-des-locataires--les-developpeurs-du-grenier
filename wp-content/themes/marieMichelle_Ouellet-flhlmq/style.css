@@ -2478,7 +2478,7 @@ input:focus, textarea:focus {
   }
 }
 .article {
-  min-height: 250vh;
+  min-height: 100vh;
   margin: 0 auto;
   width: 1400px;
 }
@@ -2543,6 +2543,9 @@ input:focus, textarea:focus {
   border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.article__content p, .article__content h3, .article__content cite, .article__content cite::after {
+  margin-bottom: 2vw;
 }
 
 .alt {
