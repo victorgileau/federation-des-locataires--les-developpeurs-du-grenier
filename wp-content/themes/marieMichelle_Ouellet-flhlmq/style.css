@@ -1379,6 +1379,7 @@ footer .footer__btn button {
   border: 1px solid #022B3A;
   font-weight: bold;
   font-size: 2em;
+  padding-top: 12px;
   height: 2em;
   border-radius: 100px;
 }
