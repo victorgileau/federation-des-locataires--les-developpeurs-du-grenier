@@ -1121,6 +1121,7 @@ footer .footer__btn button {
   max-width: 1400px;
   margin: auto;
   height: 80vh;
+  position: relative;
 }
 .actualites__titre {
   width: 100%;
@@ -1263,14 +1264,14 @@ footer .footer__btn button {
 
 @media screen and (max-width: 1400px) {
   .swiper-nav {
-    top: -5vh;
+    top: 0;
   }
   .swiper {
     height: 70%;
   }
   .actualite {
     width: 500px;
-    grid-template-rows: 20px 100px auto 20px;
+    grid-template-rows: minmax(20px, 40px) 100px minmax(200px, auto) auto;
   }
   .actualite__date {
     font-size: 20px;
@@ -1280,8 +1281,14 @@ footer .footer__btn button {
   }
 }
 @media screen and (max-width: 768px) {
+  .actualites {
+    height: auto;
+    min-height: 60vh;
+    position: relative;
+  }
   .swiper-nav {
-    top: -2vh;
+    top: 2vh;
+    height: 10vh;
   }
   .swiper {
     height: 70%;
@@ -1295,6 +1302,11 @@ footer .footer__btn button {
   }
   .actualite__desc {
     font-size: 26px;
+  }
+}
+@media screen and (max-height: 850px) {
+  .actualites {
+    margin-bottom: 10vh;
   }
 }
 .membre {

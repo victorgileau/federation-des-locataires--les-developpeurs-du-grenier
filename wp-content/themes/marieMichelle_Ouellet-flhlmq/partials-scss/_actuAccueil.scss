@@ -8,6 +8,7 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
     max-width: 1400px;
     margin: auto;
     height: 80vh;
+    position: relative;
     &__titre {
         width: 100%;
         justify-self: center;
@@ -144,7 +145,7 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
 
 @media screen and (max-width: 1400px) {
     .swiper-nav {
-        top: -5vh;
+        top: 0;
     }
     .swiper {
         height: 70%;
@@ -152,7 +153,7 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
 
     .actualite {
         width: 500px;
-        grid-template-rows: 20px 100px auto 20px;
+        grid-template-rows: minmax(20px, 40px) 100px minmax(200px, auto) auto;
 
         &__date {
             font-size: 20px;
@@ -165,8 +166,16 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
 }
 
 @media screen and (max-width: 768px) {
+    .actualites {
+        height: auto;
+        min-height: 60vh;
+        position: relative;
+    }
+
     .swiper-nav {
-        top: -2vh;
+        top: 2vh;
+        height: 10vh;
+        
     }
 
     .swiper {
@@ -184,5 +193,11 @@ $imgArr: (nouv1: './medias/img/accueil_carte_01.jpg', nouv2: './medias/img/accue
         &__desc {
             font-size: 26px;
         }
+    }
+}
+
+@media screen and (max-height: 850px) {
+    .actualites {
+        margin-bottom: 10vh;
     }
 }
