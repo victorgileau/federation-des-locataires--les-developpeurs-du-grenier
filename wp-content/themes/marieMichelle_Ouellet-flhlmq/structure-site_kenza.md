@@ -1,36 +1,36 @@
 # Acceuil
 
 ## POST TYPE
-### Carte Service
-### Carte Nouvelle
-### Carte témoignage
-#### Carte blanche
-#### Carte lavendre
+### service
+### nouvelle
+### temoignage
 
-## MODÈLE (TEMPLATE)
+## MODÈLE
 ### home.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTES
 ### PARTIAL
 #### header.php
 #### footer.php
 #### pageAccueil.php
 
 ### CHAMPS PERSONNALISÉS (CUSTOM FIELDS)
+#### partenaires
 
 ## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS)
 ### Cartes nouvelle
 #### Date
 #### Type de nouvelle
 
+
 ---------------
 
 # 404
 
-## MODÈLE (TEMPLATE)
+## MODÈLE
 ### 404.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTES
 ### PARTIAL
 ### header.php
 ### footer.php
@@ -40,9 +40,9 @@
 
 # Contact
 
-## MODÈLE (TEMPLATE)
+## MODÈLE
 ### contact.php
-## COMPOSANTE DE LA PAGES
+## COMPOSANTES
 ### PARTIAL
 #### header.php
 #### footer.php
@@ -52,101 +52,122 @@
 
 # À propos
 
-## MODÈLE (TEMPLATE)
+## MODÈLE
 ### aPropos.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTES
 ### PARTIAL
 #### header.php
 #### footer.php
 #### heroBase.php
 #### pageAPpropos.php
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS)
-### hero base
-#### text fil d'arianne
-#### img
+## AUTRES CHAMPS PERSONNALISÉS
+### Hero de base
 
 ---------------
 
 # Article nouvelle
 ## POST TYPE
 ### nouvelle
-### carte nouvelle
 
-## MODÈLE (TEMPLATE)
+## MODÈLE
 ### nouvelle.php
 
-## COMPOSANTE DE LA PAGES
+## COMPOSANTES
 ### PARTIAL
 #### header.php
 #### footer.php
 #### pageNouvelle.php
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS)
+### CHAMPS PERSONNALISÉS
 #### type de nouvelle
 #### date
 #### auteur
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS)
-### hero base
-#### text fil d'arianne
-#### img
+## AUTRES CHAMPS PERSONNALISÉS
+### Hero de base
 
 ---------------
 
 # Liste nouvelles
 ## POST TYPE
-### cartes nouvelles
+### nouvelle
 
-## MODÈLE (TEMPLATE)
-### 
+## MODÈLE
+### listeNouvelle.php
 
 ## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+### PARTIAL
+#### header.php
+#### footer.php
+#### pageListeNouvelles.php
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
+### CHAMPS PERSONNALISÉS
+#### carte nouvelle
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## AUTRES CHAMPS PERSONNALISÉS
+### Hero de base
 
 ---------------
 
 # Service
-## TYPE DE CONTENU (POST TYPE)
 
-## MODÈLE (TEMPLATE)
+## MODÈLE
+### service.php
 
 ## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+### PARTIAL
+#### header.php
+#### footer.php
+#### pageService.php
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
-
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## AUTRES CHAMPS PERSONNALISÉS
+### Hero de base
 
 ---------------
 
 # Liste services
-## TYPE DE CONTENU (POST TYPE)
+## POST TYPE
+### participation
+### publications
+### droits
 
-## MODÈLE (TEMPLATE)
+## MODÈLE
+### listeServices.php
 
 ## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+### PARTIAL
+#### header.php
+#### footer.php
+#### pageListeServices.php
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
+### CHAMPS PERSONNALISÉS
+#### participation
+#### publications
+#### droits
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## AUTRES CHAMPS PERSONNALISÉS
+### Hero de base
 
 ---------------
 
 # Équipe
-## TYPE DE CONTENU (POST TYPE)
+## POST TYPE
+### personne
 
-## MODÈLE (TEMPLATE)
+## MODÈLE
+### equipe.php
 
 ## COMPOSANTE DE LA PAGES
-### NOM DU PARTIAL DU THÈME WP POUR CETTE COMPOSTANTE
+### PARTIAL
+#### header.php
+#### footer.php
+#### pageEquipe.php
 
-### CHAMPS PERSONNALISÉS (CUSTOM FIELDS) DE CETTE COMPOSANTE
+### CHAMPS PERSONNALISÉS
+#### carte personne
+#### modale
 
-## AUTRES CHAMPS PERSONNALISÉS (CUSTOM FIELDS) SANS LIEN AVEC UNE COMPOSANTE
+## AUTRES CHAMPS PERSONNALISÉS
+### Hero de base
