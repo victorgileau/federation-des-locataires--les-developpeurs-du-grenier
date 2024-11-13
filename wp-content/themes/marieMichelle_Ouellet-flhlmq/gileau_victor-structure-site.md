@@ -1,20 +1,13 @@
 # 404
 
-## Aucun (POST TYPE)
+## errorPage (POST TYPE)
 
 ## MODÈLE "errorPage" (TEMPLATE)
-
-## Menu
-
-### "header"
 
 ## 404 contenu
 
 ### "errorPage"
-
-## Pied de page
-
-### "footer"
+### CHAMPS PERSONNALISÉS (buttonErrorPage)
 
 -------------
 
@@ -24,37 +17,29 @@
 
 ## MODÈLE "about" (TEMPLATE)
 
-## Menu
-
-### "header"
-
 ## L'union fait la force!
 
-### "histoire"
+### "history"
+### CHAMPS PERSONNALISÉS (historyImg)
 
 ## Nous regroupons
 
-### "infoNum"
+### "infoNumber"
+### CHAMPS PERSONNALISÉS (association + associationText + committee + committeeText + representative + representativeText)
 
 ## Notre mission
 
-### "notreMission"
-
-## Pied de page
-
-### "footer"
+### "ourMission"
+### Post Type = "ourMissionContent"
+#### CHAMPS PERSONNALISÉS (title + texte + SVG)
 
 -----------
 
 # Contact-us
 
-## Aucun (POST TYPE)
+## contact (POST TYPE)
 
 ## MODÈLE "about" (TEMPLATE)
-
-## Menu
-
-### "header"
 
 ## Contacter nous
 
@@ -63,64 +48,66 @@
 ## Membre
 
 ### "member"
+#### CHAMPS PERSONNALISÉS (title, msg ,buttonSabonner)
 
-## Pied de page
+## Abonnez-vous
 
-### "footer"
+### "subscription"
+#### CHAMPS PERSONNALISÉS (title, mail,buttonSabonner)
 
 -----------
 
-# Index
+# Accueil
 
-## Aucun (POST TYPE)  / un pour actualités
+## Page (POST TYPE)  / un pour actualités
 
 ## MODÈLE "index" (TEMPLATE)
-
-## Menu
-
-### "header"
 
 ## Hero Accueil
 
 ### "heroAcceuil"
+#### CHAMPS PERSONNALISÉS (entrepriseName, title, titleSpecal, buttonBlack, buttonWhite, imageSwipperHero (image gallery))
 
 ## Recherche
 
-### "recherche"
+### "research"
+#### CHAMPS PERSONNALISÉS (title, placeholderResearchBar)
 
 ## À propos
 
-### "aPorposAcceuil"
+### "aboutAcceuil"
+#### CHAMPS PERSONNALISÉS (title, msg, buttonAboutAcceuil)
 
 ## Service et formation 
 
 ### "service"
 
 ### "servicesPost" (Post Type)
+#### CHAMPS PERSONNALISÉS (title, icon, texte, buttonContent)
 
 ## Actualités
 
 ### "actualites"
 
 ### "actualitesPost" (Post Type)
+#### CHAMPS PERSONNALISÉS (date, title, image, categorie)
 
 ## Témoignages 
 
-### "temoignages"
+### "testimonial"
 
-### "temoignagesPost" (Post Type)
+### "testimonialPost" (Post Type)
+#### CHAMPS PERSONNALISÉS (name, job, image, texte)
 
 ## Membre
 
 ### "member"
+#### CHAMPS PERSONNALISÉS (title, msg ,buttonSabonner)
 
 ## Abonnez-vous
 
-### "abonnement"
-
-## Pied de page
-
-### "footer"
+### "subscription"
+#### CHAMPS PERSONNALISÉS (title, mail,buttonSabonner)
 
 ----------
 
@@ -128,23 +115,17 @@
 
 ## MODÈLE "newsHub" (TEMPLATE)
 
-## Menu
-
-### "header"
-
 ## Hero Kenza
 
 ### "heroKenza"
+#### CHAMPS PERSONNALISÉS (image)
 
 ## Actualités
 
-### "actiablitesPage"
+### "actualitesPage"
 
-### actualitePage (POST TYPE)
-
-## Pied de page
-
-### "footer"
+### "actualitesPost" (Post Type)
+#### CHAMPS PERSONNALISÉS (date, title, image, categorie)
 
 -----------
 
@@ -154,41 +135,33 @@
 
 ## MODÈLE "nouvelle" (TEMPLATE)
 
-## Menu
-
-### "header"
-
 ## Hero victor
 
 ### "heroVictor"
+#### CHAMPS PERSONNALISÉS (image)
 
-## contneu article
+## contenu article
 
-### "nouvelleContnenu"
+### "newsContent"
 
-### catégorie + date + images (CUSTOM FIELDS)
+#### catégorie + date + images (CUSTOM FIELDS)
 
 ## Actualités
 
 ### "actiablitesPage"
 
-### actualitePage (POST TYPE)
+### "actualitesPost" (Post Type)
+#### CHAMPS PERSONNALISÉS (date, title, image, categorie)
 
-## Pied de page
-
-### "footer"
 
 -----------
 
 # Services
 
-## Menu
-
-### "header"
-
 ## Hero Kenza
 
 ### "heroKenza"
+#### CHAMPS PERSONNALISÉS (image)
 
 ## Votre participation
 
@@ -196,27 +169,27 @@
 
 ## Nos publication
 
-### "nosServices"
+### "ourServices"
 
 ### publicationServicePage (POST TYPE)
+#### CHAMPS PERSONNALISÉS (title, icon, texte, buttonContent)
 
 ## Droit des locataires
 
 ### "droitLocataire"
 
 ### droitLocatairePage (POST TYPE)
+#### CHAMPS PERSONNALISÉS (title, texte, buttonContent)
 
 ## Membre
 
 ### "member"
+#### CHAMPS PERSONNALISÉS (title, msg ,buttonSabonner)
 
 ## Abonnez-vous
 
-### "abonnement"
-
-## Pied de page
-
-### "footer"
+### "subscription"
+#### CHAMPS PERSONNALISÉS (title, mail,buttonSabonner)
 
 -----------
 
@@ -226,29 +199,22 @@
 
 ## MODÈLE "service" (TEMPLATE)
 
-## Menu
-
-### "header"
-
 ## Hero victor
 
 ### "heroVictor"
+#### CHAMPS PERSONNALISÉS (image)
 
 ## contenu article
 
 ### "articleContnenu"
-
 ### catégorie + date + images (CUSTOM FIELDS)
 
-## Service et formation 
+## Service et formation
 
 ### "service"
 
 ### "servicesPost" (Post Type)
-
-## Pied de page
-
-### "footer"
+#### CHAMPS PERSONNALISÉS (title, icon, texte, buttonContent)
 
 -----------
 
@@ -258,18 +224,21 @@
 
 ## MODÈLE "equipe" (TEMPLATE)
 
-## Menu
-
-### "header"
-
 ## Hero victor
 
 ### "heroVictor"
+#### CHAMPS PERSONNALISÉS (image)
 
 ## Membre de l'équipe
 
-### "membreEquipe"
+### "memberTeam"
 
-## Pied de page
+### "membersOfTeam" (Post Type)
+#### CHAMPS PERSONNALISÉS (title, job, texte, image)
 
-### "footer"
+## Membre de l'équipe (modal)
+
+### "memberTeamModal"
+
+### "membersOfTeam" (Post Type)
+#### CHAMPS PERSONNALISÉS (title, job, texte, image)
