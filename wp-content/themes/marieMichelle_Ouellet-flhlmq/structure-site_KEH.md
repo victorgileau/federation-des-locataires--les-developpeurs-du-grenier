@@ -27,7 +27,7 @@
 
 #### membre.php
 ##### CUSTOM FIELDS
-- Image:image
+- Image
 - Title:text
 - Membre description: text
 - Text(button membre): label
@@ -35,30 +35,30 @@
 
 ## AUTRES CUSTOM FIELDS
 ### Hero
-#### Hero description: text
-#### Slogan: text
-#### Span: text
-#### Swiper: gallery
-#### Text(button join): label
-#### Text(button info): label
+- Hero description: text
+- Slogan: text
+- Span: text
+- Swiper: gallery
+- Text(button join): label
+- Text(button info): label
 
 ### Recherche
-#### Description: text
-#### Search field: text area
+- Description: text
+- Search field: text area
 
 ### A propos
-#### Title: text
-#### Description: text
-#### Text(button about): label
+- Title: text
+- Description: text
+- Text(button about): label
 
 ### Actu
-#### Swiper: gallery
+- Swiper: gallery
 
 ### Temoignage
-#### Title: text
-#### Undertitle: text
-#### Description: text
-#### Image: image
+- Title: text
+- Undertitle: text
+- Description: text
+- Image
 
 ---------------
 
@@ -72,7 +72,7 @@
 
 ## COMPOSANTES
 ### PARTIAL
-#### Aucun
+- Aucun
 
 ## AUTRES CUSTOM FIELDS
 ### Description: text
@@ -134,45 +134,36 @@
 
 # Article nouvelle
 ## POST TYPE
-### news
+### news-article
 
 ## MODÈLE
-### nouvelle
+### news-article.php
 
 ## COMPOSANTES
 ### PARTIAL
-#### Aucun
-
-### CUSTOM FIELDS
-#### Date
-#### Type
-#### Author (s'il y a)
+- heroBase.php
 
 ## AUTRES CUSTOM FIELDS
-### heroBase
-#### Image
-#### Link (fil d'Arianne)
+- Text(article Type): label
+- Date
+- Article undertitle: text
+- Article: text
+- Citation: text
+- Link before: link
+- Link after: link
 
 ---------------
 
 # Liste nouvelles
 ## POST TYPE
-### newsHub
+### news-hub
 
 ## MODÈLE
-### listeNouvelle
+### news-hub.php
 
 ## COMPOSANTE DE LA PAGES
 ### PARTIAL
 #### heroBase.php
-
-### CUSTOM FIELDS
-#### Aucun ??
-
-## AUTRES CUSTOM FIELDS
-### heroBase
-#### Image
-#### Link (fil d'Arianne)
 
 ---------------
 
@@ -181,46 +172,39 @@
 ### service
 
 ## MODÈLE
-### service
+### services.php
 
 ## COMPOSANTE DE LA PAGES
 ### PARTIAL
-#### heroBase.php
-#### service.php
-
-### CUSTOM FIELDS
-#### Aucun
+- heroBase.php
+- service.php
 
 ## AUTRES CUSTOM FIELDS
-### heroBase
-#### Image
-#### Link (fil d'Arianne)
+- Service undertitle:text
+- Service description:text
+- Image
 
 ---------------
 
 # Liste services
 ## POST TYPE
-### servicesHub
+### services-hub
 
 ## MODÈLE
-### listeServices
+### services-hub.php
 
 ## COMPOSANTE DE LA PAGES
 ### PARTIAL
-#### heroBase.php
-#### abonnement.php
-#### membre.php
+- heroBase.php
+- abonnement.php
+- membre.php
 
-### CUSTOM FIELDS
-#### swiper (publications) ??
-#### participation ??
-#### publications ??
-#### droits ??
 
 ## AUTRES CUSTOM FIELDS
-### heroBase
-#### Image
-#### Link (fil d'Arianne)
+- Services undertitle: text
+- Services description: text
+- Swiper: gallery
+- Link more rights: link
 
 ---------------
 
@@ -229,16 +213,15 @@
 ### team
 
 ## MODÈLE
-### equipe
+### team.php
 
 ## COMPOSANTE DE LA PAGES
 ### PARTIAL
 #### heroBase.php
 
-### CUSTOM FIELDS
-#### modale
-
 ## AUTRES CUSTOM FIELDS
-### heroBase
-#### Image
-#### Link (fil d'Arianne)
+### Modale
+- Name: text
+- Position: text
+- Description: text
+- Image
