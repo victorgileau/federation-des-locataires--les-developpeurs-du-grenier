@@ -35,20 +35,20 @@
 
 ## contact (POST TYPE)
 
-## MODÈLE "about" (TEMPLATE)
+## MODÈLE "contact.php" (TEMPLATE)
 
 ## Contacter nous (section)
 
-### "contact"
+#### CHAMPS PERSONNALISÉS (titleOne, titleTwo, placeholderName, placeholderEmail, placeholderMsg, btnSend, phoneNumber, email, adresseStreet, adresseCity, adresseCode)
 
 ## Membre (section)
 
-### "member"
+### "member.php"
 #### CHAMPS PERSONNALISÉS (title, msg ,buttonSabonner)
 
 ## Abonnez-vous (section)
 
-### "subscription"
+### "subscription.php"
 #### CHAMPS PERSONNALISÉS (title, mail,buttonSabonner)
 
 -----------
@@ -57,7 +57,7 @@
 
 ## welcomePage (POST TYPE)
 
-## MODÈLE "welcomePageTemplate" (TEMPLATE)
+## MODÈLE "welcomePageTemplate.php" (TEMPLATE)
 
 ## Hero Accueil (section)
 
@@ -69,7 +69,6 @@
 
 ## À propos (section)
 
-### "aboutAcceuil"
 #### CHAMPS PERSONNALISÉS (aboutTitle, aboutMsg, buttonAboutAcceuil)
 
 ## Service et formation (section) 
