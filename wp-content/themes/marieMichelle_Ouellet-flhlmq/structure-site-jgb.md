@@ -2,7 +2,7 @@
 
 ## POST TYPE
 
-### Page Accueil
+### Home
 
 ## MODÈLE (TEMPLATE)
 
@@ -11,21 +11,21 @@
 
 ## COMPOSANTES
 
-### List News
-#### list_news.php
-#### listNewsName : Text
-#### listNewsDate : Date
-#### listNewsCategory : Text
-#### listNewsImage : Text
+### News List
+#### newsList.php
+#### newsListName : Text
+#### newsListDate : Date
+#### newsListCategory : Text
+#### newsListImage : Text
 
-### Services et Formations
+### Services Hub
 #### serviceshub.php
 #### services_name: text
 #### services_desc: text
 #### services_button: text
 #### services_image: image
 
-### Appel Action
+### Call To Action
 #### callToAction.php 
 #### callToAction_main: text
 #### callToAction_desc: text
@@ -33,7 +33,6 @@
 #### callToAction_image: image
 
 ### Abonnement 
-
 #### membership.php
 
 
@@ -53,20 +52,21 @@
 
 ### recherche_text: text
 
-### a_propos: group
-#### a_propos_mainText: text
-#### a_propos_desc: text
-#### a_propos_btn: text
-#### a_propos_image: image
+### about: group
+#### about_mainText: text
+#### about_desc: text
+#### about_btn: text
+#### about_image: image
 
 
 
 
---------
+-------------------
 
 # Liste de nouvelles
 
-## Listes (POST TYPE)
+## POST TYPE
+### News Hub
 
 ## MODÈLE (TEMPLATE)
 ### news-hub.php
@@ -79,30 +79,31 @@
 #### hero_title: text
 #### hero_image: image
 
-### List News
-#### list_news.php
-#### listNewsName : Text
-#### listNewsDate : Date
-#### listNewsCategory : Text
-#### listNewsImage : Text
+### News List
+#### newsList.php
+#### newsListName : Text
+#### newsListDate : Date
+#### newsListCategory : Text
+#### newsListImage : Text
 
----------------
+------------------
 
 # Article de nouvelle
 
-## Articles (POST TYPE)
+## POST TYPE
+### Articles
 
 ## MODÈLE (TEMPLATE)
 ### news_article.php
 
 ## COMPOSANTES
 
-### List News
-#### list_news.php
-#### listNewsName : Text
-#### listNewsDate : Date
-#### listNewsCategory : Text
-#### listNewsImage : Image
+### News List
+#### newsList.php
+#### newsListName : Text
+#### newsListDate : Date
+#### newsListCategory : Text
+#### newsListImage : Text
 
 ## AUTRES CHAMPS PERSONNALISÉS
 
@@ -114,11 +115,12 @@
 #### article_image: text
 
 
---------
+-------------------
 
 # Liste de services
 
-## Liste Service (POST TYPE)
+## POST TYPE
+### Service Hub
 
 ## MODÈLE (TEMPLATE)
 ### services-hub.php 
@@ -130,13 +132,13 @@
 #### hero_title: text
 #### hero_image: image
 
-### Services et Formations
+### Services Hub
 #### serviceshub.php
 #### services_name: text
 #### services_desc: text
 #### services_button: text
 
-### Appel Action
+### Call To Action
 #### callToAction.php 
 #### callToAction_main: text
 #### callToAction_desc: text
@@ -144,7 +146,6 @@
 #### callToAction_image: image
 
 ### Abonnement 
-
 #### membership.php
 
 ## CHAMPS PERSONNALISÉS 
@@ -154,15 +155,16 @@
 #### publication_desc: text
 #### publication_button: text
 
-### droits: group
-#### droits_title: text
-#### droits_desc: image
+### rights: group
+#### rights_title: text
+#### rights_desc: image
 
 -----------------------
 
 # Service
 
-## Service (POST TYPE)
+## POST TYPE
+### Service 
 
 ## MODÈLE (TEMPLATE)
 ### services.php
@@ -174,7 +176,7 @@
 #### hero_title: text
 #### hero_image: image
 
-### Services et Formations
+### Services Hub
 #### serviceshub.php
 #### services_name: text
 #### services_desc: text
@@ -191,7 +193,8 @@
 
 # Équipe
 
-## Équipe (POST TYPE)
+## POST TYPE
+### Team 
 
 ## MODÈLE (TEMPLATE)
 ### team.php
@@ -218,7 +221,8 @@
 
 # A Propos
 
-## A Propos (POST TYPE)
+## POST TYPE
+### About 
 
 ## MODÈLE (TEMPLATE)
 ### about.php
@@ -243,14 +247,15 @@
 
 # Nous Joindre
 
-## Nous Joindre (POST TYPE)
+## POST TYPE
+### Contact Us 
 
 ## MODÈLE (TEMPLATE)
 ### contact-us.php
 
 ## COMPOSANTE
 
-### Appel Action
+### Call To Action
 #### callToAction.php 
 #### callToAction_main: text
 #### callToAction_desc: text
@@ -270,7 +275,9 @@
 
 # 404
 
-## 404 (POST TYPE)
+
+## POST TYPE
+### 404 
 
 ## MODÈLE (TEMPLATE)
 ### 404.php
