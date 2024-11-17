@@ -157,7 +157,7 @@
 
 ### rights: group
 #### rights_title: text
-#### rights_desc: image
+#### rights_desc: text
 
 -----------------------
 
@@ -241,6 +241,15 @@
 #### about_title: text
 #### about_desc: text
 
+### aboutInfo: group
+#### aboutInfos_graphic: text
+#### aboutInfos: text
+
+### mission: group
+#### mission_objective: text
+#### mission_objectiveDesc: text
+#### mission_objectiveSpan: text
+
 
 
 -------------------------------
@@ -269,7 +278,7 @@
 ## AUTRES CHAMPS PERSONNALISÉS 
 ### contact_us: group
 #### contact_title: text
-#### contact_info: text area
+#### contact_info: text 
 
 ------------------------
 
