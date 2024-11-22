@@ -1,0 +1,117 @@
+/*
+Theme Name: Fédération des locataires d’habitations à loyer modique du Québec
+Author: Victor Gileau / Joshua Gonzalez-Barrera / Kenza El Harrif
+Author URI: 
+Description: Thème de base pour la reforme du site Fédération des locataires d’habitations à loyer modique du Québec
+Version: 1.0
+-------------------------------------------------------------- */
+
+@use 'partials-scss/variables';
+@use 'partials-scss/mixins/mixins';
+@use 'partials-scss/mixins/btnMenuHover';
+@use 'partials-scss/menu';
+@use 'partials-scss/footer';
+@use './partials-scss/messageProjetEtudiant';
+@use './partials-scss/servicesAccueil';
+@use "./partials-scss/temoignages";
+@use './partials-scss/heroAccueil';
+@use './partials-scss/actuAccueil';
+@use './partials-scss/appelActionAcceuil';
+@use './partials-scss/aPropos';
+@use './partials-scss/recherche';
+@use './partials-scss/abonnement';
+@use "./partials-scss/serviceshub";
+@use "./partials-scss/contact";
+@use './partials-scss/equipe';
+@use "./partials-scss/article";
+@use './partials-scss/pageErreurNotFound';
+@use './partials-scss/aboutPage';
+@use './partials-scss/newsHub';
+@use './partials-scss/service';
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(./medias/fonts/Raleway/Raleway-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'JustMe';
+    src: url(./medias/fonts/Just_Me_Again_Down_Here/JustMeAgainDownHere-Regular.ttf) format('truetype');
+}
+
+/*---------------KENZA: size telephone---------------*/
+html {
+    height: 100%;
+}
+
+* {
+    font-family: Raleway;
+}
+
+body {
+    min-height: 100vh;
+    //display: flex;
+    //flex-direction: column;
+    background-color: variables.$blancSel;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 36px;
+    color: variables.$blancSel;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 32px;
+    color: variables.$noirPoudre;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 24px;
+    color: variables.$noirPoudre;
+    font-weight: medium;
+}
+
+/*---------------KENZA: media queries tablette---------------*/
+
+@media screen and (min-width: 768px) {
+
+
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+}
+
+/*---------------KENZA: media queries desktop---------------*/
+@media screen and (min-width: 1400px) {
+
+
+    h1 {
+        font-size: 96px;
+    }
+
+    h2 {
+        font-size: 64px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+}
+
+header ul li a {
+    color: variables.$noirPoudre;
+}

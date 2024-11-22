@@ -1,0 +1,104 @@
+/* Victor */
+@use './variables';
+@use './mixins/mixins';
+
+.membre {
+    width: 100%;
+    height: 100vh;
+    max-height: 120vh;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .appelAction {
+        z-index: -1;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        text-align: center;
+        background-image: url(./medias/img/accueil_devenir_membre_montreal.jpg);
+        width: 90%;
+
+        height: 600px;
+        background-size: 250%;
+        background-position: center;
+        border-radius: 25px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Raleway';
+
+        &--over {
+            position: absolute;
+            z-index: 1;
+            border-radius: 25px;
+            backdrop-filter: blur(2px);
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 600px;
+            pointer-events: none;
+        }
+
+        &__svgLine {
+            svg {
+                width: 25px;
+            }
+
+            position: absolute;
+            bottom: -13vh;
+            right: 10px;
+        }
+
+        &__titre {
+            text-shadow: 2px 2px 5px rgba(12, 47, 54, 1);
+            font-size: 48px;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            text-shadow: 2px 2px 2px rgba(12, 47, 54, 1);
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 48px;
+            display: flex;
+            align-items: center;
+            color: variables.$blancSel;
+        }
+
+        &__btn {
+            position: absolute;
+            top: 60%;
+            bottom: 0;
+            @include mixins.btnBlanc;
+            font-size: 2em;
+            padding-top: 12px;
+            height: 2em;
+            border-radius: 100px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .membre {
+        .appelAction {
+            background-size: 180%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .membre {
+        .appelAction {
+            width: 100%;
+            background-size: 180%;
+        }
+    }
+}

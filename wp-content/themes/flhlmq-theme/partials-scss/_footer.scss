@@ -1,0 +1,260 @@
+/* Kenza */
+@use "variables";
+@use "mixins/mixins";
+
+/*-----------------KENZA: footer pour telephone !--------------------*/
+footer {
+  display: block;
+  background-color: variables.$lavandreCendre;
+  font-size: variables.$linkSizeMobile;
+
+  /*--------------KENZA: Styles Pour le logo du footer------------------------------*/
+
+  .svg__logo--complet {
+    padding-top: 28px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+  }
+
+  /*--------------KENZA: Styles Pour le bloc partenaire du footer------------------------------*/
+
+  .footer__partenaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 28px;
+
+    .img__partenaire {
+      margin-top: 0;
+      width: 180px;
+    }
+  }
+
+  /*--------------KENZA: Styles Pour le bloc réseaux sociaux du footer------------------------------*/
+
+  .footer__sociaux {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 28px;
+
+    .footer__link {
+      margin: 10px;
+    }
+  }
+
+  /*--------------KENZA: Styles Pour le bloc des liens du footer------------------------------*/
+
+  .footer__group--link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+    .footer__list {
+      margin-top: 28px;
+      padding: 0;
+    }
+
+    li {
+      padding-top: 10px;
+      opacity: .8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .footer__list--contact {
+      width: 70%;
+    }
+
+    .footer__list--info {
+      width: 45%;
+    }
+
+    .footer__list--flhlmq {
+      width: 45%;
+    }
+
+    .footer__title {
+      font-size: 1.2em;
+    }
+  }
+
+  /*--------------KENZA: Éléments autres------------------------------*/
+
+  a {
+    color: variables.$noirPoudre;
+    text-decoration: none;
+  }
+
+  .footer__ligne {
+    padding: none;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    height: 2px;
+    width: 100%;
+    background-color: variables.$noirPoudre;
+    opacity: 0.2;
+  }
+
+  .footer__link {
+    font-weight: variables.$weightMedium;
+    text-decoration: none;
+  }
+
+  .copyright {
+    margin-top: 28px;
+    text-align: center;
+  }
+
+  .footer__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 28px;
+    margin-bottom: 28px;
+
+    button {
+
+      font-size: 1.5em;
+    }
+  }
+}
+
+/*---------------KENZA: media queries tablette---------------*/
+
+@media screen and (min-width: 768px) {
+  footer {
+    .svg__logo--complet {
+      margin-left: 30px;
+      width: 25%;
+      display: inline-block;
+      margin: none;
+    }
+
+    .footer__partenaire {
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      width: 60%;
+      margin-top: 28px;
+
+      .img__partenaire {
+        width: 29%;
+      }
+    }
+
+    .footer__ligne {
+      margin-top: 56px;
+    }
+
+    .footer__sociaux {
+      width: 15%;
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .footer__group--link {
+      display: inline-block;
+      width: 90%;
+      text-align: left;
+      margin-left: 30px;
+
+      .footer__list--contact {
+        display: inline-block;
+        width: 20%;
+      }
+
+      .footer__list--info {
+        vertical-align: top;
+        margin-left: 42%;
+        display: inline-block;
+        width: 10%;
+      }
+
+      .footer__list--flhlmq {
+        vertical-align: top;
+        display: inline-block;
+        margin-left: 10%;
+        width: 15%;
+      }
+
+      .footer__title {
+        font-size: 1em;
+      }
+    }
+
+    .copyright {
+      display: inline-block;
+      width: 50%;
+      margin-top: 28px;
+      margin-bottom: 28px;
+      margin-left: 30px;
+      text-align: left;
+    }
+
+    .footer__btn {
+      position: absolute;
+      display: inline-block;
+      right: 30px;
+
+      button {
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+/*---------------KENZA: media queries desktop---------------*/
+@media screen and (min-width: 1400px) {
+  footer {
+
+    .svg__logo--complet {
+      display: inline-block;
+    }
+
+    font-size: variables.$linkSize;
+
+    .footer__partenaire {
+      padding-top: 22px;
+      margin-right: 120px;
+      margin: 0;
+      width: 55%;
+
+      .img__partenaire {
+        width: 30%;
+      }
+    }
+
+    .footer__group--link {
+
+      .footer__list--info {
+        margin-left: 49%;
+      }
+
+      .footer__list--flhlmq {
+        margin-left: 5%;
+      }
+
+      .footer__title {
+        font-size: 1em;
+      }
+    }
+
+    .footer__btn {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .copyright {
+      margin-top: 50px;
+    }
+  }
+}

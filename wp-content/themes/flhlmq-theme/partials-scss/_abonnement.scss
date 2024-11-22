@@ -1,0 +1,100 @@
+/* Joshua */
+@use "./variables";
+
+.abonnement {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.membership {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+
+    &__form {
+        width: 25vmin;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        margin-right: 10px;
+    }
+
+    &__input {
+        font-size: 16px;
+        margin-left: var(--padding);
+        outline: none;
+        border-radius: 28px;
+        background: transparent;
+        width: 25vmin;
+        padding: 1.3vmin;
+        border: 1px solid variables.$noirPoudre;
+    }
+
+    &__text {
+        color: black;
+        font-size: 32px;
+        grid-column: span 2;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    &__btn {
+        justify-self: center;
+        font-size: 18px;
+        padding: 1.3vmin;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    .membership {
+        &__content {
+            flex-direction: column;
+        }
+
+        &__form {
+            width: 40vmin;
+            margin: 10px 0px;
+        }
+
+        &__input {
+            width: 40vmin;
+        }
+
+        &__btn {
+            font-size: 20px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .membership {
+        &__form {
+            width: 75vmin;
+        }
+
+        &__text {
+            font-size: 4vw;
+        }
+
+        &__input {
+            width: 75vmin;
+            padding: 1.5vmin;
+        }
+
+        &__btn {
+            font-size: 18px;
+        }
+    }
+}

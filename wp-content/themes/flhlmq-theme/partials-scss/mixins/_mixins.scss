@@ -1,0 +1,258 @@
+@use '../variables';
+
+@mixin btnBlanc {
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 25px;
+    background-color: variables.$blancSel;
+    color: variables.$bleuNuit;
+    border: 1px solid variables.$bleuNuit;
+    font-weight: bold;
+
+    a {
+        color: variables.$bleuNuit;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: variables.$bleuNuit;
+        color: variables.$blancSel;
+        border: 1px solid variables.$blancSel;
+
+        a {
+            color: variables.$blancSel;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin btnNoir {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 25px;
+    background-color: variables.$noirPoudre;
+    color: variables.$blancSel;
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-weight: bold;
+
+    a {
+        color: variables.$blancSel;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: variables.$blancSel;
+        color: variables.$noirPoudre;
+        border: 1px solid variables.$noirPoudre;
+
+        a {
+            color: variables.$bleuNuit;
+            text-decoration: none;
+        }
+    }
+
+
+}
+
+@mixin btnBleu {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 25px;
+    background-color: variables.$bleuNuit;
+    color: variables.$blancSel;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    a {
+        color: variables.$blancSel;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: variables.$blancSel;
+        color: variables.$bleuNuit;
+        border: 1px solid variables.$bleuNuit ;
+
+        a {
+            color: variables.$bleuNuit;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin btnLavendreS {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0em;
+    padding-right: 2em;
+    border-radius: 25px;
+    background-color: variables.$lavandrepetant;
+    color: variables.$noirPoudre;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    a {
+        color: variables.$noirPoudre;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: variables.$noirPoudre;
+        color: variables.$lavandrepetant;
+        border: 1px solid variables.$lavandrepetant ;
+
+        a {
+            color: variables.$lavandrepetant;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin btnLavendre {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0em;
+    padding-right: 1em;
+    border-radius: 25px;
+    background-color: variables.$lavandrepetant;
+    color: variables.$noirPoudre;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    a {
+        color: variables.$noirPoudre;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: variables.$noirPoudre;
+        color: variables.$lavandrepetant;
+        border: 1px solid variables.$lavandrepetant ;
+
+        a {
+            color: variables.$lavandrepetant;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin btnBlancSarcelle {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 50px;
+    background-color: variables.$blancSel;
+    color: variables.$bleuSarcelle;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    a {
+        color: variables.$bleuSarcelle;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: variables.$bleuSarcelle;
+        color: variables.$blancSel;
+        border: 1px solid variables.$blancSel;
+
+        a {
+            color: variables.$blancSel;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin btnLavendreSH {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0em;
+    padding-right: 2em;
+    border-radius: 25px;
+    background-color: variables.$noirPoudre;
+    color: variables.$lavandrepetant;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    a {
+        color: variables.$lavandrepetant;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: variables.$lavandrepetant;
+        color: variables.$noirPoudre;
+        border: 1px solid variables.$noirPoudre;
+
+        a {
+            color: variables.$noirPoudre;
+            text-decoration: none;
+        }
+    }
+}
+
+@mixin btnSarcelleSH {
+    border: none;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0em;
+    padding-right: 2em;
+    border-radius: 25px;
+    background-color: variables.$blancSel;
+    color: variables.$bleuSarcelle;
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0);
+
+    a {
+        color: variables.$bleuSarcelle;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: variables.$bleuSarcelle;
+        color: variables.$blancSel;
+        border: 1px solid variables.$blancSel;
+
+        a {
+            color: variables.$blancSel;
+            text-decoration: none;
+        }
+    }
+}
