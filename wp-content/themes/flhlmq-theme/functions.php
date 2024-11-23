@@ -27,7 +27,6 @@ register_nav_menus(
 Function déclarant la barre latérale principale */
 function add_sidebars() {
 	register_sidebar(array(	
-		'id' => $id,
 		/* 
 			1. 'main-sidebar' = Nom dans le code
 			2. 'Barre laterale principale' = Nom dans l'admin
