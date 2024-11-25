@@ -1,7 +1,7 @@
 <?php 
 /**
- * 	Template Name: À propos
- * 	Identique à page, mais avec une barre latérale
+ * Template Name: service
+ * Template Post Type: errorpage, hero, service
  */
 
 get_header(); // Affiche header.php
@@ -11,16 +11,35 @@ get_template_part( 'partials/hero');
 if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ? 
 	// Si oui, bouclons au travers les pages (logiquement, il n'y en aura qu'une)
 	while ( have_posts() ) : the_post(); 
+
+	$imageOne = get_field('service_imageone');
+
+
 ?>
 
 	<article>
 		<?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
-			<h2>
-				<?php the_title(); // Titre de la page ?>
-			</h2>
+			<div class="conteneurServicePage">
+        <section class="servicePage">
+            <div class="servicePage__sectionUn">
+                <img class="img" src="<?php echo esc_url($imageOne['url']) ?>" alt="img">
+                <div class="contenuText">
+                    <h2>
+                        <?php the_field('service_titleone'); ?>
+                    </h2>
+                    <p class="text">
+						<?php the_field('service_textcontentone'); ?>
+                    </p>
+                </div>
+            </div>
+            <div class="servicePage__sectionDeux">
+			<?php the_content(); // Contenu principal de la page ?>
+            </div>
+        </section>
+    </div>
 		<?php endif; ?>
 		
-		<?php the_content(); // Contenu principal de la page ?>
+		
 	</article>
 <?php endwhile; // Fermeture de la boucle
 
