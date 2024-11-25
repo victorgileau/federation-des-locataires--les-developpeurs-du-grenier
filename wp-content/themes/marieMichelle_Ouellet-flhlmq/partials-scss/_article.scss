@@ -10,6 +10,13 @@
 
     &__content {
         margin-bottom: 100px;
+
+        img {
+            width: 100vw;
+            height: 500px;
+            background-image: url("../medias/img/petition_hlm.png");
+            background-size: cover;
+        }
     }
 
     &__buttons {
@@ -42,12 +49,7 @@
     }
 
 
-    &__img {
-        width: 100vw;
-        height: 500px;
-        background-image: url("../medias/img/petition_hlm.png");
-        background-size: cover;
-    }
+
 
 
     &__preview {
