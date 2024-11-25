@@ -22,10 +22,7 @@ echo '<br>| test articles ' . the_ID();
 echo '<br>| test articles titre' . the_title();
 endif;
 */
-get_template_part( 'partials/hero', null, array(
-	'title' => the_title(),
-	'id' => get_the_ID(),
-));
+get_template_part( 'partials/hero');
 
 
 

@@ -1,14 +1,19 @@
 <?php
 /**
  * Template Name: errorPageTheme
- * Template Post Type: errorpage
+ * Template Post Type: errorpage, page, 
  */
 
 get_header(); // Affiche header.php
 
 if ( have_posts() ) :
     //va chercher les posts 'groupe'
-    $errorPageAll = new WP_Query('post_type=errorpage'); // 👈 Utilisation
+    $arguments = array(
+        'post_type' => 'errorpage',
+        'posts_per_page' => 1,
+    );
+    var_dump($arguments);
+    $errorPageAll = new WP_Query($arguments); // 👈 Utilisation
     //va a travers tout les posts 'groupe'
     while ($errorPageAll->have_posts()) : $errorPageAll->the_post();
     
