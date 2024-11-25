@@ -47,6 +47,8 @@ function add_style_and_js()  {
 		2. get_template_directory_uri() . '/style.css' = Chemin où ce trouve le fichier CSS en question
 	*/
 	wp_enqueue_style('swipper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?v='.time());
+	wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css?v='.time());
+	
 	wp_enqueue_style('default', get_template_directory_uri() . '/style.css?v='.time());
 
 	/* Pour ajoutez une feuille de style supplémentaire, copier la ligne précédente et ajuster le chemin du fichier de façon relative vers votre nouveau fichier CSS */

@@ -1,7 +1,7 @@
 <?php 
 /**
- * 	Template Name: À propos
- * 	Identique à page, mais avec une barre latérale
+ * Template Name: contactUsTheme
+ * Template Post Type: contact_us
  */
 
 get_header(); // Affiche header.php
@@ -11,15 +11,38 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 	while ( have_posts() ) : the_post(); 
 ?>
 
-	<article>
-		<?php if (!is_front_page()) : // Si nous ne sommes PAS sur la page d'accueil ?>
-			<h2>
-				<?php the_title(); // Titre de la page ?>
-			</h2>
-		<?php endif; ?>
-		
-		<?php the_content(); // Contenu principal de la page ?>
-	</article>
+<section class="contact">
+        <div class="contact__container">
+            <h2 class="contact__title"><?php the_field('contact_title')?></h2>
+            <div class="contact__wrapper">
+                <div class="contact__form">
+                    <h3>Envoyez-nous un message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="<?php the_field('contact_name')?>">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="<?php the_field('contact_email')?>">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="<?php the_field('contact_message')?>"></textarea>
+                        </div>
+                        <button type="submit" class="contact__btn">Envoyer Message</button>
+                    </form>
+                </div>
+                <div class="contact__info">
+                    <h3>Information</h3>
+                    <p><i class="fas fa-phone"></i><?php the_field('contact_number')?></p>
+                    <p><i class="fas fa-envelope"></i><?php the_field('contact_emailf')?> </p>
+                    <p><i class="fas fa-map-marker-alt"></i><?php the_field('contact_address')?> </p>
+                    <p><?php the_field('contact_city-country')?></p>
+                    <p><?php the_field('contact_address_code')?></p>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+
 <?php endwhile; // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
