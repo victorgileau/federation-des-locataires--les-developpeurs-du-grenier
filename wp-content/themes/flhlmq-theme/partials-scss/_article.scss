@@ -6,7 +6,7 @@
     min-height: 100vh;
     margin: 0 auto;
     width: 1400px;
-    font-size: 18px;
+    font-size: 24px;
 
     &__content {
         margin-bottom: 100px;
@@ -17,6 +17,18 @@
             border-radius: 15px;
             object-fit: cover;
         }
+        
+        p{
+            a {
+            text-decoration: none;
+            color: variables.$bleuSarcelle;
+            transition-duration: 0.2s;
+            &:hover {
+                color: variables.$bleuNuit;
+            }
+        }
+        }
+        
     }
 
     &__buttons {
@@ -90,14 +102,7 @@
         margin-bottom: 2vw;
     }
 
-    &__link {
-        text-decoration: none;
-        color: variables.$bleuSarcelle;
-        transition-duration: 0.2s;
-        &:hover {
-            color: variables.$bleuNuit;
-        }
-    }
+    
 
 }
 

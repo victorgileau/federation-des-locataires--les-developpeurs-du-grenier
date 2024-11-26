@@ -2780,7 +2780,7 @@ Version: 1.0
   min-height: 100vh;
   margin: 0 auto;
   width: 1400px;
-  font-size: 18px;
+  font-size: 24px;
 }
 .article__content {
   margin-bottom: 100px;
@@ -2791,6 +2791,14 @@ Version: 1.0
   border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.article__content p a {
+  text-decoration: none;
+  color: #1F7A8C;
+  transition-duration: 0.2s;
+}
+.article__content p a:hover {
+  color: #022B3A;
 }
 .article__buttons {
   display: grid;
@@ -2870,14 +2878,6 @@ Version: 1.0
 }
 .article__content p, .article__content h3, .article__content cite, .article__content cite::after {
   margin-bottom: 2vw;
-}
-.article__link {
-  text-decoration: none;
-  color: #1F7A8C;
-  transition-duration: 0.2s;
-}
-.article__link:hover {
-  color: #022B3A;
 }
 
 .preview-title {
