@@ -1,24 +1,31 @@
 <?php
 /**
+ * The template for displaying 404 pages (Not Found)
  * Template Name: errorPageTheme
- * Template Post Type: errorpage, page, 
+ * Template Post Type: errorpage, page
  */
 
 get_header(); // Affiche header.php
 
-if ( have_posts() ) :
+ 
     //va chercher les posts 'groupe'
+    
     $arguments = array(
         'post_type' => 'errorpage',
         'posts_per_page' => 1,
     );
-    var_dump($arguments);
+    //var_dump($arguments);
     $errorPageAll = new WP_Query($arguments); // 👈 Utilisation
     //va a travers tout les posts 'groupe'
     while ($errorPageAll->have_posts()) : $errorPageAll->the_post();
     
+    //while ( have_posts() ) : the_post();
 
 ?>
+<div id="primary" class="content-area">
+    <div id="content" class="site-content" role="main">
+    <div class="page-wrapper">
+    <div class="page-content">
 
         <section class="pageErrorContainer">
 
@@ -48,10 +55,15 @@ if ( have_posts() ) :
 
         </section>
 
+        </div><!-- .page-content -->
+			</div><!-- .page-wrapper -->
+
+        </div><!-- #content -->
+	</div><!-- #primary -->
+
         <?php
 	endwhile;
-	wp_reset_postdata();
-    endif;
 
-get_footer();
+    get_sidebar();
+    get_footer();
 ?>
