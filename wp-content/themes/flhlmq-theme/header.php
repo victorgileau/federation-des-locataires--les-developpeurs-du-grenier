@@ -39,24 +39,37 @@
 
 	<nav>
 		<?php 
-			// Affiche un menu si dans le tableau de bord un menu a été défini dans cet emplacement
-			wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
+			// Affiche un menu si dans le tableau de bord un menu a été défini dans cet emplacement 
+			wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); /*( <-- pas besoin de ce code ci) */
 
+			/*
 			$menuArray = wp_get_nav_menu_items('menu 1', array(
 				'post_type' => 'nav_menu_item',
-			));
+			));*/
 
 			//echo var_dump($menuArray[0]);
 
+			//créé des array pour sauvegarder le contenu du menu
+			$menuItemsTitleArr = array();
+			$menuItemsUrlArr = array();
+
+			//va cherche l'information dans le "menu 1" dans wordPress (Apparence/Menus/Structure du menu)
 			if ( $menu_items = wp_get_nav_menu_items( 'menu 1' ) ) { // Loop over menu items
 				foreach ( $menu_items as $menu_item) { // Compare menu object with current page menu object
 					echo 'contenu-menu : ' . $menu_item->title;
 					$current = ( $menu_item->object_id == get_queried_object_id() ) ? 'current' : '';// Print menu item
 					echo '<li class="' . $current . '"><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
+
+					$menuItemsTitleArr[] = $menu_item->title;
+					$menuItemsUrlArr[] = $menu_item->url;
 				}
 			}
 
-			
+			//Permet de selectionner items specifique
+			//echo var_dump($menuItemsTitleArr[0]);
+			//echo var_dump($menuItemsUrlArr[0]);
+			echo var_dump($menuItemsTitleArr);
+			echo var_dump($menuItemsUrlArr);
 		?>
 	</nav>
 
