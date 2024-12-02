@@ -52,6 +52,7 @@
 			//créé des array pour sauvegarder le contenu du menu
 			$menuItemsTitleArr = array();
 			$menuItemsUrlArr = array();
+			$menuItemsArr = array();
 
 			//va cherche l'information dans le "menu 1" dans wordPress (Apparence/Menus/Structure du menu)
 			if ( $menu_items = wp_get_nav_menu_items( 'menu 1' ) ) { // Loop over menu items
@@ -62,6 +63,7 @@
 
 					$menuItemsTitleArr[] = $menu_item->title;
 					$menuItemsUrlArr[] = $menu_item->url;
+					$menuItemsArr[] = $menu_item;
 				}
 			}
 
@@ -69,7 +71,17 @@
 			//echo var_dump($menuItemsTitleArr[0]);
 			//echo var_dump($menuItemsUrlArr[0]);
 			echo var_dump($menuItemsTitleArr);
+			echo '<br> <br>';
 			echo var_dump($menuItemsUrlArr);
+			echo '<br> <br>';
+
+			if ( function_exists ( 'wpm_language_switcher' ) ) 
+
+			wpm_translate_string('FR', 'Français du Canada');
+
+			$test =  wpm_language_switcher("select", "name");
+
+			echo $test[0];
 		?>
 	</nav>
 

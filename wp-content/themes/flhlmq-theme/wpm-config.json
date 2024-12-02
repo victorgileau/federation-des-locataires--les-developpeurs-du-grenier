@@ -1,0 +1,12 @@
+{
+    "post_types": {
+        "about": {},
+        "contact_us": {},
+        "errorpage": {},
+        "hero": {},
+        "news_article": {},
+        "newshub": {},
+        "service": {},
+        "team-member": {}
+    }
+}
