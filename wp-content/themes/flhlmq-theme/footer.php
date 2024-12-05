@@ -6,9 +6,6 @@
 // Fermeture de la zone de contenu principale ?>
 </main>
 
-<footer>
-	<p>Développement web - Collège Montmorency - 2021</p>
-</footer>
 
 <?php wp_footer(); 
 	$menuItemsTitleArr = array();
@@ -18,9 +15,9 @@
 	//va cherche l'information dans le "menu 1" dans wordPress (Apparence/Menus/Structure du menu)
 	if ( $menu_items = wp_get_nav_menu_items( 'Menu 2' ) ) { // Loop over menu items
 		foreach ( $menu_items as $menu_item) { // Compare menu object with current page menu object
-			echo 'contenu-menu : ' . $menu_item->title;
+
 			$current = ( $menu_item->object_id == get_queried_object_id() ) ? 'current' : '';// Print menu item
-			echo '<li class="' . $current . '"><a href="' . $menu_item->url . '">' . $menu_item->title . '</a></li>';
+
 
 			$menuItemsTitleArr[] = $menu_item->title;
 			$menuItemsUrlArr[] = $menu_item->url;
@@ -29,20 +26,7 @@
 	}
 
 	//Permet de selectionner items specifique
-	echo var_dump($menuItemsTitleArr[0]);
-	echo '<br> <br>';
-	echo var_dump($menuItemsTitleArr[1]);
-	echo '<br> <br>';
-	echo var_dump($menuItemsTitleArr[2]);
-	echo '<br> <br>';
-	echo var_dump($menuItemsTitleArr[3]);
-	echo '<br> <br>';
-	echo var_dump($menuItemsUrlArr[0]);
-	echo '<br> <br>';
-	echo var_dump($menuItemsTitleArr);
-	echo '<br> <br>';
-	echo var_dump($menuItemsUrlArr);
-	echo '<br> <br>';
+
 	?>
 
 	<footer>
