@@ -68,8 +68,10 @@
 			}
 
 			//Permet de selectionner items specifique
-			//echo var_dump($menuItemsTitleArr[0]);
-			//echo var_dump($menuItemsUrlArr[0]);
+			echo var_dump($menuItemsTitleArr[0]);
+			echo '<br> <br>';
+			echo var_dump($menuItemsUrlArr[0]);
+			echo '<br> <br>';
 			echo var_dump($menuItemsTitleArr);
 			echo '<br> <br>';
 			echo var_dump($menuItemsUrlArr);
