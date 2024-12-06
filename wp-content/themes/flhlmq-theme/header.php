@@ -69,8 +69,8 @@
 
 			if ( function_exists ( 'wpm_language_switcher' ) ) 
 
-
-			$test =  wpm_language_switcher("select", "name");
+        //permet de créé selection de langue 
+			  //wpm_language_switcher("list", "name");
 
 		?>
 
