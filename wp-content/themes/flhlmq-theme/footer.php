@@ -262,9 +262,9 @@
       <ul class="footer__list footer__list--flhlmq">
         <h3 class="footer__title footer__title--flhlmq">FLHLMQ</h3>
         <li class="footer__item"><a class="footer__link" href="<?php echo $menuItemsUrlArr[2]?>"><?php echo $menuItemsTitleArr[2]?></a></li>
-        <li class="footer__item"><a class="footer__link" href="#">Nos Services</a></li>
         <li class="footer__item"><a class="footer__link" href="<?php echo $menuItemsUrlArr[3]?>"><?php echo $menuItemsTitleArr[3]?></a></li>
-        <li class="footer__item"><a class="footer__link" href="<?php echo $menuItemsTitleArr[4]?>"><?php echo $menuItemsTitleArr[4]?></a></li>
+        <li class="footer__item"><a class="footer__link" href="<?php echo $menuItemsUrlArr[4]?>"><?php echo $menuItemsTitleArr[4]?></a></li>
+        <li class="footer__item"><a class="footer__link" href="<?php echo $menuItemsTitleArr[5]?>"><?php echo $menuItemsTitleArr[5]?></a></li>
       </ul>
     </div>
     <div class="copyright">©2024 - Fédération des locataires d’habitations à loyer modique du Québec</div>

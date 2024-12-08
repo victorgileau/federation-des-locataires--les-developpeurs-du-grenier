@@ -111,18 +111,18 @@ while ( $message->have_posts() ) : $message->the_post(); ?>
       <div class="nav-menu">
         <div class="nav-content">
           <ul>
-            <li><a href="services-hub.html" class="btn">Nos services</a></li>
             <li><a href="<?php echo $menuItemsUrlArr[0]?>" class="btn"><?php echo $menuItemsTitleArr[0]?></a></li>
             <li><a href="<?php echo $menuItemsUrlArr[1]?>" class="btn"><?php echo $menuItemsTitleArr[1]?></a></li>
             <li><a href="<?php echo $menuItemsUrlArr[2]?>" class="btn"><?php echo $menuItemsTitleArr[2]?></a></li>
+            <li><a href="<?php echo $menuItemsUrlArr[3]?>" class="btn"><?php echo $menuItemsTitleArr[3]?></a></li>
           </ul>
           <a href="<?php bloginfo('url'); ?>" class="logo" id="logoNormal"><img src="<?php bloginfo('template_url'); ?>/assets/LOGO_raccourcis.svg" alt=""></a>
           <ul>
-            <li><a href="<?php echo $menuItemsUrlArr[3]?>" class="btn"><?php echo $menuItemsTitleArr[3]?></a></li>
+            <li><a href="<?php echo $menuItemsUrlArr[4]?>" class="btn"><?php echo $menuItemsTitleArr[4]?></a></li>
             <li><a href="#" class="btn">FAQ</a></li>
             <li><a href="#"><button class="btnBleu">Devenir membre</button></a></li>
             <li><a href="#"><button class="btnB">Se connecter</button></a></li>
-            <li><a href="<?php echo $menuItemsUrlArr[4]?>" class="btn">FR</a></li>
+            <li><a href="<?php echo $menuItemsUrlArr[5]?>" class="btn">FR</a></li>
           </ul>
         </div>
         <div class="boxBurger">
