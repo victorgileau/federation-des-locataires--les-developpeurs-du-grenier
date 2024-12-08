@@ -66,11 +66,13 @@
 
 			//Permet de selectionner items specifique
 
+      //echo var_dump($menuItemsArr[0]);
+
 
 			if ( function_exists ( 'wpm_language_switcher' ) ) 
 
         //permet de créé selection de langue 
-			  //wpm_language_switcher("list", "name");
+			  
 
 		?>
 
@@ -122,7 +124,8 @@ while ( $message->have_posts() ) : $message->the_post(); ?>
             <li><a href="#" class="btn">FAQ</a></li>
             <li><a href="#"><button class="btnBleu">Devenir membre</button></a></li>
             <li><a href="#"><button class="btnB">Se connecter</button></a></li>
-            <li><a href="<?php echo $menuItemsUrlArr[5]?>" class="btn">FR</a></li>
+            <?php wpm_language_switcher("dropdown", "name"); ?>
+            <!--<li class="language"><a href="<?php /* echo $menuItemsUrlArr[5] */?>" class="btn language"></a></li>-->
           </ul>
         </div>
         <div class="boxBurger">

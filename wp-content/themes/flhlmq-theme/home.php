@@ -102,17 +102,17 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 			<script>
 				
 				document.addEventListener("DOMContentLoaded", (event) => {
-					fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article")
+					fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed")
 						.then(data => data.json())
 						.then(posts => {
 							
 							console.log(posts);
 							posts.forEach((post, i) => {
 								const actuFetch = document.querySelector('.actuFetch');
-								//let srcImg = post._embedded['wp:featuredmedia'][0].source_url;
+								let srcImg = post._embedded['wp:featuredmedia'][0].source_url;
 								console.log(post.title.rendered);
 								console.log(post.acf)
-								//console.log(post._embedded['wp:featuredmedia'][0].source_url);
+								console.log(post._embedded['wp:featuredmedia'][0].source_url);
 								let val = i + 1;
 								actuFetch.innerHTML += `
 								<div class="swiper-slide swiper-slide--nouv${val}">

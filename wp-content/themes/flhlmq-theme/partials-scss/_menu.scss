@@ -43,6 +43,19 @@
         margin: 0 15px;
         text-decoration: none;
     }
+
+    
+
+    .language {
+        margin: 0;
+        font-size: 20px
+        ul, li {
+            margin: 0;
+        }
+        & span {
+            font-size: 20px
+        }
+    }
 }
 
 .nav-content {
