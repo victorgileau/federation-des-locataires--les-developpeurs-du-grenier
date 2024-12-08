@@ -21,7 +21,8 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 		<?php the_content(); // Contenu principal de la page ?>
 	</article>
 <?php endwhile; // Fermeture de la boucle
-
+get_template_part('partials/member'); 
+get_template_part('partials/infoletter');
 else : // Si aucune page n'a été trouvée
 	get_template_part( 'partials/404' ); // Affiche partials/404.php
 endif;
