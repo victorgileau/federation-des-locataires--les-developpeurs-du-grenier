@@ -85,9 +85,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 						<hr>
 						<div class="card">
 							<div class="card__column">
-							<?php while( have_rows('aboutmissionone')) : the_row(); ?>
-								<h3 class="card__titre"><?php the_sub_field('about_missioninfotitle'); ?></h3>
-								<?php the_sub_field('about_missioninfoicon'); ?>
+								<h3 class="card__titre"><?php the_field('about_missiononetitle'); ?></h3>
 								
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94 48" fill="none" class="svg__arrow">
 									<path
@@ -97,17 +95,14 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 								
 							</div>
 							<p class="card__text">
-								<?php the_sub_field('about_missioninfotext'); ?>
+								<?php the_field('about_missiononetext'); ?>
 
 							</p>
-							<?php endwhile; ?>
 						</div>
 						<hr>
 						<div class="card">
 							<div class="card__column">
-							<?php while( have_rows('aboutmissiontwo')) : the_row(); ?>
-								<h3 class="card__titre"><?php the_sub_field('about_missioninfotitle'); ?></h3>
-								<?php the_sub_field('about_missioninfoicon'); ?>
+								<h3 class="card__titre"><?php the_field('about_missiontwotitle'); ?></h3>
 								
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107 95" fill="none">
 									<path
@@ -117,16 +112,16 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 								
 							</div>
 							<p class="card__text">
-								<?php the_sub_field('about_missioninfotext'); ?>
+								<?php the_field('about_missiontwotext'); ?>
 
 							</p>
-							<?php endwhile; ?>
 						</div>
 						<hr>
 						<div class="card">
 							<div class="card__column">
-							<?php while( have_rows('aboutmissionthree')) : the_row(); ?>
-								<h3 class="card__titre"><?php the_sub_field('about_missioninfotitle'); ?></h3>
+							<?php
+							 ?>
+								<h3 class="card__titre"><?php the_field('about_missionthreetitle'); ?></h3>
 								
 								
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 66" fill="none">
@@ -137,10 +132,9 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 								
 							</div>
 							<p class="card__text">
-								<?php the_sub_field('about_missioninfotext'); ?>
+								<?php the_field('about_missionthreetext'); ?>
 
 							</p>
-							<?php endwhile; ?>
 						</div>
 						<hr>
 						<div class="mission__alignement--card card">

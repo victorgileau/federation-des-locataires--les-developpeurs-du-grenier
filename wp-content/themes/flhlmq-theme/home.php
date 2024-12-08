@@ -126,7 +126,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 										</p>
 										</div>
 										<!--image pour tester-->
-										<div class="actualite__img" style="background-image: url('${srcImg}');"></div>
+										<div class="actualite__img imageFetch${i}" style="background-image: url('');"></div>
 										<button class="actualite__btn btnN">
 											<a href="#">Évenement</a>
 										</button>
@@ -136,6 +136,18 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 							});
 							
 							
+						});
+					fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed")
+						.then(data => data.json()) 
+						.then(all => {
+							console.log(all);
+							for (let i = 0; i <= 4; i++) {
+								let img = document.querySelector(`.imageFetch${i}`);
+								let val = all[i];
+								console.log(val._embedded['wp:featuredmedia'][0].source_url);
+								let srcImg = val._embedded['wp:featuredmedia'][0].source_url;
+								img.style.backgroundImage = `url(${srcImg})`;
+							}
 						});
 				});
 				
