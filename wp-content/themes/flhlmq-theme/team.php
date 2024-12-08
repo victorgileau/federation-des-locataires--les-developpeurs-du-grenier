@@ -6,6 +6,8 @@
 
 get_header(); // Affiche header.php
 
+get_template_part( 'partials/hero');
+
 if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ? 
 	// Si oui, bouclons au travers les pages (logiquement, il n'y en aura qu'une)
 	while ( have_posts() ) : the_post(); 
@@ -36,13 +38,6 @@ $memberrole4 = $member4['member_role_4'];
 $memberdesc4 = $member4['member_desc_4'];
 ?>
 <main>
-        <div class="hero equipe">
-            <h1 class="hero__titre titre">Notre Équipe</h1>
-            <div class="hero__bgHero bgHero">
-                <img class="hero__img img" src="./medias/img/accueil_carte_01.jpg" alt="hero image">
-            </div>
-            <p class="hero__page page"><a href="./index.html">Accueil</a> > Notre Équipe</p>
-        </div>
 
         <div class="equipeConteneur">
             <div class="membreEquipe">

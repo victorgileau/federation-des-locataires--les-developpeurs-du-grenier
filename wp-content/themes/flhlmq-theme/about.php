@@ -79,13 +79,13 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 			<section class="section__mission mission">
 				<div class="mission__alignement">
 					<!--<img src="medias/img/accueil_hero_01.jpg" alt="" class="mission__img">-->
-					<h2 class="mission__alignement--titre">Notre mission</h2>
+					<h2 class="mission__alignement--titre"><?php the_field('about_missionmaintitle') ?></h2>
 
 					<div class="mission__grid">
 						<hr>
 						<div class="card">
 							<div class="card__column">
-							<?php while( have_rows('about_missionone')) : the_row(); ?>
+							<?php while( have_rows('aboutmissionone')) : the_row(); ?>
 								<h3 class="card__titre"><?php the_sub_field('about_missioninfotitle'); ?></h3>
 								<?php the_sub_field('about_missioninfoicon'); ?>
 								
@@ -105,7 +105,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 						<hr>
 						<div class="card">
 							<div class="card__column">
-							<?php while( have_rows('about_missiontwo')) : the_row(); ?>
+							<?php while( have_rows('aboutmissiontwo')) : the_row(); ?>
 								<h3 class="card__titre"><?php the_sub_field('about_missioninfotitle'); ?></h3>
 								<?php the_sub_field('about_missioninfoicon'); ?>
 								
@@ -125,9 +125,9 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 						<hr>
 						<div class="card">
 							<div class="card__column">
-							<?php while( have_rows('about_missionthree')) : the_row(); ?>
+							<?php while( have_rows('aboutmissionthree')) : the_row(); ?>
 								<h3 class="card__titre"><?php the_sub_field('about_missioninfotitle'); ?></h3>
-								<?php the_sub_field('about_missioninfoicon'); ?>
+								
 								
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 66" fill="none">
 									<path
@@ -145,24 +145,21 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 						<hr>
 						<div class="mission__alignement--card card">
 							<div class="card__column">
-							<?php while( have_rows('about_missionfour')) : the_row();
-							$svgFour = get_sub_field('about_missioninfoicon')
+							<?php /*while( have_rows('aboutmissionfive')) : the_row();*/
 							?>
-								<h3 class="card__titre"><?php the_sub_field('about_missioninfotitle'); ?></h3>
+								<h3 class="card__titre"><?php the_field('about_missionfourtitle'); ?></h3>
 								
 								
 								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 100" fill="none">
-									<path
-										d="M28.2137 18.9654C10.796 20.4788 3 46.3429 3 60.6039C3 108.491 66.1038 102.688 92.1974 79.8947C116.646 58.5385 108.585 27.0285 84.2324 9.89982C77.3506 5.05943 69.2204 1.72454 60.7067 3.46957C56.7372 4.28317 53.1358 6.05619 49.102 6.63198M24.6725 46.9012C25.0971 44.5658 27.6699 40.392 29.6551 39.0421C32.2938 37.2478 38.2064 42.7829 40.853 43.6651M63.5057 38.1176C63.8417 35.9338 69.5371 22.752 71.4675 24.6082C73.3161 26.3857 77.1615 27.5206 78.2993 29.7962M49.6367 57.9965C50.3003 61.9783 58.6162 61.3095 61.2456 61.1813C67.5639 60.8731 71.6325 59.6997 73.214 53.3735M21.8987 58.9211C21.1739 59.7264 20.5118 60.8357 20.5118 61.6949M31.1447 56.1472C29.7342 58.046 27.8591 59.9693 26.984 62.1571M84.7715 42.7405C84.5955 43.3013 83.2405 48.114 83.8469 46.9012M93.5552 39.0422C93.2606 41.1045 92.2085 43.0422 91.706 45.0521"
-										stroke="#1F7A8C" stroke-width="5" stroke-linecap="round" />
+									<path d="M28.2137 18.9654C10.796 20.4788 3 46.3429 3 60.6039C3 108.491 66.1038 102.688 92.1974 79.8947C116.646 58.5385 108.585 27.0285 84.2324 9.89982C77.3506 5.05943 69.2204 1.72454 60.7067 3.46957C56.7372 4.28317 53.1358 6.05619 49.102 6.63198M24.6725 46.9012C25.0971 44.5658 27.6699 40.392 29.6551 39.0421C32.2938 37.2478 38.2064 42.7829 40.853 43.6651M63.5057 38.1176C63.8417 35.9338 69.5371 22.752 71.4675 24.6082C73.3161 26.3857 77.1615 27.5206 78.2993 29.7962M49.6367 57.9965C50.3003 61.9783 58.6162 61.3095 61.2456 61.1813C67.5639 60.8731 71.6325 59.6997 73.214 53.3735M21.8987 58.9211C21.1739 59.7264 20.5118 60.8357 20.5118 61.6949M31.1447 56.1472C29.7342 58.046 27.8591 59.9693 26.984 62.1571M84.7715 42.7405C84.5955 43.3013 83.2405 48.114 83.8469 46.9012M93.5552 39.0422C93.2606 41.1045 92.2085 43.0422 91.706 45.0521" stroke="#1F7A8C" stroke-width="5" stroke-linecap="round" />
 								</svg>
 								
 							</div>
 							<p class="card__text">
-								<?php the_sub_field('about_missioninfotext'); ?>
+								<?php the_field('about_missionfourtext'); ?>
 
 							</p>
-							<?php endwhile; ?>
+							<?php /*endwhile;*/ ?>
 						</div>
 						<hr>
 					</div>
