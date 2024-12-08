@@ -98,6 +98,77 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 			<!--Fin A propos (Joshua)-->
 
 			<?php get_template_part( 'partials/servicespartial'); ?>
+
+			<script>
+				
+				document.addEventListener("DOMContentLoaded", (event) => {
+					fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article")
+						.then(data => data.json())
+						.then(posts => {
+							
+							console.log(posts);
+							posts.forEach((post, i) => {
+								const actuFetch = document.querySelector('.actuFetch');
+								//let srcImg = post._embedded['wp:featuredmedia'][0].source_url;
+								console.log(post.title.rendered);
+								console.log(post.acf)
+								//console.log(post._embedded['wp:featuredmedia'][0].source_url);
+								let val = i + 1;
+								actuFetch.innerHTML += `
+								<div class="swiper-slide swiper-slide--nouv${val}">
+									<div class="actualite">
+										<div class="actualite__date">
+										mar 20/08/2024 - 13:30 | ${post.date_gmt}
+										</div>
+										<div class="actualite__desc">
+										<p>
+											<a href="${post.link}">${post.title.rendered}</a>
+										</p>
+										</div>
+										<!--image pour tester-->
+										<div class="actualite__img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Test.svg/2560px-Test.svg.png');"></div>
+										<button class="actualite__btn btnN">
+											<a href="#">Évenement</a>
+										</button>
+									</div>
+								</div>
+								`;
+							});
+							
+							
+						});
+				});
+				
+
+				//news_article?_embed
+			</script>
+
+			<section class="actualites">
+				<?php $imageActu = get_field('actialitetitleimg'); ?>
+				<img src="<?php echo esc_url($imageActu['url']) ?>" class="actualites__titre" width="648px" height="207px">
+				<div class="swiper swiperActialite">
+					<div class="swiper-wrapper actuFetch">
+					</div>
+				</div>
+
+				<div class="swiper-nav">
+					<button class="btn-prev">
+						<svg width='25px' viewBox="0 0 72 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M3 20C1.34315 20 0 21.3431 0 23C0 24.6569 1.34315 26 3 26L3 20ZM71.1213 25.1213C72.2929 23.9497 72.2929 22.0503 71.1213 20.8787L52.0294 1.7868C50.8579 0.615224 48.9584 0.615224 47.7868 1.7868C46.6152 2.95837 46.6152 4.85786 47.7868 6.02944L64.7574 23L47.7868 39.9706C46.6152 41.1421 46.6152 43.0416 47.7868 44.2132C48.9584 45.3848 50.8579 45.3848 52.0294 44.2132L71.1213 25.1213ZM3 26L69 26V20L3 20L3 26Z"
+							fill="blue" />
+						</svg>
+					</button>
+
+					<button class="btn-next"><svg width='25px' viewBox="0 0 72 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M3 20C1.34315 20 0 21.3431 0 23C0 24.6569 1.34315 26 3 26L3 20ZM71.1213 25.1213C72.2929 23.9497 72.2929 22.0503 71.1213 20.8787L52.0294 1.7868C50.8579 0.615224 48.9584 0.615224 47.7868 1.7868C46.6152 2.95837 46.6152 4.85786 47.7868 6.02944L64.7574 23L47.7868 39.9706C46.6152 41.1421 46.6152 43.0416 47.7868 44.2132C48.9584 45.3848 50.8579 45.3848 52.0294 44.2132L71.1213 25.1213ZM3 26L69 26V20L3 20L3 26Z"
+							fill="blue" />
+						</svg>
+					</button>
+				</div>
+
+			</section>
 		<?php endif; ?>
 		
 		<?php the_content(); // Contenu principal de la page ?>

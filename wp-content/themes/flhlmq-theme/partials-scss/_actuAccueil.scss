@@ -17,8 +17,12 @@ $imgArr: (
     position: relative;
 
     &__titre {
-        width: 100%;
-        justify-self: center;
+        /*width: 100%;*/
+        display: block;
+        width: 648px;
+        height: 207px;
+        //justify-self: center;
+        margin: auto;
         color: variables.$bleuNuit;
     }
 }

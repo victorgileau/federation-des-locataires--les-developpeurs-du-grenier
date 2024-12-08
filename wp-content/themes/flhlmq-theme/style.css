@@ -1335,8 +1335,11 @@ Version: 1.0
   position: relative;
 }
 .actualites__titre {
-  width: 100%;
-  justify-self: center;
+  /*width: 100%;*/
+  display: block;
+  width: 648px;
+  height: 207px;
+  margin: auto;
   color: #022B3A;
 }
 
