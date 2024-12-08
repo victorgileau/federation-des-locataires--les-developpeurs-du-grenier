@@ -190,8 +190,9 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 					fill="white" />
 				</svg>
 				<h2 class="temoignages__titre"><?php the_field("testimonytitle") ?></h2>
-				
+				<div class="marge__tem">
 				<?php get_template_part("partials/temoignage"); ?>
+				</div>
 
 			</section>
 		<?php endif; ?>

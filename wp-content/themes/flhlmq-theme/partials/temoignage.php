@@ -6,7 +6,7 @@
     while ($temoin->have_posts()) : $temoin->the_post();  
     ?>
     <div class="marge__tem">
-      <div class="temoignage temoignage--un">
+      <div class="temoignage <?php the_field('class'); ?>">
         <div class="temoignage__titre">
           <?php the_title(); ?>
           <p><?php the_field("job"); ?></p>
