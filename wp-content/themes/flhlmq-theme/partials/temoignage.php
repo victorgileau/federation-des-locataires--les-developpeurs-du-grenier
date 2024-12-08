@@ -1,9 +1,5 @@
 <?php
-/**
- * Template Name: Temoignage
- * Template Post Type: temoignage
- */
-if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ? 
+ 
 	// Si oui, bouclons au travers les pages (logiquement, il n'y en aura qu'une)
 	$temoin = new WP_Query('post_type=temoignage');
     
@@ -24,7 +20,6 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
       </div>
       <?php 
     endwhile;
-  endif;
   wp_reset_postdata();
     ?>
 
