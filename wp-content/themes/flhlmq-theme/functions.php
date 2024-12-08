@@ -49,6 +49,7 @@ function add_style_and_js()  {
 	*/
 	wp_enqueue_style('swipper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?v='.time());
 	wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css?v='.time());
+	wp_enqueue_style('fontsearch', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0?v='.time());
 	
 	wp_enqueue_style('default', get_template_directory_uri() . '/style.css?v='.time());
 

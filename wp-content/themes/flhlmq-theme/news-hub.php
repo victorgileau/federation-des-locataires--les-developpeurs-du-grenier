@@ -27,7 +27,7 @@ get_template_part( 'partials/hero');
 		while ($article->have_posts()) : $article->the_post(); 
 		?>
 
-		<a href="" class="actualiteHub">
+		<a href="<?php the_permalink(); ?>" class="actualiteHub">
 				<p class="actualiteHub__date">
 				<?php echo esc_html ( get_field( 'newsarticledate' ) ); ?>
 				</p>
