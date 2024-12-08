@@ -25,9 +25,11 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 			<!--PAGE À PROPOS KENZA-->
 			<section class="section__intro intro">
 				<div class="intro__alignement">
-				<?php while( have_rows('about_history')) : the_row(); ?>
+				<?php while( have_rows('about_history')) : the_row(); 
+				$historyimg = get_sub_field('about_historyimage');
+				?>
 					<div class="intro__alignement--img">
-						<img src="<?php echo esc_url( $history['about_historyimage']['url']); ?>" alt="">
+						<img src="<?php echo esc_url( $historyimg['url']); ?>" alt="">
 					</div>
 
 					
