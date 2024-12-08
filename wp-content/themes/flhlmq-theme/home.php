@@ -126,7 +126,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 										</p>
 										</div>
 										<!--image pour tester-->
-										<div class="actualite__img" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Test.svg/2560px-Test.svg.png');"></div>
+										<div class="actualite__img" style="background-image: url('${srcImg}');"></div>
 										<button class="actualite__btn btnN">
 											<a href="#">Évenement</a>
 										</button>
