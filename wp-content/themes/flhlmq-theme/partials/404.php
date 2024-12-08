@@ -64,6 +64,6 @@ get_header(); // Affiche header.php
         <?php
 	endwhile;
 
-    get_sidebar();
+    //get_sidebar();
     get_footer();
 ?>

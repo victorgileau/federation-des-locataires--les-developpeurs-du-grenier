@@ -14,10 +14,10 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 	$history = get_field('about_history');
 	$groupe = get_field('about_groupe');
-	$missionOne = get_field('about_missionone');
-	$missionTwo = get_field('about_missiontwo');
-	$missionThree = get_field('about_missionthree');
-	$missionFour = get_field('about_missionfour');
+	//$missionOne = get_field('about_missionone');
+	//$missionTwo = get_field('about_missiontwo');
+	//$missionThree = get_field('about_missionthree');
+	//$missionFour = get_field('about_missionfour');
 ?>
 
 	<article>
@@ -26,10 +26,12 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 			<section class="section__intro intro">
 				<div class="intro__alignement">
 				<?php while( have_rows('about_history')) : the_row(); 
-				$historyimg = get_sub_field('about_historyimage');
+				$historyimg = get_sub_field('about_historyimg');
+				$imageHisto = get_field('historyimg');
+
 				?>
 					<div class="intro__alignement--img">
-						<img src="<?php echo esc_url( $historyimg['url']); ?>" alt="">
+						<img src="<?php echo esc_url( $imageHisto['url']); ?>">
 					</div>
 
 					
