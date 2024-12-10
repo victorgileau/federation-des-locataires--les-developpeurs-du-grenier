@@ -15,6 +15,7 @@ $image2 = get_field('main_image_02');
 $image3 = get_field('main_image_03');
 ?>
 
+<section class="hero">
 <div class="hero__container">
 
 <div class="hero__info info">
@@ -56,6 +57,7 @@ $image3 = get_field('main_image_03');
 </div>
 
 </div>
+</section>
 
 
 <?php 
