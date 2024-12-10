@@ -128,7 +128,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 										<!--image pour tester-->
 										<div class="actualite__img imageFetch${i}" style="background-image: url('');"></div>
 										<button class="actualite__btn btnN">
-											<a href="#">Évenement</a>
+											<a href="#">${post.acf.newsarticlecategory[0]}</a>
 										</button>
 									</div>
 								</div>
