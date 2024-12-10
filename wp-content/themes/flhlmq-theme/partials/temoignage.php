@@ -6,7 +6,7 @@
     $i = 0;
     while ($temoin->have_posts()) : $temoin->the_post();
     ?>
-      <div class="temoignage <?php echo 'temoignage--', $classTab[i] ?>">
+      <div class="temoignage <?php echo 'temoignage--', $classTab[$i] ?>">
         <div class="temoignage__titre">
           <?php the_title(); ?>
           <p><?php the_field("job"); ?></p>
