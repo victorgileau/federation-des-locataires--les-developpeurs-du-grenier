@@ -2,10 +2,11 @@
  
 	// Si oui, bouclons au travers les pages (logiquement, il n'y en aura qu'une)
 	$temoin = new WP_Query('post_type=temoignage');
-    
-    while ($temoin->have_posts()) : $temoin->the_post();  
+    $classTab = ["un", "deux", "troix"];
+    $i = 0;
+    while ($temoin->have_posts()) : $temoin->the_post();
     ?>
-      <div class="temoignage <?php the_field('class'); ?>">
+      <div class="temoignage <?php echo 'temoignage--', $classTab[i] ?>">
         <div class="temoignage__titre">
           <?php the_title(); ?>
           <p><?php the_field("job"); ?></p>
@@ -18,6 +19,7 @@
         </div>
 
       <?php 
+      $i++;
     endwhile;
   wp_reset_postdata();
     ?>
