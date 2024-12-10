@@ -2,7 +2,7 @@
  
 	// Si oui, bouclons au travers les pages (logiquement, il n'y en aura qu'une)
 	$temoin = new WP_Query('post_type=temoignage');
-    $classTab = ["un", "deux", "troix"];
+    $classTab = ["un", "deux", "trois"];
     $i = 0;
     while ($temoin->have_posts()) : $temoin->the_post();
     ?>
