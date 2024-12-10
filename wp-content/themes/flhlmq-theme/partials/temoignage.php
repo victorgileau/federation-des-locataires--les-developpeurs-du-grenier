@@ -17,6 +17,7 @@
           <?php the_content(); ?>
           </div>
         </div>
+      </div>
 
       <?php 
       $i++;
