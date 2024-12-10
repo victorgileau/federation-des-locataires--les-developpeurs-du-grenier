@@ -5,7 +5,6 @@
     
     while ($temoin->have_posts()) : $temoin->the_post();  
     ?>
-    <div class="marge__tem">
       <div class="temoignage <?php the_field('class'); ?>">
         <div class="temoignage__titre">
           <?php the_title(); ?>
@@ -17,7 +16,7 @@
           <?php the_content(); ?>
           </div>
         </div>
-      </div>
+
       <?php 
     endwhile;
   wp_reset_postdata();
