@@ -5,7 +5,7 @@
  */
 
 get_header(); // Affiche header.php
-
+get_template_part('partials/heroAccueil');
 if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ? 
 	// Si oui, bouclons au travers les pages (logiquement, il n'y en aura qu'une)
 	while ( have_posts() ) : the_post(); 
@@ -60,6 +60,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 				
 			</section>
 			Fin Hero (Victor)-->
+			
 
 			<!--Début Recherche (Joshua)-->
 			<?php
