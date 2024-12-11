@@ -34,7 +34,9 @@ get_template_part( 'partials/hero');
 		document.addEventListener("DOMContentLoaded", (event) => {
 			let asc = document.querySelector('.ASC');
 			let desc = document.querySelector('.DESC');
-			document.querySelector('#orderNews').addEventListener("change", () => {
+			const orderNews = document.querySelector('#orderNews');
+			orderNews.addEventListener("change", () => {
+				console.log(this.value);
 				if (this.value == "ASC") {
 					let actuFetchNew = document.querySelector('.fetch');
 					actuFetchNew.innerHTML = "";
