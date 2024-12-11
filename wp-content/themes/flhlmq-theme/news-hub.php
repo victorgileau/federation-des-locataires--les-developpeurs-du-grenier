@@ -24,7 +24,7 @@ get_template_part( 'partials/hero');
 						console.log(post._embedded['wp:featuredmedia'][0].source_url);
 						let val = i + 1;
 						actuFetch.innerHTML += `
-						<a href="${post.link}" class="actualiteHub ${"news", val} ?>">
+						<a href="${post.link}" class="actualiteHub news${val}">
 							<p class="actualiteHub__date">
 							${post.date_gmt}
 							</p>
