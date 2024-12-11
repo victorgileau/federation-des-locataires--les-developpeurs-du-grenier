@@ -3521,6 +3521,12 @@ Version: 1.0
   height: 600px;
   width: 100%;
 }
+.actualiteHub.news1 .actualiteHub__date {
+  font-size: 24px;
+}
+.actualiteHub.news1 .actualiteHub__desc {
+  font-size: 32px;
+}
 
 .actualiteHub {
   text-decoration: none;
