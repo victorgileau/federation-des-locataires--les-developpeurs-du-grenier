@@ -49,7 +49,7 @@ get_template_part( 'partials/hero');
 				.then(data => data.json()) 
 				.then(all => {
 					console.log(all);
-					all.forEach(el, i => {
+					all.forEach((el, i) => {
 						let img = document.querySelector(`.imageFetch${i}`);
 						let val = el;
 						console.log(val._embedded['wp:featuredmedia'][0].source_url);
