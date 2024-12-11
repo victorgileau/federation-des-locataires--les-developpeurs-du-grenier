@@ -3516,6 +3516,11 @@ Version: 1.0
   margin-bottom: 50px;
 }
 
+.actualiteHub.news1 {
+  flex-grow: 3;
+  min-height: 400px;
+}
+
 .actualiteHub {
   text-decoration: none;
   margin-bottom: 50px;

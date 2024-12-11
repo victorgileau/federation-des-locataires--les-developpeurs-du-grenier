@@ -23,11 +23,12 @@ get_template_part( 'partials/hero');
 			),
 			'post_type' => 'news_article',
 		);
+		$i = 1;
 		$article = new WP_Query($arguments); // 👈 Utilisation
-		while ($article->have_posts()) : $article->the_post(); 
+		while ($article->have_posts()) : $article->the_post();
 		?>
 
-		<a href="<?php the_permalink(); ?>" class="actualiteHub">
+		<a href="<?php the_permalink(); ?>" class="actualiteHub <?php echo "news", $i ?>">
 				<p class="actualiteHub__date">
 				<?php echo esc_html ( get_field( 'newsarticledate' ) ); ?>
 				</p>
@@ -45,6 +46,7 @@ get_template_part( 'partials/hero');
 		</a>
 
 		<?php
+		$i++;
 		endwhile; 
 		wp_reset_postdata(); 
 		?>
@@ -52,6 +54,12 @@ get_template_part( 'partials/hero');
 	</section>
 
 	</article>
+
+	<section class="actus">
+		<div class="actus__alignement fetch">
+
+		</div>
+	</section>
 <?php // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
