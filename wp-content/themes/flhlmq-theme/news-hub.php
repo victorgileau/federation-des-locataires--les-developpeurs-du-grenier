@@ -34,15 +34,16 @@ get_template_part( 'partials/hero');
 		document.addEventListener("DOMContentLoaded", (event) => {
 			let asc = document.querySelector('.ASC');
 			let desc = document.querySelector('.DESC');
-			asc.addEventListener("click", () => {
-				let actuFetchNew = document.querySelector('.fetch');
-				actuFetchNew.innerHTML = "";
-				fetchFunction('asc');
-			});
-			desc.addEventListener("click", () => {
-				let actuFetchNew = document.querySelector('.fetch');
-				actuFetchNew.innerHTML = "";
-				fetchFunction('desc');
+			document.querySelector('#orderNews').addEventListener("change", () => {
+				if (this.value == "ASC") {
+					let actuFetchNew = document.querySelector('.fetch');
+					actuFetchNew.innerHTML = "";
+					fetchFunction('asc');
+				} else if (this.value == "DESC") {
+					let actuFetchNew = document.querySelector('.fetch');
+					actuFetchNew.innerHTML = "";
+					fetchFunction('desc');
+				}
 			});
 
 			fetchFunction('desc');
