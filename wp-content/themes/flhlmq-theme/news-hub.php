@@ -12,6 +12,7 @@ get_template_part( 'partials/hero');
 
 <?php
 			// Si oui, bouclons au travers pour tous les afficher
+			/*
 		$imageNewsArr = array();
 		$numberNewsImage = 0;
 		$arguments = array( // 👈 Tableau d'arguments
@@ -25,6 +26,7 @@ get_template_part( 'partials/hero');
 		$imageNewsArr[] = the_post_thumbnail_url();
 		endwhile; 
 		wp_reset_postdata();
+		*/
 	?>
 
 	<script>
@@ -54,10 +56,12 @@ get_template_part( 'partials/hero');
 					console.log(posts);
 					let array = [];
 					<?php 
+					/*
 						for ($i=0; $i < (count($imageNewsArr)); $i++) { 
 							//echo $imageNewsArr[$i];
 							?> array.push("<?php echo $imageNewsArr[$i]; ?>"); <?php
 						}
+							*/
 					?>
 					posts.forEach((post, index) => {
 						let actuFetch = document.querySelector('.fetch');
@@ -76,7 +80,7 @@ get_template_part( 'partials/hero');
 								</p>
 							</div>
 
-							<div class="actualiteHub__img imageFetch${index}" style="background-image: url('${array[index]}');"></div>
+							<div class="actualiteHub__img imageFetch${index}" style="background-image: url('');"></div>
 							<?php $numberNewsImage++; ?>
 							<button class="actualiteHub__btn btnN">
 							${post.acf.newsarticlecategory[0]}
