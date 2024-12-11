@@ -29,11 +29,14 @@ get_template_part( 'partials/hero');
 
 	<script>		
 		document.addEventListener("DOMContentLoaded", (event) => {
-			console.log(<?php 
+			console.log("");
+			let array[];
+			<?php 
 				for ($i=0; $i < (count($imageNewsArr)); $i++) { 
-					echo $imageNewsArr[i];
+					echo $imageNewsArr[$i];
+					?> array.push(<?php echo $imageNewsArr[$i]; ?>) <?php
 				}
-				?>);
+			?>
 			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=desc")
 				.then(data => data.json())
 				.then(posts => {
@@ -56,7 +59,7 @@ get_template_part( 'partials/hero');
 								</p>
 							</div>
 
-							<div class="actualiteHub__img imageFetch${index}" style="background-image: url('<?php echo $imageNewsArr[$numberNewsImage];  ?>');"></div>
+							<div class="actualiteHub__img imageFetch${index}" style="background-image: url('${array[index]}');"></div>
 							<?php $numberNewsImage++; ?>
 							<button class="actualiteHub__btn btnN">
 							${post.acf.newsarticlecategory[0]}
