@@ -10,8 +10,29 @@ get_template_part( 'partials/hero');
 
 ?>
 
+<?php
+			// Si oui, bouclons au travers pour tous les afficher
+		$imageNewsArr = array();
+		$arguments = array( // 👈 Tableau d'arguments
+			'orderby' => array(
+			'date' =>'DESC',
+			),
+			'post_type' => 'news_article',
+		);
+		$article = new WP_Query($arguments); // 👈 Utilisation
+		while ($article->have_posts()) : $article->the_post();
+		$imageNewsArr[] = the_post_thumbnail_url();
+		endwhile; 
+		wp_reset_postdata();
+	?>
+
 	<script>		
 		document.addEventListener("DOMContentLoaded", (event) => {
+			console.log(<?php 
+				for ($i=0; $i < (count($imageNewsArr)); $i++) { 
+					echo $imageNewsArr[i];
+				}
+				?>);
 			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4")
 				.then(data => data.json())
 				.then(posts => {
