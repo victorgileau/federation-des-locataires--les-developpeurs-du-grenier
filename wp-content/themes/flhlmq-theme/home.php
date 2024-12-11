@@ -142,13 +142,13 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 						.then(data => data.json()) 
 						.then(all => {
 							console.log(all);
-							for (let i = 0; i <= 4; i++) {
+							array.forEach(element, i => {
 								let img = document.querySelector(`.imageFetch${i}`);
-								let val = all[i];
+								let val = el;
 								console.log(val._embedded['wp:featuredmedia'][0].source_url);
 								let srcImg = val._embedded['wp:featuredmedia'][0].source_url;
 								img.style.backgroundImage = `url(${srcImg})`;
-							}
+							});
 						});
 				});
 				
