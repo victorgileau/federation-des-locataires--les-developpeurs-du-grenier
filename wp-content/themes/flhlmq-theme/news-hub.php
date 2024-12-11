@@ -38,12 +38,12 @@ get_template_part( 'partials/hero');
 				.then(posts => {
 					console.log("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed");
 					console.log(posts);
-					posts.forEach((post, i) => {
+					posts.forEach((post, index) => {
 						let actuFetch = document.querySelector('.fetch');
 						console.log(post.title.rendered);
 						console.log(post.acf)
 						console.log(post._embedded['wp:featuredmedia'][0].source_url);
-						let val = i + 1;
+						let val = index + 1;
 						actuFetch.innerHTML += `
 						<a href="${post.link}" class="actualiteHub news${val}">
 							<p class="actualiteHub__date">
@@ -55,7 +55,7 @@ get_template_part( 'partials/hero');
 								</p>
 							</div>
 
-							<div class="actualiteHub__img imageFetch${i}" style="background-image: url('');"></div>
+							<div class="actualiteHub__img imageFetch${i}" style="background-image: url('<?php echo $imageNewsArr[index];  ?>');"></div>
 							
 							<button class="actualiteHub__btn btnN">
 							${post.acf.newsarticlecategory[0]}
