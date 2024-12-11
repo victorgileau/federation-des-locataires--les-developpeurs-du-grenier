@@ -33,8 +33,7 @@ get_template_part( 'partials/hero');
 			<?php 
 				for ($i=0; $i < (count($imageNewsArr)); $i++) { 
 					echo $imageNewsArr[$i];
-					?> array.push("<?php var_dump($imageNewsArr[$i]); ?>"); 
-					console.log('<?php var_dump($imageNewsArr[$i]); ?>');<?php
+					?> array.push("<?php var_dump($imageNewsArr[$i]); ?>"); <?php
 				}
 			?>
 			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=desc")
