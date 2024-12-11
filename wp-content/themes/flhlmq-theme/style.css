@@ -3517,8 +3517,9 @@ Version: 1.0
 }
 
 .actualiteHub.news1 {
-  flex-grow: 3;
-  min-height: 400px;
+  flex-grow: 1;
+  height: 600px;
+  width: 100%;
 }
 
 .actualiteHub {
