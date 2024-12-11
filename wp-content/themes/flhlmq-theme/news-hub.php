@@ -56,7 +56,7 @@ get_template_part( 'partials/hero');
 								</p>
 							</div>
 
-							<div class="actualiteHub__img imageFetch${i}" style="background-image: url('<?php echo $imageNewsArr[$numberNewsImage];  ?>');"></div>
+							<div class="actualiteHub__img imageFetch${index}" style="background-image: url('<?php echo $imageNewsArr[$numberNewsImage];  ?>');"></div>
 							<?php $numberNewsImage++; ?>
 							<button class="actualiteHub__btn btnN">
 							${post.acf.newsarticlecategory[0]}
