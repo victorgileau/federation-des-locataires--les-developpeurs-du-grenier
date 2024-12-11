@@ -27,20 +27,36 @@ get_template_part( 'partials/hero');
 		wp_reset_postdata();
 	?>
 
-	<script>		
+	<script>
+		
 		document.addEventListener("DOMContentLoaded", (event) => {
-			let array = [];
-			<?php 
-				for ($i=0; $i < (count($imageNewsArr)); $i++) { 
-					echo $imageNewsArr[$i];
-					?> array.push("<?php echo $imageNewsArr[$i]; ?>"); <?php
-				}
-			?>
-			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=desc")
+			let asc = document.querySelector('.ASC');
+			let desc = document.querySelector('.DESC');
+			asc.addEventListener("click", () => {
+				let actuFetchNew = document.querySelector('.fetch');
+				actuFetchNew.innerHTML = "";
+				fetch('asc');
+			});
+			desc.addEventListener("click", () => {
+				let actuFetchNew = document.querySelector('.fetch');
+				actuFetchNew.innerHTML = "";
+				fetch('desc');
+			});
+			fetch('desc');
+			
+			function fetch(order) {
+				fetch(`<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=${order}`)
 				.then(data => data.json())
 				.then(posts => {
 					console.log("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed");
 					console.log(posts);
+					let array = [];
+					<?php 
+						for ($i=0; $i < (count($imageNewsArr)); $i++) { 
+							//echo $imageNewsArr[$i];
+							?> array.push("<?php echo $imageNewsArr[$i]; ?>"); <?php
+						}
+					?>
 					posts.forEach((post, index) => {
 						let actuFetch = document.querySelector('.fetch');
 						console.log(post.title.rendered);
@@ -68,6 +84,8 @@ get_template_part( 'partials/hero');
 					
 					
 				});
+			}
+			
 				/*
 			fetch("<?php /*bloginfo('url');*/ ?>/index.php/wp-json/wp/v2/news_article?_embed")
 				.then(data => data.json()) 
@@ -86,6 +104,9 @@ get_template_part( 'partials/hero');
 
 		//news_article?_embed
 	</script>
+
+	<button class="ASC">ASC</button>
+	<button class="DESC">DESC</button>
 
 	<section class="actus">
 		<div class="actus__alignement fetch">
