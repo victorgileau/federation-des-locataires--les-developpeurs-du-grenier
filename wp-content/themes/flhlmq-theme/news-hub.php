@@ -26,7 +26,7 @@ get_template_part( 'partials/hero');
 						actuFetch.innerHTML += `
 						<a href="${post.link}" class="actualiteHub news${val}">
 							<p class="actualiteHub__date">
-							${post.date_gmt}
+							${post.acf.newsarticledate}
 							</p>
 							<div class="actualiteHub__desc">
 								<p>
