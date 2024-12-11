@@ -13,6 +13,7 @@ get_template_part( 'partials/hero');
 <?php
 			// Si oui, bouclons au travers pour tous les afficher
 		$imageNewsArr = array();
+		$numberNewsImage = 0;
 		$arguments = array( // 👈 Tableau d'arguments
 			'orderby' => array(
 			'date' =>'DESC',
@@ -33,7 +34,7 @@ get_template_part( 'partials/hero');
 					echo $imageNewsArr[i];
 				}
 				?>);
-			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4")
+			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=desc")
 				.then(data => data.json())
 				.then(posts => {
 					console.log("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed");
@@ -55,8 +56,8 @@ get_template_part( 'partials/hero');
 								</p>
 							</div>
 
-							<div class="actualiteHub__img imageFetch${i}" style="background-image: url('<?php echo $imageNewsArr[index];  ?>');"></div>
-							
+							<div class="actualiteHub__img imageFetch${i}" style="background-image: url('<?php echo $imageNewsArr[$numberNewsImage];  ?>');"></div>
+							<?php $numberNewsImage++; ?>
 							<button class="actualiteHub__btn btnN">
 							${post.acf.newsarticlecategory[0]}
 							</button>
@@ -65,7 +66,8 @@ get_template_part( 'partials/hero');
 					
 					
 				});
-			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed")
+				/*
+			fetch("<?php /*bloginfo('url');*/ ?>/index.php/wp-json/wp/v2/news_article?_embed")
 				.then(data => data.json()) 
 				.then(all => {
 					console.log(all);
@@ -76,7 +78,7 @@ get_template_part( 'partials/hero');
 						let srcImg = val._embedded['wp:featuredmedia'][0].source_url;
 						img.style.backgroundImage = `url(${srcImg})`;
 					});
-				});
+				});*/
 		});
 		
 
