@@ -68,12 +68,12 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 				
 				<div class="article__buttons" id="resetPostPreview">
 					<p class="article__page page"><a onclick="window.location.reload(true);" href="#resetPostPreview" class="article__before">
-							<?php the_field("newsarticlebtnbeforepreview"); ?> test</a>
+							<?php the_field("newsarticlebtnbeforepreview"); ?></a>
 					</p>
 					<p class="article__page page"><a onclick="window.location.reload(true);" href="#resetPostPreview" class="article__next">
-						<?php the_field("newsarticlebtnnextpreview"); ?> test</a></p>
+						<?php the_field("newsarticlebtnnextpreview"); ?></a></p>
 				</div>
-				<h3 class="preview-title"><?php the_field("newsarticletitlepreview"); ?> title test</h3>
+				<h3 class="preview-title"><?php the_field("newsarticletitlepreview"); ?></h3>
 				<div class="actus__alignement noMorePadding">
 					<?php 
 					// The Query
