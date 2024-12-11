@@ -16,7 +16,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
             <h2 class="contact__title"><?php the_field('contact_title')?></h2>
             <div class="contact__wrapper">
                 <div class="contact__form">
-                    <h3>Envoyez-nous un message</h3>
+                    <h3><?php the_field('contact_real_title')?></h3>
                     <form>
                         <div class="form-group">
                             <input type="text" name="name" placeholder="<?php the_field('contact_name')?>">
@@ -27,7 +27,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                         <div class="form-group">
                             <textarea name="message" placeholder="<?php the_field('contact_message')?>"></textarea>
                         </div>
-                        <button type="submit" class="contact__btn">Envoyer Message</button>
+                        <button type="submit" class="contact__btn"><?php the_field('contact_btn')?></button>
                     </form>
                 </div>
                 <div class="contact__info">
