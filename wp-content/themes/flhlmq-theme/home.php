@@ -142,7 +142,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 						.then(data => data.json()) 
 						.then(all => {
 							console.log(all);
-							all.forEach(el, i => {
+							all.forEach((el, i) => {
 								console.log(el);
 								let img = document.querySelector(`.imageFetch${i}`);
 								let val = el;
