@@ -111,8 +111,10 @@ get_template_part( 'partials/hero');
 		//news_article?_embed
 	</script>
 
-	<button class="ASC">ASC</button>
-	<button class="DESC">DESC</button>
+	<select name="orderNews" id="orderNews">
+		<option class="ASC" value="ASC">Plus enciens</option>
+		<option class="DESC" value="DESC">Plus récent</option>
+	</select>
 
 	<section class="actus">
 		<div class="actus__alignement fetch">
