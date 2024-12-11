@@ -35,16 +35,17 @@ get_template_part( 'partials/hero');
 			asc.addEventListener("click", () => {
 				let actuFetchNew = document.querySelector('.fetch');
 				actuFetchNew.innerHTML = "";
-				fetch('asc');
+				fetchFunction('asc');
 			});
 			desc.addEventListener("click", () => {
 				let actuFetchNew = document.querySelector('.fetch');
 				actuFetchNew.innerHTML = "";
-				fetch('desc');
+				fetchFunction('desc');
 			});
-			fetch('desc');
+
+			fetchFunction('desc');
 			
-			function fetch(order) {
+			function fetchFunction(order) {
 				fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=", order)
 				.then(data => data.json())
 				.then(posts => {
