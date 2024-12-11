@@ -30,7 +30,7 @@ get_template_part( 'partials/hero');
 	<script>		
 		document.addEventListener("DOMContentLoaded", (event) => {
 			console.log("");
-			let array[];
+			let array = [];
 			<?php 
 				for ($i=0; $i < (count($imageNewsArr)); $i++) { 
 					echo $imageNewsArr[$i];
