@@ -46,7 +46,8 @@ get_template_part( 'partials/hero');
 			fetchFunction('desc');
 			
 			function fetchFunction(order) {
-				fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=", order)
+				let url = "<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=" + order + "";
+				fetch(url)
 				.then(data => data.json())
 				.then(posts => {
 					console.log("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed");
