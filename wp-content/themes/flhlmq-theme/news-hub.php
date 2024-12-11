@@ -12,14 +12,13 @@ get_template_part( 'partials/hero');
 
 	<script>		
 		document.addEventListener("DOMContentLoaded", (event) => {
-			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article")
+			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4")
 				.then(data => data.json())
 				.then(posts => {
 					console.log("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed");
 					console.log(posts);
 					posts.forEach((post, i) => {
-						const actuFetch = document.querySelector('.fetch');
-						let srcImg = post._embedded['wp:featuredmedia'][0].source_url;
+						let actuFetch = document.querySelector('.fetch');
 						console.log(post.title.rendered);
 						console.log(post.acf)
 						console.log(post._embedded['wp:featuredmedia'][0].source_url);
@@ -50,7 +49,7 @@ get_template_part( 'partials/hero');
 				.then(all => {
 					console.log(all);
 					all.forEach((el, i) => {
-						let img = document.querySelector(`.imageFetch${i}`);
+						const img = document.querySelector(`.imageFetch${i}`);
 						let val = el;
 						console.log(val._embedded['wp:featuredmedia'][0].source_url);
 						let srcImg = val._embedded['wp:featuredmedia'][0].source_url;
