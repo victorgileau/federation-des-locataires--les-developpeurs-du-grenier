@@ -106,7 +106,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 					fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed")
 						.then(data => data.json())
 						.then(posts => {
-							
+							console.log("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed");
 							console.log(posts);
 							posts.forEach((post, i) => {
 								const actuFetch = document.querySelector('.actuFetch');
