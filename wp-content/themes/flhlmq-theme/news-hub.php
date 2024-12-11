@@ -55,6 +55,59 @@ get_template_part( 'partials/hero');
 
 	</article>
 
+	<script>		
+		document.addEventListener("DOMContentLoaded", (event) => {
+			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article")
+				.then(data => data.json())
+				.then(posts => {
+					console.log("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed");
+					console.log(posts);
+					posts.forEach((post, i) => {
+						const actuFetch = document.querySelector('.fetch');
+						let srcImg = post._embedded['wp:featuredmedia'][0].source_url;
+						console.log(post.title.rendered);
+						console.log(post.acf)
+						console.log(post._embedded['wp:featuredmedia'][0].source_url);
+						let val = i + 1;
+						actuFetch.innerHTML += `
+						<a href="${post.link}" class="actualiteHub ${"news", val} ?>">
+							<p class="actualiteHub__date">
+							${post.date_gmt}
+							</p>
+							<div class="actualiteHub__desc">
+								<p>
+									<span class="surligne__droits">${post.title.rendered}</span>
+								</p>
+							</div>
+
+							<div class="actualiteHub__img imageFetch${i}" style="background-image: url('');"></div>
+							
+							<button class="actualiteHub__btn btnN">
+							${post.acf.newsarticlecategory[0]}
+							</button>
+						</a>`;
+					});
+					
+					
+				});
+			fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed")
+				.then(data => data.json()) 
+				.then(all => {
+					console.log(all);
+					all.forEach(el, i => {
+						let img = document.querySelector(`.imageFetch${i}`);
+						let val = el;
+						console.log(val._embedded['wp:featuredmedia'][0].source_url);
+						let srcImg = val._embedded['wp:featuredmedia'][0].source_url;
+						img.style.backgroundImage = `url(${srcImg})`;
+					});
+				});
+		});
+		
+
+		//news_article?_embed
+	</script>
+
 	<section class="actus">
 		<div class="actus__alignement fetch">
 

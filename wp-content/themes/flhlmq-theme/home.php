@@ -142,7 +142,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 						.then(data => data.json()) 
 						.then(all => {
 							console.log(all);
-							array.forEach(element, i => {
+							all.forEach(el, i => {
 								let img = document.querySelector(`.imageFetch${i}`);
 								let val = el;
 								console.log(val._embedded['wp:featuredmedia'][0].source_url);
