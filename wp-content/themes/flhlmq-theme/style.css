@@ -3461,6 +3461,54 @@ Author URI:
 Description: Thème de base pour la reforme du site Fédération des locataires d’habitations à loyer modique du Québec
 Version: 1.0
 -------------------------------------------------------------- */
+.containerSelectOrder {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+.containerSelectOrder select {
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 24px;
+}
+
+.containerBtnNext {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+.containerBtnNext .buttonAddMore {
+  font-size: 24px;
+  border-radius: 100%;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 25px;
+  background-color: #022B3A;
+  color: #ffffff;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.containerBtnNext .buttonAddMore a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.containerBtnNext .buttonAddMore:hover {
+  background-color: #ffffff;
+  color: #022B3A;
+  border: 1px solid #022B3A;
+}
+.containerBtnNext .buttonAddMore:hover a {
+  color: #022B3A;
+  text-decoration: none;
+}
+
 .newsHub {
   margin-bottom: 100px;
   margin-top: 100px;

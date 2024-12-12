@@ -100,68 +100,42 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
 
 			<?php get_template_part( 'partials/servicespartial'); ?>
 
-			<script>
-				
-				document.addEventListener("DOMContentLoaded", (event) => {
-					fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed")
-						.then(data => data.json())
-						.then(posts => {
-							console.log("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed");
-							console.log(posts);
-							posts.forEach((post, i) => {
-								const actuFetch = document.querySelector('.actuFetch');
-								let srcImg = post._embedded['wp:featuredmedia'][0].source_url;
-								console.log(post.title.rendered);
-								console.log(post.acf)
-								console.log(post._embedded['wp:featuredmedia'][0].source_url);
-								let val = i + 1;
-								actuFetch.innerHTML += `
-								<div class="swiper-slide swiper-slide--nouv${val}">
-									<div class="actualite">
-										<div class="actualite__date">
-										mar 20/08/2024 - 13:30 | ${post.date_gmt}
-										</div>
-										<div class="actualite__desc">
-										<p>
-											<a href="${post.link}">${post.title.rendered}</a>
-										</p>
-										</div>
-										<!--image pour tester-->
-										<div class="actualite__img imageFetch${i}" style="background-image: url('');"></div>
-										<button class="actualite__btn btnN">
-											<a href="#">${post.acf.newsarticlecategory[0]}</a>
-										</button>
-									</div>
-								</div>
-								`;
-							});
-							
-							
-						});
-					fetch("<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed")
-						.then(data => data.json()) 
-						.then(all => {
-							console.log(all);
-							all.forEach((el, i) => {
-								console.log(el);
-								let img = document.querySelector(`.imageFetch${i}`);
-								let val = el;
-								console.log(val._embedded['wp:featuredmedia'][0].source_url);
-								let srcImg = val._embedded['wp:featuredmedia'][0].source_url;
-								img.style.backgroundImage = `url(${srcImg})`;
-							});
-						});
-				});
-				
-
-				//news_article?_embed
-			</script>
-
 			<section class="actualites">
 				<?php $imageActu = get_field('actialitetitleimg'); ?>
 				<img src="<?php echo esc_url($imageActu['url']) ?>" class="actualites__titre" width="648px" height="207px">
 				<div class="swiper swiperActialite">
 					<div class="swiper-wrapper actuFetch">
+					<?php 
+							// Si oui, bouclons au travers pour tous les afficher
+							
+						$arguments = array( // 👈 Tableau d'arguments
+							'orderby' => array(
+							'date' =>'DESC',
+							),
+							'post_type' => 'news_article',
+						);
+						$article = new WP_Query($arguments); // 👈 Utilisation
+						while ($article->have_posts()) : $article->the_post();
+						?>
+						<div class="swiper-slide swiper-slide--nouv${val}">
+							<div class="actualite">
+								<div class="actualite__date">
+								<?php echo esc_html ( get_field( 'newsarticledate' ) ); ?>
+								</div>
+								<div class="actualite__desc">
+								<p>
+									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+								</p>
+								</div>
+								<!--image pour tester-->
+								<div class="actualite__img imageFetch${i}" style="background-image: url('<?php the_post_thumbnail_url();?>');"></div>
+								<?php $value = get_field('newsarticlecategory');?>
+								<button class="actualite__btn btnN">
+									<a href="<?php the_permalink(); ?>"><?php echo $value[0]?></a>
+								</button>
+							</div>
+						</div>
+					<?php endwhile;wp_reset_postdata(); ?>
 					</div>
 				</div>
 

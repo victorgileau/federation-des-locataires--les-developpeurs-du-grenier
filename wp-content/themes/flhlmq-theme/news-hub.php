@@ -32,26 +32,37 @@ get_template_part( 'partials/hero');
 	<script>
 		
 		document.addEventListener("DOMContentLoaded", (event) => {
-			let asc = document.querySelector('.ASC');
-			let desc = document.querySelector('.DESC');
-			const orderNews = document.querySelector('#orderNews');
-			orderNews.addEventListener("change", () => {
-				console.log(this.value);
-				if (this.value == "ASC") {
+			let startValue = 4;
+			const orderNewsEl = document.querySelector('#orderNewsId');
+			orderNewsEl.addEventListener("change", () => {
+				console.log(orderNewsEl.value);
+				if (orderNewsEl.value == "ASC") {
 					let actuFetchNew = document.querySelector('.fetch');
 					actuFetchNew.innerHTML = "";
-					fetchFunction('asc');
-				} else if (this.value == "DESC") {
+					fetchFunction('asc', startValue);
+				} else if (orderNewsEl.value == "DESC") {
 					let actuFetchNew = document.querySelector('.fetch');
 					actuFetchNew.innerHTML = "";
-					fetchFunction('desc');
+					fetchFunction('desc', startValue);
 				}
 			});
 
-			fetchFunction('desc');
+			const buttonAddMore = document.querySelector('.buttonAddMore');
+			buttonAddMore.addEventListener('click', () => {
+				startValue++;
+				let actuFetchNew = document.querySelector('.fetch');
+				actuFetchNew.innerHTML = "";
+				if (orderNewsEl.value == "ASC") {
+					fetchFunction('asc', startValue);
+				} else if (orderNewsEl.value == "DESC") {
+					fetchFunction('desc', startValue);
+				}
+			});
+
+			fetchFunction('desc', 4);
 			
-			function fetchFunction(order) {
-				let url = "<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=" + order + "&user_has_cap";
+			function fetchFunction(order, number) {
+				let url = "<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?user_has_cap&_embed&per_page=" + number + "&orderby=date&order=" + order + "";
 				fetch(url)
 				.then(data => data.json())
 				.then(posts => {
@@ -72,6 +83,7 @@ get_template_part( 'partials/hero');
 						console.log(post.acf)
 						console.log(post._embedded['wp:featuredmedia'][0].source_url);
 						let val = index + 1;
+						let jsonImage = `<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/media/${post.acf.newsarticleimageone}`;
 						actuFetch.innerHTML += `
 						<a href="${post.link}" class="actualiteHub news${val}">
 							<p class="actualiteHub__date">
@@ -83,7 +95,7 @@ get_template_part( 'partials/hero');
 								</p>
 							</div>
 
-							<div class="actualiteHub__img imageFetch${index}" style="background-image: url('<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/media/${post.acf.newsarticleimageone}');"></div>
+							<div class="actualiteHub__img imageFetch${index}" style="background-image: url('https://www.elegantthemes.com/blog/wp-content/uploads/2019/12/401-error-wordpress-featured-image.jpg');"></div>
 							<?php $numberNewsImage++; ?>
 							<button class="actualiteHub__btn btnN">
 							${post.acf.newsarticlecategory[0]}
@@ -94,30 +106,23 @@ get_template_part( 'partials/hero');
 					
 				});
 			}
-			
-				/*
-			fetch("<?php /*bloginfo('url');*/ ?>/index.php/wp-json/wp/v2/news_article?_embed")
-				.then(data => data.json()) 
-				.then(all => {
-					console.log(all);
-					all.forEach((el, i) => {
-						const img = document.querySelector(`.imageFetch${i}`);
-						let val = el;
-						console.log(val._embedded['wp:featuredmedia'][0].source_url);
-						let srcImg = val._embedded['wp:featuredmedia'][0].source_url;
-						img.style.backgroundImage = `url(${srcImg})`;
-					});
-				});*/
 		});
 		
 
 		//news_article?_embed
 	</script>
 
-	<select name="orderNews" id="orderNews">
-		<option class="ASC" value="ASC">Plus enciens</option>
-		<option class="DESC" value="DESC">Plus récent</option>
-	</select>
+	<?php 
+		if (have_posts()) : 
+			while ( have_posts() ) : the_post(); 
+	?>
+	<div class="containerSelectOrder">
+		<select name="orderNews" id="orderNewsId">
+			<option class="ASC" value="ASC"><?php the_field('asctext'); ?></option>
+			<option class="DESC" value="DESC"><?php the_field('desctext'); ?></option>
+		</select>
+	</div>
+	<?php endwhile; ?>
 
 	<section class="actus">
 		<div class="actus__alignement fetch">
@@ -125,11 +130,14 @@ get_template_part( 'partials/hero');
 		</div>
 	</section>
 
+	<div class="containerBtnNext">
+		<button class="buttonAddMore btnN">+</button>
+	</div>
+
 	<article>
 	<section class="actus">
 		<div class="actus__alignement">
 		<?php
-		if ( have_posts() ) : 
 			// Si oui, bouclons au travers pour tous les afficher
 			
 		$arguments = array( // 👈 Tableau d'arguments
@@ -137,6 +145,7 @@ get_template_part( 'partials/hero');
 			'date' =>'DESC',
 			),
 			'post_type' => 'news_article',
+			'posts_per_page' => 4,
 		);
 		$i = 1;
 		$article = new WP_Query($arguments); // 👈 Utilisation
