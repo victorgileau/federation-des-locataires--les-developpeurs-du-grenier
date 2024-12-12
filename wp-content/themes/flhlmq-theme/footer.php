@@ -249,7 +249,7 @@
     <div class="footer__group--link">
       <ul class="footer__list footer__list--contact">
         <h3 class="footer__title footer__title--contact">Nous contacter</h3>
-        <li class="footer__item"><a class="footer__link" href="#">info@flhlmq.com</a></li>
+        <li class="footer__item"><a class="footer__link" href="mailto:info@flhlmq.com">info@flhlmq.com</a></li>
         <li class="footer__item"><a class="footer__link" href="#">1-800-566-9662</a></li>
         <li class="footer__item"><a class="footer__link" href="https://maps.app.goo.gl/auPTLSZXmm6zQHro7">2520, av.
             Lionel-Groulx, local 202 Montréal, (Québec) H3J 1J8</a></li>
@@ -267,7 +267,7 @@
         <li class="footer__item"><a class="footer__link" href="<?php echo $menuItemsTitleArr[5]?>"><?php echo $menuItemsTitleArr[5]?></a></li>
       </ul>
     </div>
-    <div class="copyright">©2024 - Fédération des locataires d’habitations à loyer modique du Québec</div>
+    <div class="copyright">©2024 - Fédération des locataires d'habitations à loyer modique du Québec | Développeurs du Grenier</div>
 
     <div class="footer__btn">
       <button class="btnBleu">Devenir Membre</button>
