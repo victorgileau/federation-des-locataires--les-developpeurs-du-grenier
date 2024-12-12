@@ -145,7 +145,7 @@ get_template_part( 'partials/hero');
 			'date' =>'DESC',
 			),
 			'post_type' => 'news_article',
-			'posts_per_page' => 4,
+			'posts_per_page' => 13,
 		);
 		$i = 1;
 		$article = new WP_Query($arguments); // 👈 Utilisation
