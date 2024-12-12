@@ -25,7 +25,7 @@ if ( have_posts() ) : // Est-ce que nous avons des pages à afficher ?
                 <img class="img" src="<?php echo esc_url($imageOne['url']) ?>" alt="img">
                 <div class="contenuText">
                     <h2>
-                        <?php the_field('service_titleone'); ?>
+                        <?php the_field('sercice_titleone'); ?>
                     </h2>
                     <p class="text">
 						<?php the_field('service_textcontentone'); ?>
