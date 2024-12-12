@@ -70,5 +70,23 @@ function add_style_and_js()  {
 	/* Pour ajoutez un script, copier la ligne précédente et ajuster le chemin de façon relative vers votre nouveau fichier JS */
 }
 
+
+
 /* Appel de la fonction ajoutant les styles et scripts */
-add_action('wp_enqueue_scripts', 'add_style_and_js'); 
+add_action('wp_enqueue_scripts', 'add_style_and_js');
+
+
+//ajout code externe
+add_filter('user_has_cap', function(array $allcaps, array $caps, array $args, WP_User $user) {
+    // Bail out if the capability check is not for reading a post.
+    if ($args[0] !== 'read_post') {
+        return $allcaps;
+    }
+    $post_id = $args[2];
+    // If the post is a media item, make sure the user has the capability to read it.
+    if (get_post_type($post_id) === 'attachment') {
+        $allcaps['read_post'] = true;
+    }
+
+    return $allcaps;
+}, 10, 4);
