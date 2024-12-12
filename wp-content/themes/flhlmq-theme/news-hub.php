@@ -51,7 +51,7 @@ get_template_part( 'partials/hero');
 			fetchFunction('desc');
 			
 			function fetchFunction(order) {
-				let url = "<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=" + order + "";
+				let url = "<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/news_article?_embed&per_page=4&orderby=date&order=" + order + "&user_has_cap";
 				fetch(url)
 				.then(data => data.json())
 				.then(posts => {
@@ -83,7 +83,7 @@ get_template_part( 'partials/hero');
 								</p>
 							</div>
 
-							<div class="actualiteHub__img imageFetch${index}" style="background-image: url('');"></div>
+							<div class="actualiteHub__img imageFetch${index}" style="background-image: url('<?php bloginfo('url'); ?>/index.php/wp-json/wp/v2/media/${post.acf.newsarticleimageone}');"></div>
 							<?php $numberNewsImage++; ?>
 							<button class="actualiteHub__btn btnN">
 							${post.acf.newsarticlecategory[0]}
