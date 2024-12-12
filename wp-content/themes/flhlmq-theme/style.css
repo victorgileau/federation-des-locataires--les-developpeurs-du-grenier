@@ -1346,6 +1346,7 @@ Version: 1.0
   /*width: 100%;*/
   display: block;
   width: 648px;
+  max-width: 90%;
   height: 207px;
   margin: auto;
   color: #022B3A;
